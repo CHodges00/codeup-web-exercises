@@ -117,10 +117,34 @@ console.log(sample.substr(cIndex), (sample.indexOf("p") + 1));
 
 // Exercise 3
 
+//#1
 var lM = (3 * 3), bB = (3 * 5), hS = (3 * 1);
 let cost = lM + bB + hS;
 console.log(cost);
 // Total rental cost = $27
+
+// #2
+let google = 400;
+let amazon = 380;
+let facebook = 350;
+
+let pay = ((google * 6) + (amazon * 4) + (facebook * 10));
+
+console.log(pay);
+
+//#3
+
+var classFull = false;
+var notConflict = true;
+
+if (classFull && notConflict) {
+    console.log("You're in")
+}else{
+        console.log("Better luck next time")}
+
+// #4
+
+
 
 // Exercise 4
 
@@ -132,6 +156,8 @@ console.log(password.length >=  5 || false);
 console.log(password.includes(username));
 // Password can't include username
 console.log(username.length <= 20 && true);
-// username less then 20
-console.log(
-// IN - PROGRESS
+// username less than 20
+console.log(username.trim() == username);
+// no whitespace
+console.log(password.trim() == password);
+// no whitespace
