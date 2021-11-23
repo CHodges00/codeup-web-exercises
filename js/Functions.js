@@ -66,6 +66,7 @@ function isTwo() {
 }
 
 console.log(isTwo());
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -78,14 +79,15 @@ console.log(isTwo());
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(tipPercent, bill){
+function calculateTip(tipPercent, bill) {
     var tipTotal = (tipPercent * bill);
-    return "You should tip " + tipTotal ;
+    return "You should tip " + tipTotal.toFixed(2); // Keep from returning too many deciamls
 }
 
 console.log(calculateTip(.20, 178.95));
+// should log 35.79
 console.log(calculateTip(.25, 480.13));
-
+// should log 120.03
 
 
 /**
@@ -94,7 +96,15 @@ console.log(calculateTip(.25, 480.13));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+// Engine compatability issue ???? / "prompt not defined" in all of my attempts
 
+//function calculateTip(percent, total) {
+//    var total = prompt("Enter total here ");
+//    var percent = prompt("What percent would you like to tip ? * as a decimal !!");
+//    var totalBill = alert("Your total tip amount is " + (total * percent));
+//}
+
+//console.log();
 
 
 /**
@@ -112,6 +122,16 @@ console.log(calculateTip(.25, 480.13));
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount(){
-
+function applyDiscount(fullPrice, discountPercent) {
+    var discountAmount = (fullPrice * discountPercent);
+    var newTotal = (fullPrice - discountAmount);
+    return "Discounted total is " + newTotal;
 }
+
+console.log(applyDiscount(500, .2));
+// should log 400
+console.log(applyDiscount(200, .5));
+// should log 100
+console.log(applyDiscount(5000, .27));
+// should log 3650
+
