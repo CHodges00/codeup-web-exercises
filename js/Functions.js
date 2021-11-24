@@ -135,3 +135,4 @@ console.log(applyDiscount(200, .5));
 console.log(applyDiscount(5000, .27));
 // should log 3650
 
+
