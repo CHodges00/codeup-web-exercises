@@ -20,27 +20,59 @@
  * console.logging the function's return value
  */
 
-function analyzeColor(color){
+//function analyzeColor(color){
+//    if (color === 'blue') {
+//        return('Blue is Clues');
+//    } else if (color === 'red') {
+//        return('Red is Dead');
+//    } else {
+//        return(color + " !" + " " + 'Who Likes That Color ?');
+//    }
+//}
 
-}
+//console.log(analyzeColor('green'));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
+//console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+function analyzeColor(color) {
+
+    switch (color) {
+        case 'blue':
+            return('Blue is Clues');
+            break;
+        case 'green':
+            return('Mean Green !');
+            break;
+        case 'purple' :
+            return('Like Barney ?')
+            break;
+        default:
+            return(color + " !" + ' Who Likes That Color ?');
+            break;
+    }
+}
+console.log(analyzeColor('green'));
+console.log(analyzeColor('red'));
+console.log(analyzeColor('blue'));
+console.log(analyzeColor('purple'));
 
 /**
  * TODO:
@@ -49,6 +81,30 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
+function analyzeColor(color) {
+        var userColor = prompt("What is your favorite color ?");
+
+    switch (color) {
+        case 'blue':
+            return('Blue is Clues');
+            break;
+        case 'green':
+            return('Mean Green !');
+            break;
+        case 'purple' :
+            return('Like Barney ?')
+            break;
+        default:
+            return(color + " !" + ' Who Likes That Color ?');
+            break;
+    }
+}
+
+
+//console.log(analyzeColor('green'));
+//console.log(analyzeColor('red'));
+//console.log(analyzeColor('blue'));
+//console.log(analyzeColor('purple'));
 /* ########################################################################## */
 
 /**
