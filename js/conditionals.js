@@ -136,7 +136,7 @@ function calculateTotal(luckyNumber, totalAmount) {
             return (totalAmount);
             break;
         case 1 :
-            return (totalAmount * .1);
+            return (totalAmount - (totalAmount * .1));
             break;
         case 2 :
             return (totalAmount - (totalAmount * .25));
@@ -156,7 +156,13 @@ function calculateTotal(luckyNumber, totalAmount) {
     }
 }
 
+console.log(calculateTotal(0, 100));
+console.log(calculateTotal(1, 100));
+console.log(calculateTotal(2, 100));
 console.log(calculateTotal(3, 100));
+console.log(calculateTotal(4, 100));
+console.log(calculateTotal(5, 100));
+console.log(calculateTotal(6, 100));
 
 /**
  * TODO:
