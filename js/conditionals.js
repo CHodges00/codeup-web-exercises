@@ -56,16 +56,16 @@ function analyzeColor(color) {
 
     switch (color) {
         case 'blue':
-            return ('Blue is Clues');
+            return ('Blue is Clues')
             break;
         case 'green':
-            return ('Mean Green !');
+            return ('Mean Green !')
             break;
         case 'purple' :
             return ('Like Barney ?')
             break;
         default:
-            return (color + " !" + ' Who Likes That Color ?');
+            return (color + " !" + ' Who Likes That Color ?')
             break;
     }
 }
@@ -136,19 +136,19 @@ function calculateTotal(luckyNumber, totalAmount) {
             return (totalAmount);
             break;
         case 1 :
-            return (totalAmount - (totalAmount * .1));
+            return (totalAmount * .9);
             break;
         case 2 :
-            return (totalAmount - (totalAmount * .25));
+            return (totalAmount * .75);
             break;
         case 3 :
-            return (totalAmount - (totalAmount * .35));
+            return (totalAmount * .65);
             break;
         case 4 :
             return (totalAmount * .5);
             break;
         case 5 :
-            return (totalAmount);
+            return 0;
             break;
         default:
             return (totalAmount);
@@ -173,7 +173,36 @@ console.log(calculateTotal(6, 100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+/// var luckyNumber = Math.floor(Math.random() * 6);
+
+// function calculateTotal(luckyNumber, totalAmount) {
+//     var userTotal= prompt("What is your total ?");
+//     switch (luckyNumber){
+//         case 0 :
+//             return ('Lucky # 0 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal);
+//             break;
+//         case 1 :
+//             return ('Lucky # 1 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .9));
+//             break;
+//         case 2 :
+//             return ('Lucky # 2 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .75));
+//             break;
+//         case 3 :
+//             return ('Lucky # 3 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .65));
+//                break;
+//         case 4 :
+//             return ('Lucky # 4 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .5));
+//             break;
+//         case 5 :
+//             return ('Lucky # 5 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal);
+//             break;
+//         default:
+//             return (userTotal);
+//             break;
+//     }
+// }
+
+//console.log(calculateTotal(5, 100 ));
 
 /**
  * TODO:
