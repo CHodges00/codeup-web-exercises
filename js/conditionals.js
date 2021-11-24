@@ -56,19 +56,20 @@ function analyzeColor(color) {
 
     switch (color) {
         case 'blue':
-            return('Blue is Clues');
+            return ('Blue is Clues');
             break;
         case 'green':
-            return('Mean Green !');
+            return ('Mean Green !');
             break;
         case 'purple' :
-            return('Like Barney ?')
+            return ('Like Barney ?')
             break;
         default:
-            return(color + " !" + ' Who Likes That Color ?');
+            return (color + " !" + ' Who Likes That Color ?');
             break;
     }
 }
+
 console.log(analyzeColor('green'));
 console.log(analyzeColor('red'));
 console.log(analyzeColor('blue'));
@@ -81,24 +82,24 @@ console.log(analyzeColor('purple'));
  * function to show it to the user.
  */
 
-function analyzeColor(color) {
-        var userColor = prompt("What is your favorite color ?");
-
-    switch (color) {
-        case 'blue':
-            return('Blue is Clues');
-            break;
-        case 'green':
-            return('Mean Green !');
-            break;
-        case 'purple' :
-            return('Like Barney ?')
-            break;
-        default:
-            return(color + " !" + ' Who Likes That Color ?');
-            break;
-    }
-}
+//function analyzeColor() {
+//        var userColor = prompt("What is your favorite color ?");
+//
+//    switch (userColor) {
+//        case ('blue'):
+//            return('Blue is Clues');
+//            break;
+//        case 'green':
+//            return('Mean Green !');
+//            break;
+//        case 'purple' :
+//            return('Like Barney ?')
+//            break;
+//        default:
+//            return(userColor + " !" + ' Who Likes That Color ?');
+//            break;
+//    }
+//}
 
 
 //console.log(analyzeColor('green'));
@@ -126,6 +127,36 @@ function analyzeColor(color) {
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+function calculateTotal(luckyNumber, totalAmount) {
+
+    switch (luckyNumber) {
+
+        case 0 :
+            return (totalAmount);
+            break;
+        case 1 :
+            return (totalAmount * .1);
+            break;
+        case 2 :
+            return (totalAmount - (totalAmount * .25));
+            break;
+        case 3 :
+            return (totalAmount - (totalAmount * .35));
+            break;
+        case 4 :
+            return (totalAmount * .5);
+            break;
+        case 5 :
+            return (totalAmount);
+            break;
+        default:
+            return (totalAmount);
+            break;
+    }
+}
+
+console.log(calculateTotal(3, 100));
 
 /**
  * TODO:
