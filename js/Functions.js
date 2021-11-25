@@ -96,14 +96,13 @@ console.log(calculateTip(.25, 480.13));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-// Engine compatability issue ???? / "prompt not defined" in all of my attempts
 
-//function calculateTip(percent, total) {
+//function calculateTip() {
 //    var total = prompt("Enter total here ");
 //    var percent = prompt("What percent would you like to tip ? * as a decimal !!");
 //    var totalBill = alert("Your total tip amount is " + (total * percent));
 //}
-
+//
 //console.log();
 
 
@@ -136,3 +135,63 @@ console.log(applyDiscount(5000, .27));
 // should log 3650
 
 
+////PRACTICE !!
+
+////node functional
+//function number(a, b) {
+//    var multiple = a * b;
+//    switch (multiple) {
+//        case 100 :
+//            return ("You're a Winner !")
+//            break;
+//        case 500 :
+//            return ("!!!!! GRAND PRIZE !!!!!")
+//            break;
+//        case 60 :
+//            return ("Runner Up !")
+//            break;
+//        case 25 :
+//            return ("Prize Already Claimed....")
+//            break;
+//        default :
+//            return ("Better Luck Next Time....")
+//            break;
+//    }
+//}
+//
+//console.log(number(10, 10));
+//console.log(number(10, 50));
+//console.log(number(10, 6));
+//console.log(number(10, 2.5));
+//console.log(number(10, 1));
+
+///
+///HTML functional w/prompt
+
+//function number() {
+//    var yourGuess = prompt("pick num 1-500");
+//
+//    switch (yourGuess) {
+//        case '100' :
+//            return ("You're a Winner !")
+//            break;
+//        case '500' :
+//            return ("!!!!! GRAND PRIZE !!!!!")
+//            break;
+//        case '60' :
+//            return ("Runner Up !")
+//            break;
+//        case '25' :
+//            return ("Prize Already Claimed....")
+//            break;
+//        default :
+//            return (yourGuess + " =" + " Better Luck Next Time....")
+//            break;
+//    }
+//}
+
+//console.log(number());
+//console.log(number());
+//console.log(number());
+//console.log(number());
+//console.log(number());
