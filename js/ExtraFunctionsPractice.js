@@ -160,7 +160,7 @@ console.log(isMultipleOfFive(19));
 // Make a function named not(input) returns the input with a flipped boolean
 
 
-// Make a function named notNot(input) that the negation of the negation of the input.
+// Make a function named notNot(input) that returns the negation of the negation of the input.
 
 
 // Make a function named and(predicate1, predicate2) that returns the logical operation of AND
