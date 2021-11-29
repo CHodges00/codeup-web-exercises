@@ -57,15 +57,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo() {
-    console.log(random);
+function isTwo(random) {
     if (random === 2) {
         return true
     } else
         return false
 }
 
-console.log(isTwo());
+console.log(isTwo(random));
 
 /**
  * TODO:
