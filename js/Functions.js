@@ -97,13 +97,13 @@ console.log(calculateTip(.25, 480.13));
  * then display the dollar amount they should tip
  */
 
-//function calculateTip() {
-//    var total = prompt("Enter total here ");
-//    var percent = prompt("What percent would you like to tip ? * as a decimal !!");
-//    var totalBill = alert("Your total tip amount is " + (total * percent));
-//}
-//
-//console.log();
+function calculateTip() {
+    var total = prompt("Enter total here ");
+    var percent = prompt("What percent would you like to tip ? * as a decimal !!");
+    var totalBill = alert("Your total tip amount is " + (total * percent));
+}
+
+console.log();
 
 
 /**
