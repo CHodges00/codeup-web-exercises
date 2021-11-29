@@ -20,7 +20,6 @@
  * console.logging the function's return value
  */
 
-/*
 function analyzeColor(color){
     if (color === 'blue') {
         return('Blue is Clues');
@@ -32,7 +31,7 @@ function analyzeColor(color){
 }
 
 console.log(analyzeColor('green'));
-*/
+
 
 
 /**
@@ -42,22 +41,22 @@ console.log(analyzeColor('green'));
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
 */
-//var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-//var randomColor = colors[Math.floor(Math.random() * colors.length)];
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
-//console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-/*
+
 function analyzeColor(color) {
 
     switch (color) {
@@ -79,7 +78,7 @@ console.log(analyzeColor('green'));
 console.log(analyzeColor('red'));
 console.log(analyzeColor('blue'));
 console.log(analyzeColor('purple'));
- */
+
 
 
 
@@ -91,8 +90,8 @@ console.log(analyzeColor('purple'));
      */
 
 
-    //let userColor = prompt("What is your favorite color ?");
-    //alert((analyzeColor(userColor) + ' is your favorite Color !'));
+    let userColor = prompt("What is your favorite color ?");
+    alert((analyzeColor(userColor) + ' is your favorite Color !'));
 
 
 /* ########################################################################## */
@@ -117,7 +116,7 @@ console.log(analyzeColor('purple'));
  * return value.
  */
 
-/*
+
     function calculateTotal(luckyNumber, totalAmount) {
 
     switch (luckyNumber) {
@@ -154,7 +153,7 @@ console.log(calculateTotal(2, 100));
 console.log(calculateTotal(3, 100));
 console.log(calculateTotal(4, 100));
 
-*/
+
 
 
 /**
@@ -167,7 +166,7 @@ console.log(calculateTotal(4, 100));
  */
 // Generate a random number between 0 and 6
 
- /*
+
  var luckyNumber = Math.floor(Math.random() * 6);
 
  let totalAmount = prompt("What is your total ?");
@@ -176,7 +175,7 @@ console.log(calculateTotal(4, 100));
 
  alert("Your Lucky number is " + luckyNumber + ", " + "Pre-discount = " + totalAmount + ", " + "Post-discount = " + dicountedTotal + " !" );
 
-  */
+
 
 
 /*
@@ -228,7 +227,7 @@ console.log(calculateTotal(4, 100));
  */
 
 
-/*
+
 let userConfirmation = confirm("Would you like to enter a # ?");
 
 if (userConfirmation) {
@@ -251,4 +250,3 @@ if (userConfirmation) {
         alert("We can't accept 0 for the next step !")
     }
 }
-*/
