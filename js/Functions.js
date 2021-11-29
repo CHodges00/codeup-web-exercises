@@ -166,7 +166,7 @@ console.log(applyDiscount(5000, .27));
 //console.log(number(10, 1));
 
 ///
-///HTML functional w/prompt
+///functional w/prompt
 
 //function number() {
 //    var yourGuess = prompt("pick num 1-500");
