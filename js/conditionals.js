@@ -167,7 +167,7 @@
 
 
  // var luckyNumber = Math.floor(Math.random() * 6);
- 
+
  // let totalAmount = prompt("What is your total ?");
 
  // let dicountedTotal = (calculateTotal(luckyNumber, totalAmount));
