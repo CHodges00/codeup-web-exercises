@@ -142,11 +142,11 @@
 //     }
 // }
 
-//random # for scores
+//generate random # for scores
 function randomScores(min, max) {
     return Math.floor(Math.random() * (300 - 200 + 1) + 200)
 }
-//make random scores into array
+//put random scores into array
 function makeScoreBoard() {
     let score1 = randomScores();
     let score2 = randomScores();
@@ -158,7 +158,7 @@ function makeScoreBoard() {
         console.log("Array of scores"); console.log(scoreBoard);
 
 //log average of scores in array
-let average = scoreBoard.reduce((a, b, c) => a + b + c) / scoreBoard.length - 1;
+    let average = scoreBoard.reduce((a, b, c) => a + b + c) / scoreBoard.length - 1;
         console.log("Average of scores in Array"); console.log(average);
 
 //log best score in array
@@ -173,7 +173,7 @@ let average = scoreBoard.reduce((a, b, c) => a + b + c) / scoreBoard.length - 1;
             return false;
         }
     }
-        console.log("If best score is divisble by 3 OR 5"); console.log(isDivisible(max));
+        console.log("If best score is divisible by 3 OR 5"); console.log(isDivisible(max));
 
 
 
