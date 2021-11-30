@@ -234,9 +234,9 @@
 //
 //     let entered = prompt("Please enter your number here");
 //
-//     if (entered % 2 === 0){ // %2 would leave 0 if divisible by 2, therefore even
+//     if (entered % 2 === 0) { // %2 would leave 0 if divisible by 2, therefore even
 //         alert("That's an Even Number !")
-//     }else{
+//     } else {
 //         alert("That's an Odd Number !")
 //     }
 //
