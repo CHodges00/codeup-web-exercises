@@ -36,12 +36,11 @@ numPyramid();
 console.log("******** Exercise # 4 ********");
 
 function minusFive(){
-    for(let i = 100; i > 0; i--){
-        if(i % 5 === 0){
+    let gap = 5;
+    for(let i = 100; i > 0; i-=gap){
             console.log(i)
         }
     }
-}
 minusFive();
 
 
@@ -53,3 +52,4 @@ minusFive();
 //     }
 // }
 // addFive()
+
