@@ -1,4 +1,4 @@
-(function() {
+(function(){
     "use strict";
 
     /**
@@ -60,5 +60,21 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-function 
+
+(function (){
+    var first = ([1, 2, 3, 4, 5]);
+    console.log(first[0]);
+})();
+
+
+(function (){
+    var second = ([1, 2, 3, 4, 5]);
+    console.log(second[1])
+})();
+
+
+(function (){
+    var last = ([1, 2, 3, 4, 5]);
+    console.log(last[4]);
+})();
 
