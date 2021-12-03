@@ -86,10 +86,10 @@
                 {title: 'Illumination Light', author: {firstName: 'Alice', lastName: 'Hoffman'}}, {
                 title: 'Geek Love', author: {firstName: 'Katherine', lastName: 'Dunn'}
             }];
-
-    console.log(books[3].title);
-    console.log(books[3].author.firstName);
-    console.log(books[3].author.lastName);
+    //
+    // console.log(books[3].title);
+    // console.log(books[3].author.firstName);
+    // console.log(books[3].author.lastName);
 
 
     /**
@@ -118,9 +118,12 @@
      */
 
     books.forEach(function (book){
-        var i = 0;
-        console.log("Book # " + i++ + "Title: " +  )
-
+        var counter = 0;
+        counter ++;
+        console.log("Book # " + counter);
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---")
     });
 
 
