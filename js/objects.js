@@ -79,13 +79,13 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books =
-            [{title: 'Letting Go', author: {firstName: 'Philip', lastName: 'Roth'}},
-                {title: 'Fear of Flying', author: {firstName: 'Erica', lastName: 'Jong'}},
-                {title: 'Little Women', author: {firstName: 'Louisa', lastName: 'Alcott'}},
-                {title: 'Illumination Light', author: {firstName: 'Alice', lastName: 'Hoffman'}}, {
-                title: 'Geek Love', author: {firstName: 'Katherine', lastName: 'Dunn'}
-            }];
+    // var books =
+    //         [{title: 'Letting Go', author: {firstName: 'Philip', lastName: 'Roth'}},
+    //             {title: 'Fear of Flying', author: {firstName: 'Erica', lastName: 'Jong'}},
+    //             {title: 'Little Women', author: {firstName: 'Louisa', lastName: 'Alcott'}},
+    //             {title: 'Illumination Light', author: {firstName: 'Alice', lastName: 'Hoffman'}}, {
+    //             title: 'Geek Love', author: {firstName: 'Katherine', lastName: 'Dunn'}
+    //         }];
     //
     // console.log(books[3].title);
     // console.log(books[3].author.firstName);
@@ -117,14 +117,13 @@
      *      ...
      */
 
-    books.forEach(function (book){
-        var counter = 0;
-        counter ++;
-        console.log("Book # " + counter);
-        console.log("Title: " + book.title);
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
-        console.log("---")
-    });
+    // books.forEach(function (book){
+    //
+    //     console.log("Book # " + (books.indexOf(book) + 1));
+    //     console.log("Title: " + book.title);
+    //     console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    //     console.log("---")
+    // });
 
 
     /**
@@ -138,5 +137,14 @@
      *   `showBookInfo` function.
      */
 
+
+    function createBook(title, firstName, lastName){
+
+        let book = {title: "", author:{firstName: "", lastName:""} };
+        let enteredBook = title;
+        let enteredFirst = firstName;
+        let enteredLast = lastName;
+        console.log(book);
+    }
 
 })();
