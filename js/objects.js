@@ -29,10 +29,10 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    // person.sayHello = function () {
+    // function sayHello() {
     //     console.log("Hello from " + person.first + " " + person.last + "!");
     // }
-    // console.log(person.sayHello());
+    // console.log(sayHello());
 
 
     /** TODO:
@@ -49,17 +49,25 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    //
+    // shoppers.forEach(function (shopper){
+    //     // console.log((shopper.name + " spent " + shopper.amount + " !"));
+    //     if (shopper.amount > 200){
+    //         console.log((shopper.name + ' spent $' + shopper.amount.toFixed(2) + ', You earned a 12% dicount equaling $' +
+    //             (shopper.amount * .12).toFixed(2) + ', making your new total $' + (shopper.amount * .88).toFixed(2)));
+    //     }else{
+    //         console.log((shopper.name + ' spent $' + shopper.amount.toFixed(2) + ' = No disocunt earned ! '));
+    //     }
+    // });
 
-    // let spent = ??
-    let discount = (total * .88)
-    let dicountedTotal = (total - disocunt);
 
-    // alert("You spent " + total + ", " + " you earned a 12% discount ! + "New total = " +  discountedTotal);
+
+
 
 
 
@@ -75,6 +83,11 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [{title: 'Letting Go', author:['Philip','Roth']}, {title:'Fear of Flying', author:['Erica','Jong']}, {title:'Little Women', author:['Louisa','Alcott']},
+        {title:'Illumination Light', author:['Alice','Hoffman']}, {title:'Geek Love', author:['Katherine',"Dunn"]},]
+
+    console.log(books);
 
     /**
      * TODO:
