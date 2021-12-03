@@ -11,7 +11,8 @@
      * console.log planetsArray to check your work
      */
 
-    // console.log(planetsArray);
+    planetsArray = planetsString.split(',');
+    console.log(planetsArray);
 
     /**
      * TODO:
@@ -24,4 +25,11 @@
      * string, and <li> tags around each planet.
      */
 
+    var br = planetsString.split('|').join('<br>');
+    console.log(br);
+    // var br = planetsString.replace('|', '<br>');
+    // console.log(br)
+
+    // var unordered = (<ul>"<li>Mercury</li><li>Venus</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li>"</ul>);
+    // console.log(unordered);
 })();
