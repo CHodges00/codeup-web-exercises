@@ -30,6 +30,7 @@
     // var br = planetsString.replace('|', '<br>');
     // console.log(br)
 
-    // var unordered = (<ul>"<li>Mercury</li><li>Venus</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li>"</ul>);
-    // console.log(unordered);
+    // var li = planetsString.split('|').join('<li>');
+    // console.log(li);
+
 })();
