@@ -1,9 +1,9 @@
-(function(){
+(function() {
     "use strict";
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
     var planetsArray;
-
+    console.log(planetsString);
     /**
      * TODO:
      * Convert planetsString to an array, and save it in a variable named
@@ -11,7 +11,7 @@
      * console.log planetsArray to check your work
      */
 
-    planetsArray = planetsString.split(',');
+    planetsArray = planetsString.split();
     console.log(planetsArray);
 
     /**
@@ -27,10 +27,21 @@
 
     var br = planetsString.split('|').join('<br>');
     console.log(br);
-    // var br = planetsString.replace('|', '<br>');
-    // console.log(br)
 
-    // var li = planetsString.split('|').join('<li>');
-    // console.log(li);
+
+
+    // var newString = planetsArray.join("|");
+    // console.log(newString);
+    //
+    // var listString = "<ul>";
+    // planetsArray.forEach(function (planet) {
+    //
+    //     listString += "<li>" + planet + "</li>";
+    //     console.log(listString);
+    //
+    //     listString += "</ul>";
+    //     console.log(listString);
+    //
+    // });
 
 })();
