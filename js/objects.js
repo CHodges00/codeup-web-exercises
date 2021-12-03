@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -66,11 +66,6 @@
     // });
 
 
-
-
-
-
-
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -84,10 +79,18 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books = [{title: 'Letting Go', author:['Philip','Roth']}, {title:'Fear of Flying', author:['Erica','Jong']}, {title:'Little Women', author:['Louisa','Alcott']},
-        {title:'Illumination Light', author:['Alice','Hoffman']}, {title:'Geek Love', author:['Katherine',"Dunn"]},]
+    var books =
+            [{title: 'Letting Go', author: {firstName: 'Philip', lastName: 'Roth'}},
+                {title: 'Fear of Flying', author: {firstName: 'Erica', lastName: 'Jong'}},
+                {title: 'Little Women', author: {firstName: 'Louisa', lastName: 'Alcott'}},
+                {title: 'Illumination Light', author: {firstName: 'Alice', lastName: 'Hoffman'}}, {
+                title: 'Geek Love', author: {firstName: 'Katherine', lastName: 'Dunn'}
+            }];
 
-    console.log(books);
+    console.log(books[3].title);
+    console.log(books[3].author.firstName);
+    console.log(books[3].author.lastName);
+
 
     /**
      * TODO:
@@ -114,6 +117,13 @@
      *      ...
      */
 
+    books.forEach(function (book){
+        var i = 0;
+        console.log("Book # " + i++ + "Title: " +  )
+
+    });
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -124,5 +134,6 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 
 })();
