@@ -21,19 +21,19 @@
  */
 
 
-// function analyzeColor(color){
-//     if (color === 'blue') {
-//         return('Blue is Clues');
-//     } else if (color === 'red') {
-//         return('Red is Dead');
-//     } else {
-//         return(color + " !" + " " + 'Who Likes That Color ?');
-//     }
-// }
-//
-// console.log(analyzeColor('blue'));
-// console.log(analyzeColor('red'));
-// console.log(analyzeColor('purple'));
+function analyzeColor(color){
+    if (color === 'blue') {
+        return('Blue is Clues');
+    } else if (color === 'red') {
+        return('Red is Dead');
+    } else {
+        return(color + " !" + " " + 'Who Likes That Color ?');
+    }
+}
+
+console.log(analyzeColor('blue'));
+console.log(analyzeColor('red'));
+console.log(analyzeColor('purple'));
 
 
 /**
@@ -45,8 +45,8 @@
 */
 
 
-// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 /**
@@ -55,34 +55,34 @@
  * You should see a different message every time you refresh the page
  */
 
-// console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-// function analyzeColor(color) {
-//
-//     switch (color) {
-//         case 'blue':
-//             return ('Blue is Clues')
-//             break;
-//         case 'green':
-//             return ('Mean Green !')
-//             break;
-//         case 'purple' :
-//             return ('Like Barney ?')
-//             break;
-//         default:
-//             return (color + " !" + ' Who Likes That Color ?')
-//             break;
-//     }
-// }
-// console.log(analyzeColor('green'));
-// console.log(analyzeColor('red'));
-// console.log(analyzeColor('blue'));
-// console.log(analyzeColor('purple'));
+function analyzeColor(color) {
+
+    switch (color) {
+        case 'blue':
+            return ('Blue is Clues')
+            break;
+        case 'green':
+            return ('Mean Green !')
+            break;
+        case 'purple' :
+            return ('Like Barney ?')
+            break;
+        default:
+            return (color + " !" + ' Who Likes That Color ?')
+            break;
+    }
+}
+console.log(analyzeColor('green'));
+console.log(analyzeColor('red'));
+console.log(analyzeColor('blue'));
+console.log(analyzeColor('purple'));
 
     /**
      * TODO:
@@ -91,8 +91,8 @@
      * function to show it to the user.
      */
 
-    // let userColor = prompt("What is your favorite color ?");
-    // alert((analyzeColor(userColor) + ' is your favorite Color !'));
+    let userColor = prompt("What is your favorite color ?");
+    alert((analyzeColor(userColor) + ' is your favorite Color !'));
 
 
 /**
@@ -116,41 +116,41 @@
  */
 
 
-//     function calculateTotal(luckyNumber, totalAmount) {
-//
-//     switch (luckyNumber) {
-//
-//         case 0 :
-//             return (totalAmount);
-//             break;
-//         case 1 :
-//             return (totalAmount * .9);
-//             break;
-//         case 2 :
-//             return (totalAmount * .75);
-//             break;
-//         case 3 :
-//             return (totalAmount * .65);
-//             break;
-//         case 4 :
-//             return (totalAmount * .5);
-//             break;
-//         case 5 :
-//             return 0;
-//             break;
-//         default:
-//             return (totalAmount);
-//             break;
-//     }
-//     }
-//
-// console.log(calculateTotal(0, 100));
-// console.log(calculateTotal(1, 100));
-// console.log(calculateTotal(5, 100));
-// console.log(calculateTotal(6, 100));
-// console.log(calculateTotal(2, 100));
-// console.log(calculateTotal(3, 100));
-// console.log(calculateTotal(4, 100));
+    function calculateTotal(luckyNumber, totalAmount) {
+
+    switch (luckyNumber) {
+
+        case 0 :
+            return (totalAmount);
+            break;
+        case 1 :
+            return (totalAmount * .9);
+            break;
+        case 2 :
+            return (totalAmount * .75);
+            break;
+        case 3 :
+            return (totalAmount * .65);
+            break;
+        case 4 :
+            return (totalAmount * .5);
+            break;
+        case 5 :
+            return 0;
+            break;
+        default:
+            return (totalAmount);
+            break;
+    }
+    }
+
+console.log(calculateTotal(0, 100));
+console.log(calculateTotal(1, 100));
+console.log(calculateTotal(5, 100));
+console.log(calculateTotal(6, 100));
+console.log(calculateTotal(2, 100));
+console.log(calculateTotal(3, 100));
+console.log(calculateTotal(4, 100));
 
 
 
@@ -166,44 +166,44 @@
 // Generate a random number between 0 and 6
 
 
- // var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 6);
 
- // let totalAmount = prompt("What is your total ?");
+ let totalAmount = prompt("What is your total ?");
 
- // let dicountedTotal = (calculateTotal(luckyNumber, totalAmount));
+ let dicountedTotal = (calculateTotal(luckyNumber, totalAmount));
 
- // alert("Your Lucky number is " + luckyNumber + ", " + "Pre-discount = " + totalAmount + ", " + "Post-discount = " + dicountedTotal + " !" );
-
-
+ alert("Your Lucky number is " + luckyNumber + ", " + "Pre-discount = " + totalAmount + ", " + "Post-discount = " + dicountedTotal + " !" );
 
 
 
-//  function calculateTotal(luckyNumber, totalBill) {
-//     let userTotal = ("What is your total ?");
-//     switch (luckyNumber) {
-//         case 0 :
-//             return ('Lucky # 0 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal))
-//             break;
-//         case 1 :
-//             return ('Lucky # 1 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .9))
-//             break;
-//         case 2 :
-//             return ('Lucky # 2 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .75))
-//             break;
-//         case 3 :
-//             return ('Lucky # 3 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .65))
-//             break;
-//         case 4 :
-//             return ('Lucky # 4 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .5))
-//             break;
-//         case 5 :
-//             return ('Lucky # 5 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal))
-//             break;
-//         default:
-//             return (userTotal)
-//             break;
-//     }
-// }
+
+
+ function calculateTotal(luckyNumber, totalBill) {
+    let userTotal = ("What is your total ?");
+    switch (luckyNumber) {
+        case 0 :
+            return ('Lucky # 0 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal))
+            break;
+        case 1 :
+            return ('Lucky # 1 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .9))
+            break;
+        case 2 :
+            return ('Lucky # 2 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .75))
+            break;
+        case 3 :
+            return ('Lucky # 3 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .65))
+            break;
+        case 4 :
+            return ('Lucky # 4 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal * .5))
+            break;
+        case 5 :
+            return ('Lucky # 5 !, ' + 'Your total bill was ' + userTotal + 'your discounted total is ' + (userTotal))
+            break;
+        default:
+            return (userTotal)
+            break;
+    }
+}
 
 
 
@@ -228,25 +228,25 @@
 
 
 
-// let userConfirmation = confirm("Would you like to enter a # ?");
-//
-// if (userConfirmation) {
-//
-//     let entered = prompt("Please enter your number here");
-//
-//     if (entered % 2 === 0) { // %2 would leave 0 if divisible by 2, therefore even
-//         alert("That's an Even Number !")
-//     } else {
-//         alert("That's an Odd Number !")
-//     }
-//
-//     alert((parseInt(entered) + 100) + " is your # + 100 !")
-//
-//     if (entered < 0){
-//         alert("That is a Negative # ")
-//     }else if (entered > 0){
-//         alert("That is a Positive # ")
-//     }else{
-//         alert("We can't accept 0 for the next step !")
-//     }
-// }
+let userConfirmation = confirm("Would you like to enter a # ?");
+
+if (userConfirmation) {
+
+    let entered = prompt("Please enter your number here");
+
+    if (entered % 2 === 0) { // %2 would leave 0 if divisible by 2, therefore even
+        alert("That's an Even Number !")
+    } else {
+        alert("That's an Odd Number !")
+    }
+
+    alert((parseInt(entered) + 100) + " is your # + 100 !")
+
+    if (entered < 0){
+        alert("That is a Negative # ")
+    }else if (entered > 0){
+        alert("That is a Positive # ")
+    }else{
+        alert("We can't accept 0 for the next step !")
+    }
+}
