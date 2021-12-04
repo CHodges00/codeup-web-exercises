@@ -12,10 +12,11 @@
 <script>
 (function() {
     "use strict";
+    // TODO: This function needs to be called once every second
 
     var detonationTimer = 5;
-
-    // TODO: This function needs to be called once every second
+    var interval = 1000;
+    let timer = setInterval(updateTimer,interval);
     function updateTimer() {
         if (detonationTimer == 0) {
             alert('EXTERMINATE!');
@@ -30,6 +31,10 @@
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
+    clearInterval(timer);
+    document.getElementById('message').innerHTML = "WOAH, THAT WAS CLOSE !!!!";
+    document.getElementById('timer').innerHTML = detonationTimer;
+    document.getElementById('defuser').innerHTML = "Want to go again .... ?";
 
     }
 
