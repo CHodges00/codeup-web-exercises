@@ -35,9 +35,12 @@
         clearInterval(timer);
         document.getElementById('message').innerHTML = "WOAH, THAT WAS CLOSE !!!!";
         document.getElementById('defuser').innerHTML = "Want to go again .... ?";
+        document.getElementById('defuser').addEventListener('click', newButton);
     }
 
-
+    let newButton = function (){ //function(event){
+        location.reload();
+    }
 
     // Don't modify anything below this line!
     //
