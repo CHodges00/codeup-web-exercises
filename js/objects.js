@@ -12,12 +12,13 @@
  *  > console.log(person.lastName) // "Sanchez"
  */
 
-var person = {};
-person.first = "Cody";
-person.last = "Hodges";
+var person = {
+    firstName: "Cody",
+    lastName: "Hodges",
+}
 
-console.log(person.first);
-console.log(person.last);
+console.log(person.firstName);
+console.log(person.lastName);
 
 /**
  * TODO:
@@ -28,9 +29,12 @@ console.log(person.last);
  * Example
  * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
  */
-
-function sayHello() {
-    console.log("Hello from " + person.first + " " + person.last + "!");
+var person = {
+    firstName: "Cody",
+    lastName: "Hodges",
+sayHello: function () {
+    console.log("Hello from " + person.firstName + " " + person.lastName + "!");
+}
 }
 console.log(person.sayHello());
 
@@ -148,9 +152,9 @@ books.forEach(function (book){
 // }
 //
 // console.log(createBook())
-
-
-
+//
+//
+//
 // function createBook() {
 //     var book = [{title: '', author: ''}];
 //     var givenTitle = prompt('Title');
@@ -163,10 +167,10 @@ books.forEach(function (book){
 //     var book = [{title, author}]
 //     console.log(book);
 // };
-//
 
-//{title: "", author: ""}
-//{firstName: "", lastName:""} };
+
+// // {title: "", author: ""}
+// // {firstName: "", lastName:""} };
 // let enteredBook = title;
 // let enteredFirst = firstName;
 // let enteredLast = lastName;
