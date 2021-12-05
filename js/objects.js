@@ -177,3 +177,131 @@ books.forEach(function (book){
 // console.log(book);
 // });
 
+
+
+//Objects Practice
+//employee income
+let employee = {
+    baseSalary: 65000,
+    overTime: 138,
+    wage: 25.75,
+    getWage: function () {
+        return (this.baseSalary + (this.overTime * this.wage)).toFixed(2)
+    }
+}
+
+//employees taxes
+let uncleSam = {
+    tax: .30,
+    taxes: function () {
+        return ((employee.getWage() * this.tax));
+    }
+}
+
+//employees bring home
+let takeHome = {
+    federal: function () {
+        return (employee.getWage() - uncleSam.taxes());
+    }
+};
+
+
+//employee $ after taxes
+let remainder = function () {
+    return (takeHome.federal() / 12);
+}
+
+
+//New car
+let car = {
+    year: '2019',
+    make: ' Chevalier',
+    model: ' Road King',
+    drive: ' AWD',
+    yourCar: function () {
+        return (this.year + this.make + this.model + this.drive);
+    }
+}
+
+
+//Costs of new car
+let finances = {
+    price: 65000.99,
+    payment: 800.54,
+    insurance: 130.07,
+    fuel: 250.82,
+    monthlyCost: function () {
+        return (this.payment + this.insurance + this.fuel).toFixed(2);
+    }
+}
+
+
+//Intrest payments on loan per year
+let intrest = {
+    apr: .12,
+    apr2: .09,
+    varRateYearOne: function () {
+        return ((finances.price * this.apr).toFixed(2));
+    },
+    varRateYearTwo: function () {
+        return ((finances.price * this.apr2).toFixed(2));
+    }
+}
+
+
+//$ per month in interest
+let interestPayments = {
+    monthYearOne: function () {
+        return ((intrest.varRateYearOne() / 12).toFixed(2))
+    },
+    monthYearTwo: function () {
+        return ((intrest.varRateYearTwo() / 12).toFixed(2))
+    }
+}
+
+
+//amount left to pay
+let totalPaid = {
+    paidPremium1: function () {
+        return ((finances.payment - interestPayments.monthYearOne()).toFixed(2))
+    },
+    paidPremium2: function () {
+        return ((finances.payment - interestPayments.monthYearTwo()).toFixed(2))
+    }
+}
+
+
+
+
+console.log('You made $' + employee.getWage() + ' this year !');
+console.log('You paid $' + uncleSam.taxes() + ' in taxes on that income 😤');
+console.log('Therefore, you only brought home $' + takeHome.federal() + ' this year 😭');
+console.log('This means your monthly income = $' + remainder().toFixed(2));
+console.log('You just financed a ' + car.yourCar() + ' !');
+console.log('The amount financed = $' + finances.price);
+console.log('The monthly costs to use the vehicle = ' + 'Loan Payment of $' + finances.payment
+    + ', Insurance Premium of $' + finances.insurance + ' and a Fuel cost of $' + finances.fuel)
+console.log('Coming to a grand total of $' + finances.monthlyCost() + ' in monthly expenses' + ' or $' + (finances.payment * 12).toFixed(2) + ' per year');
+
+
+console.log('Your first year interest payments will = $' + intrest.varRateYearOne());
+console.log('You will pay $' + interestPayments.monthYearOne() + ' in interest per month for the first year');
+console.log('You will be paying $' + totalPaid.paidPremium1() + ' monthly to premium for the first year');
+console.log('Making the total of premium payments for the first year = $' + (totalPaid.paidPremium1() * 12).toFixed(2));
+console.log('Your remaining premium balance on your loan after the first year will be $' + (finances.price - (totalPaid.paidPremium1() * 12).toFixed(2)));
+
+
+
+console.log('Your second year interest payments will = $' + intrest.varRateYearTwo());
+console.log('You will pay $' + interestPayments.monthYearTwo() + ' in interest per month for the second year');
+console.log('You will be paying $' + totalPaid.paidPremium2() + ' monthly to premium for the second year');
+console.log('Making the total of premium payments for the second year = $' + (totalPaid.paidPremium2() * 12).toFixed(2));
+console.log('Your remaining premium balance on your loan after the second year will be $'
+    + ((finances.price - (totalPaid.paidPremium1() * 12)) - (totalPaid.paidPremium2() * 12).toFixed(2)));
+
+
+console.log('Your total monthly income left would = $' + (remainder() - finances.monthlyCost()).toFixed(2));
+
+
+console.log('If you invested 50% of your remaining income @ a 20% return for the year, you could make an extra $' +
+    (((remainder() - finances.monthlyCost()) / 2 ) * .2).toFixed(2));
