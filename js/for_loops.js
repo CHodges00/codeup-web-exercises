@@ -45,8 +45,8 @@ minusFive();
 
 
 // function addFive(){
-//     for(let i = 20; i < 100; i++){
-//         if(i % 10 === 0){
+//     for(let i = 5; i < 100; i++){
+//         if(i % 5 === 0){
 //             console.log(i)
 //         }
 //     }
