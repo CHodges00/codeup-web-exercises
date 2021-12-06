@@ -22,7 +22,8 @@
 <button id="btn2">Let's Change The Color Of Sub Header</button>
 <button id="btn3">Let's Change Every Other li To Grey</button>
 <button id="btn4">Let's Change The Text Of The Paragraph</button>
-<button id="btn5">Let's Get Back To Original</button>
+<button id="btn5">li Item 1 to blue</button>
+<button id="btn6">Let's Get Back To Original</button>
 <script>
     (function() {
         "use strict";
@@ -77,7 +78,12 @@
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-        console.log(listItems[0].style.color = 'blue')
+        var dbid = function (){
+            console.log(listItems[0].style.color = 'blue')
+        }
+        document.getElementById('btn5').addEventListener('click', dbid)
+
+
 
         // let liColor = function (color){
         //     listItems[1].style.backgroundColor = 'aqua';
@@ -98,7 +104,7 @@
         var takeBack = function (){
             console.log(location.reload())
         }
-        document.getElementById('btn5').addEventListener('click', takeBack);
+        document.getElementById('btn6').addEventListener('click', takeBack);
 
     })();
 </script>
