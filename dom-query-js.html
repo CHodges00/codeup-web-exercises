@@ -23,53 +23,63 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('mainheader');
+        // var mainHeader = document.getElementById('main-header');
+        // console.log(mainHeader.innerHTML);
+        console.log(document.getElementById('main-header').innerHTML);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-
-        var mainHeader = document.getElementById('main-header');
-        console.log(mainHeader.innerHTML);
-
-        mainHeader.innerHTML = "JavaScript is cool";
-        console.log(mainHeader.innerHTML);
+        document.getElementById('main-header').innerHTML = "JavaScript is cool";
+        console.log(document.getElementById('main-header').innerHTML);
 
         // TODO: Uncomment the next line and get the sub header element by id
 
-        var subHeader = document.getElementById('sub-header');
-        console.log(subHeader.innerHTML);
+        // var subHeader = document.getElementById('sub-header');
+        // console.log(subHeader.innerHTML);
+        console.log(document.getElementById('sub-header').innerHTML);
 
         // TODO: Set the text color of subHeader to blue
 
-        let newColor = function(color) {
-            subHeader.style.backgroundColor = "aqua";
-        }
-        console.log(newColor())
+        document.getElementById('sub-header').style.color = 'blue'
 
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
-        console.log(listItems);
-
+        // var listItems = document.getElementsByTagName('li');
+        // console.log(listItems);
+        console.log(document.getElementsByTagName('li'))
 
         // TODO: Set text color on every other list item to grey
 
-        let listColors = function (color){
-            for(let i = 0; i < listItems.length; i +=2){
-                listItems[i].style.backgroundColor = 'aqua';
+        // let listColors = function (color){
+        //     for(let i = 0; i < listItems.length; i +=2){
+        //         listItems[i].style.backgroundColor = 'aqua';
+        //     }
+        // }
+        var listItems = document.getElementsByTagName('li');
+
+        let listColor = function (color){
+            for(let i = 0; i < listItems.length; i+=2){
+                listItems[i].style.color = 'grey';
             }
         }
+        console.log(listColor());
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-        let liColor = function (color){
-            listItems[1].style.backgroundColor = 'aqua';
-        }
+        console.log(listItems[0].style.color = 'blue')
+
+        // let liColor = function (color){
+        //     listItems[1].style.backgroundColor = 'aqua';
+        // }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
-        console.log(subParagraphs);
+        // var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        // console.log(subParagraphs);
+        console.log(document.getElementsByClassName('sub-paragraph'));
+
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+        document.getElementsByClassName('sub-paragraph').item(0).textContent = 'Mission Accomplished'
 
 
     })();
