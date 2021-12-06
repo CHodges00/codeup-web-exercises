@@ -6,14 +6,14 @@
 </head>
 <body>
 <form>
-    <label>E-mail
+    <label for="email">E-mail
 <input id='email' name="email" type="text">
     </label>
-    <label>Password
-<input id='password' name="password" type="text">
+    <label for="password">Password
+<input id='password' name="password" type="password">
     </label>
     <hr>
-    <label>Bio
+    <label for="bio">Bio
 <textarea id='bio' name="bio"></textarea>
     </label>
     <hr>
@@ -27,6 +27,13 @@
     <label for="other">other</label>
     <input id='other' type="radio" name="other" value="other">
     <hr>
+    <label for="browser">What browser are you using?</label>
+    <select name="browser" id="browser">
+        <option value="chrome">chrome</option>
+        <option value="safari">safari</option>
+        <option value="firefox">firefox</option>
+        <option value="edge">edge</option>
+    </select>
 </form>
 </body>
 </html>
