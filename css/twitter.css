@@ -27,6 +27,7 @@ a {
 }
 .top-nav {
     position: fixed;
+    z-index: 1200;
     width: 100%;
     background: var(--light-bg);
 }
@@ -60,8 +61,11 @@ a {
     border-radius: 5px;
 }
 .btn-large {
+    float:right;
+    line-height: 20px;
     font-size: 1.3em;
     padding: 10px;
+    margin-top: 20px;
 }
 .img-circle {
     border-radius: 100%;
@@ -81,5 +85,40 @@ a {
     position: absolute;
     top: 235px;
 }
+.profile-form{
+    float: unset;
+}
 
 
+.profile-details {
+    float: left;
+    width: calc(25% - 6em);
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 0;
+}
+
+.timeline{
+    float: left;
+    width: calc(50% - 6em);
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 0;
+
+}
+.who-to-follow{
+    float: right;
+    width: calc(25% - 6em);
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.container{
+    margin: 2em;
+}
+
+.media{
+    width: 100%;
+    background-color: white;
+    
+}
