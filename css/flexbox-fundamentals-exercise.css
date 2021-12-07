@@ -87,12 +87,12 @@ section:nth-of-type(3) { /*Orange circles*/
     /* enter needed declarations here */
     margin-top: 2em;
     margin-bottom: .5em;
-    /*justify-content: flex-start;*/
 
 }
 
 section:nth-of-type(3) h3 {
     /* enter needed declarations here */
+
 
 }
 
@@ -106,18 +106,20 @@ section:nth-of-type(3) h3 {
 
 .large-brown-box { /*red boxes*/
     height: 5em;
-    width: 5em;
+    width: 10em;
     background: brown;
     /* enter needed declarations here */
-    
+    align-items: stretch; height: 5em;
 }
 
 .large-brown-box:nth-of-type(2) {
     margin: 0 1em;
 }
 
-section:nth-of-type(5) {
+section:nth-of-type(5) { /* yellow boxes */
     /* enter needed declarations here */
+    justify-content: space-evenly;
+    margin: 1em;
 }
 
 .yellow-box {
@@ -130,7 +132,10 @@ section:nth-of-type(6) { /*grey boxes*/
     background: coral;
     height: 14em;
     /* enter needed declarations here */
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: wrap;
+
 }
 
 .grey-box {
