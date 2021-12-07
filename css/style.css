@@ -12,5 +12,24 @@ h1, h2 {
 
 body {
     background-color: yellow;
-    background-image: url();
+    background-image: url(../Images/Selectors3.jpeg);
+    background-size: 1px; /*300px*/
+    font-family: 'Oswald', sans-serif;
+}
+
+li {
+    list-style: redacted;
+}
+
+td, tr {
+    padding: 50px;
+    font-size: x-large;
+
+}
+
+a:visited {
+    color: tan;
+}
+a:hover {
+    color: fuchsia;
 }
