@@ -34,6 +34,7 @@ h2, h3 {
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
+    font-size: large;
 }
 
 section {
