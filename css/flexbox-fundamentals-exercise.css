@@ -85,13 +85,16 @@ section:nth-of-type(1) div:last-child { /* last green box */
 
 section:nth-of-type(3) { /*Orange circles*/
     /* enter needed declarations here */
-    margin-top: 2em;
-    margin-bottom: .5em;
+    margin-top: auto;
+    margin-bottom: auto;
+
 
 }
 
 section:nth-of-type(3) h3 {
     /* enter needed declarations here */
+    margin-right: auto;
+    margin-top: 2.5px;
 
 
 }
