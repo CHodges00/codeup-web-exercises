@@ -1,0 +1,25 @@
+.container {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+}
+
+.bar {
+    background-color: red;
+}
+
+.lists {
+    background-color: purple;
+}
+
+.list-items {
+    background-color: forestgreen;
+}
+
+.list-item {
+    background-color: white;
+}
+
+.material-icons {
+    background-color: chocolate;
+}
