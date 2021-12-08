@@ -64,12 +64,14 @@ body {
 }
 
 #to::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+    /*display: none;*/
+    /*-webkit-appearance: none;*/
+    visibility: hidden;
 }
 
 #from::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+    /*display: none;*/
+    /*-webkit-appearance: none;*/
+    visibility: hidden;
 }
 
