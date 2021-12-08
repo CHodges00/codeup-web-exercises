@@ -1,32 +1,52 @@
 body {
     background-color: black;
-    text-decoration-color: black;
 }
 
-.container {
+/*.nav-bar {*/
+/*    background-color: gray;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*.left-list {*/
+
+/*}*/
+
+/*.logo {*/
+
+/*}*/
+.nav-bar {
+    border: 5px solid green;
     background-color: gray;
     display: flex;
     justify-content: space-between;
 }
 
+/*.nav-bar > div {*/
+/*    flex: 1;*/
+/*}*/
+
+
 .left-list {
-    /*display: flex;*/
+    background-color: red;
 }
 
-.left-item {
-
-}
 
 .logo {
+    background-color: yellow;
 
-}
+ }
+
 
 .right-list {
+    background-color: purple;
 
 }
 
-.right-item {
 
+a {
+    text-decoration: none;
 }
 
-
+li {
+    list-style: none;
+}
