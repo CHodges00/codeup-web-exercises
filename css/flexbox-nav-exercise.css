@@ -1,25 +1,32 @@
+body {
+    background-color: black;
+    text-decoration-color: black;
+}
+
 .container {
-    background-color: yellow;
+    background-color: gray;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.bar {
-    background-color: red;
+.left-list {
+    /*display: flex;*/
 }
 
-.lists {
-    background-color: purple;
+.left-item {
+
 }
 
-.list-items {
-    background-color: forestgreen;
+.logo {
+
 }
 
-.list-item {
-    background-color: white;
+.right-list {
+
 }
 
-.material-icons {
-    background-color: chocolate;
+.right-item {
+
 }
+
+
