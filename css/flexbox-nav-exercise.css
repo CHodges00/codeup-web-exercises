@@ -1,5 +1,5 @@
 body {
-    background-color: purple;
+    background-color: yellow;
 }
 
 h2 {
@@ -25,11 +25,15 @@ li, .right-item {
 }
 
 nav {
-    background-color: white;
+    background-color: grey;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/*nav li, nav h2, .right-item, .material-icons{*/
+/*    color: black;*/
+/*}*/
 
 .left-list li{
     display: inline-block;
@@ -67,11 +71,14 @@ footer {
     margin-top: 20px;
 }
 
-h2, .material-icons {
+footer h2{
+    color: white;
+}
+.material-icons {
     color: white;
 }
 
-p, .left div {
+footer p{
     color: gray;
 }
 
@@ -97,6 +104,10 @@ p, .left div {
     margin-top: 5px;
     border-radius: 25px;
     padding: 10px 10px 10px 10px;
+}
+
+button:hover{
+    color: red;
 }
 
 .center {
@@ -130,6 +141,17 @@ section{
     padding-right: 100px;
 }
 
+footer a {
+    color: white;
+}
+
+.bottom-left a {
+    color: black;
+}
+
+.bottom-left a:hover {
+    color:hotpink;
+}
 
 
 
