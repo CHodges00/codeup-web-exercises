@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: purple;
 }
 
 h2 {
@@ -39,6 +39,7 @@ nav {
 .logo {
     font-size: x-large;
     margin: auto;
+    padding-right: 100px;
 }
 
 .right-list div {
@@ -51,20 +52,82 @@ a:hover {
 }
 
 footer {
-    background-color: yellow;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     margin-top: 320px;
+    text-decoration-color: white;
 }
 
-.bottom-left, .bottom-right {
+.left {
+    padding: 50px 0px 50px 100px;
+}
+
+.left img{
+    margin-top: 20px;
+}
+
+h2, .material-icons {
+    color: white;
+}
+
+p, .left div {
+    color: gray;
+}
+
+.right {
+    padding: 50px 100px 50px 0px;
+}
+
+
+.right span{
+    margin-top: 0px;
+    margin-left: 0;
+    padding: 10px 10px 10px 0px;
+}
+
+.right input{
+    margin-top: 20px;
+    padding: 10px 10px 10px 20px;
+    size: 200px;
+    border-radius: 25px;
+}
+
+.right button {
+    margin-top: 5px;
+    border-radius: 25px;
+    padding: 10px 10px 10px 10px;
+}
+
+.center {
+    padding: 50px 0px 50px 0px;
+}
+
+.center strong{
+    color: white;
+}
+
+
+
+section{
+    border-radius: 0px 0px 15px 15px;
+    background-color: grey;
+    text-decoration-color: white;
     display: flex;
-    background-color: red;
+    justify-content: space-between;
+    height: 100px;
     align-items: center;
 }
 
-.bottom-right{
-    justify-content: flex-end;
+.bottom-left li{
+    display: inline-block;
+    align-content: flex-end;
+    padding-left: 100px;
+}
+
+.bottom-right li{
+    flex-grow: 2;
+    padding-right: 100px;
 }
 
 
