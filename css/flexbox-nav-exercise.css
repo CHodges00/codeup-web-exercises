@@ -1,5 +1,10 @@
-body {
-    background-color: yellow;
+* {
+    box-sizing: border-box;
+    border: none;
+}
+
+body{
+    margin: 0 auto;
 }
 
 h2 {
