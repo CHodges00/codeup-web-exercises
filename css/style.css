@@ -13,7 +13,7 @@ h1, h2 {
 body {
     background-color: yellow;
     background-image: url(../Images/Selectors3.jpeg);
-    background-size: 1px; /*300px*/
+    background-size: 1px; /*use 300px !!*/
     font-family: 'Oswald', sans-serif;
 }
 
