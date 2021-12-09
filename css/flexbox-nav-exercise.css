@@ -1,52 +1,108 @@
-body {
-    background-color: black;
-}
-
-/*.nav-bar {*/
-/*    background-color: gray;*/
-/*    justify-content: space-between;*/
+/*body {*/
+/*    background-color: black;*/
 /*}*/
+
+/*!*.nav-bar {*!*/
+/*!*    background-color: gray;*!*/
+/*!*    justify-content: space-between;*!*/
+/*!*}*!*/
+
+/*!*.left-list {*!*/
+
+/*!*}*!*/
+
+/*!*.logo {*!*/
+
+/*!*}*!*/
+/*.nav-bar {*/
+/*    border: 5px solid green;*/
+/*    background-color: gray;*/
+/*    display: flex;*/
+
+/*}*/
+
+/*!*.nav-bar > div {*!*/
+/*!*    flex: 1;*!*/
+/*!*}*!*/
+
 
 /*.left-list {*/
-
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    background-color: red;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    flex-grow: 1;*/
 /*}*/
+
+
 
 /*.logo {*/
+/*    background-color: yellow;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    flex-grow: 2;*/
 
+/* }*/
+
+
+/*.right-list {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    background-color: purple;*/
+/*    align-items: center;*/
+/*    flex-grow: 1;*/
 /*}*/
-.nav-bar {
-    border: 5px solid green;
+
+body {
     background-color: gray;
-    display: flex;
-    justify-content: space-between;
+    box-sizing: border-box;
 }
 
-/*.nav-bar > div {*/
-/*    flex: 1;*/
-/*}*/
-
-
-.left-list {
-    background-color: red;
+h2 {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    size: 3em;
+    padding-bottom: .2em;
+    padding-top: .2em;
+    margin: auto;
 }
-
-
-.logo {
-    background-color: yellow;
-
- }
-
-
-.right-list {
-    background-color: purple;
-
-}
-
 
 a {
     text-decoration: none;
+    color: black;
 }
 
-li {
+li, .right-item {
     list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-list li{
+    display: inline-block;
+    padding: .5em;
+}
+
+.logo {
+    font-size: x-large;
+    margin: auto;
+}
+
+.right-list div {
+    display: inline-block;
+    padding: .5em;
+}
+
+a:hover {
+    color: blue;
 }
