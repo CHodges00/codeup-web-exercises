@@ -1,3 +1,32 @@
-.container{
-    display: flex;
+body, html {
+    display: inline-block;
+    justify-content: center;
+}
+
+.container {
+
+}
+
+
+.bar {
+    background-color: hotpink;
+}
+
+
+.left {
+    background-color: green;
+}
+
+
+.headshots {
+    background-color: blue;
+}
+
+
+.bottom {
+    background-color: red;
+}
+
+.customers {
+    background-color: orange;
 }
