@@ -5,6 +5,7 @@
 
 body{
     margin: 0 auto;
+    background-color: yellow;
 }
 
 h2 {
@@ -57,7 +58,7 @@ nav {
 }
 
 a:hover {
-    color: blue;
+    color: yellow;
 }
 
 footer {
@@ -112,7 +113,7 @@ footer p{
 }
 
 button:hover{
-    color: red;
+    color: blue;
 }
 
 .center {
