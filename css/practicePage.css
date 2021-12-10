@@ -27,7 +27,7 @@ a {
 }
 
 a:hover {
-    color: greenyellow;
+    color: hotpink;
 }
 
 
@@ -40,8 +40,7 @@ a:hover {
 
 
 #nav-logo {
-    margin-left: 410px;
-    margin-right: 280px;
+    margin-right: 225px;
 }
 
 .nav-bar a {
@@ -60,7 +59,7 @@ a:hover {
     height: 6px;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 3px 5px green;
+    box-shadow: 0 3px 5px hotpink;
     transition: all 1s ease-in-out;
 }
 
@@ -72,8 +71,8 @@ a:hover {
     height: 6px;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px green;
-    transition: all 1s ease-in-out ;
+    box-shadow: 0 2px 5px hotpink;
+    transition: all 2s ease-in-out ;
 }
 
 .menu-btn_burger::before{
@@ -86,18 +85,31 @@ a:hover {
 .menu-btn.open .menu-btn_burger{
     transform: translateY(0px);
     background: transparent;
-    box-shadow: red;
 }
 
 .menu-btn.open .menu-btn_burger::before{
-    transform: rotate(1000deg) translate(0px, 40px);
+    transform: rotate(300deg) translate(15px, -30px);
 }
 
 .menu-btn.open .menu-btn_burger::after{
-    transform: rotate(-1000deg) translate(0px, 40px);
+    transform: rotate(300deg) translate(-20px, 30px);
 }
 
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: lightblue;
+}
 
+.middle h2 {
+    font-size: 50px;
+}
+
+.middle a {
+    font-size: 25px;
+}
 /*.left {*/
 /*    display: flex;*/
 /*    background-color: green;*/
