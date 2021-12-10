@@ -85,9 +85,7 @@ a {
     position: absolute;
     top: 260px;
 }
-.profile-form{
-    float: unset;
-}
+
 
 .profile-items{
     list-style-type: none;
