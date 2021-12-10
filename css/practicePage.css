@@ -3,23 +3,55 @@ body, html {
     justify-content: center;
 }
 
-.container {
+li {
+    list-style-type: none;
+}
 
+a {
+    text-decoration: none;
+}
+
+.bar a:hover{
+    color: green;
 }
 
 
-.bar {
+.nav-bar {
     background-color: hotpink;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav-left {
+    background-color: orange;
+    flex-grow: 1;
+}
+
+.nav-logo {
+    height: 75px;
+}
+
+.nav-right {
+    background-color: blue;
+    flex-grow: 1;
 }
 
 
 .left {
+    display: flex;
     background-color: green;
+    flex-direction: column;
+    padding-top: 200px;
 }
 
-
 .headshots {
-    background-color: blue;
+    place-self: center;
+    spac
+}
+
+.left-content li {
+
 }
 
 
@@ -27,6 +59,10 @@ body, html {
     background-color: red;
 }
 
-.customers {
+
+.footer {
     background-color: orange;
 }
+
+
+
