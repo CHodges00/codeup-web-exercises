@@ -17,9 +17,6 @@ body, html {
 /*    min-height: 100vh;*/
 /*}*/
 
-li {
-    list-style-type: none;
-}
 
 a {
     text-decoration: none;
@@ -40,7 +37,7 @@ a:hover {
 
 
 #nav-logo {
-    margin-right: 225px;
+    margin-right: 255px;
 }
 
 .nav-bar a {
@@ -52,6 +49,7 @@ a:hover {
 .menu-btn {
     transition: all 1s ease-in-out;
     margin: auto;
+    padding-right: 100px;
 }
 
 .menu-btn_burger {
@@ -96,19 +94,40 @@ a:hover {
 }
 
 .middle {
+    /*display: block;*/
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin-top: 20px;
-    background-color: lightblue;
+    margin-top: 200px;
+    background-color: purple;
+    /*padding-bottom: 30px;*/
+    border: 10px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .middle h2 {
-    font-size: 50px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+
+    font-size: 25px;
+    padding-left: 40px;
+    padding-right: 50px;
 }
 
 .middle a {
     font-size: 25px;
+    padding-right: 25px;
+    padding-left: 100px;
+}
+
+.middle img {
+    /*padding-right: 1250px;*/
+    /*padding-left: 100px;*/
+    border: 10px double black;
+    /*margin-top: 20px;*/
+    /*margin-bottom: 20px;*/
+
 }
 /*.left {*/
 /*    display: flex;*/
