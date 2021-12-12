@@ -1,26 +1,13 @@
 body, html {
-    background-color: white;
+    background-color: gray;
+    margin: 0;
 }
 
-
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*body {*/
-/*    background-color: lightgray;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    min-height: 100vh;*/
-/*}*/
-
-
 a {
+    display: inline-block;
+    position: relative;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 a:hover {
@@ -29,34 +16,34 @@ a:hover {
 
 
 .nav-bar {
-    background-color: lightgray;
+    background-color: black;
+    box-shadow: 0 3px 5px hotpink;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
 }
 
 
 #nav-logo {
-    margin-right: 255px;
+    margin-right: 300px;
+    margin-left: 480px;
 }
 
 .nav-bar a {
-    margin-left: 100px;
-    align-self: center;
-    padding-right: 100px;
+    margin: auto;
+    align-content: center;
 }
 
 .menu-btn {
+    margin-left: 60px;
+    margin-top: 70px;
     transition: all 1s ease-in-out;
-    margin: auto;
-    padding-right: 100px;
 }
 
 .menu-btn_burger {
     width: 50px;
     height: 6px;
     background: white;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 3px 5px hotpink;
     transition: all 1s ease-in-out;
 }
@@ -68,92 +55,116 @@ a:hover {
     width: 50px;
     height: 6px;
     background: white;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px hotpink;
-    transition: all 2s ease-in-out ;
+    transition: all 2s ease-in-out;
 }
 
-.menu-btn_burger::before{
+.menu-btn_burger::before {
     transform: translateY(-15px);
 }
-.menu-btn_burger::after{
+
+.menu-btn_burger::after {
     transform: translateY(15px);
 }
 
-.menu-btn.open .menu-btn_burger{
+.menu-btn.open .menu-btn_burger {
     transform: translateY(0px);
     background: transparent;
 }
 
-.menu-btn.open .menu-btn_burger::before{
+.menu-btn.open .menu-btn_burger::before {
     transform: rotate(300deg) translate(15px, -30px);
 }
 
-.menu-btn.open .menu-btn_burger::after{
+.menu-btn.open .menu-btn_burger::after {
     transform: rotate(300deg) translate(-20px, 30px);
 }
 
 .middle {
-    /*display: block;*/
     display: flex;
+    /*display: flex;*/
     flex-direction: row;
     align-items: center;
     margin-top: 200px;
-    background-color: purple;
-    /*padding-bottom: 30px;*/
-    border: 10px solid black;
+    background-color: black;
+    box-shadow: 0px 0px 10px 10px hotpink;
+    border: 100px solid black;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .middle h2 {
+    color: white;
     writing-mode: vertical-rl;
     text-orientation: upright;
-
     font-size: 25px;
-    padding-left: 40px;
-    padding-right: 50px;
+    margin-right: 20px;
 }
 
 .middle a {
     font-size: 25px;
-    padding-right: 25px;
-    padding-left: 100px;
+    margin-left: 100px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    justify-items: center;
 }
 
 .middle img {
-    /*padding-right: 1250px;*/
-    /*padding-left: 100px;*/
     border: 10px double black;
-    /*margin-top: 20px;*/
-    /*margin-bottom: 20px;*/
+    margin-right: 20px;
+}
+
+.middle2 {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#head2 {
+    text-align: center;
+    font-size: 100px;
+}
+
+.middle2 h3 {
+    text-align: center;
+}
+
+.middle2 p {
+    margin-left: 220px;
+    margin-right: 220px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 10px hotpink;
+}
+footer {
+    display: flex;
+    border: 2px solid black;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.foot-left {
+    border: 2px solid black;
+    margin-left: 60px;
+    padding-top: 20px;
+}
+
+footer h2 {
+    margin-left: 10px;
+}
+
+.foot-right {
+    align-content: flex-end;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.icons {
+    margin-top: 20px;
+    margin-right: 75px;
+}
+
+.material-icons {
 
 }
-/*.left {*/
-/*    display: flex;*/
-/*    background-color: green;*/
-/*    flex-direction: column;*/
-/*    padding-top: 200px;*/
-/*}*/
-
-/*.headshots {*/
-/*    place-self: center;*/
-/*    flex-direction: column;*/
-/*}*/
-
-/*#head1{*/
-/*    padding-bottom: 10px;*/
-/*    padding-left: 300px;*/
-/*}*/
-
-/*.bottom {*/
-/*    background-color: red;*/
-/*}*/
-
-
-/*.footer {*/
-/*    background-color: orange;*/
-/*}*/
-
-
-

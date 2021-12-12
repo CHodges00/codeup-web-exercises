@@ -1,10 +1,10 @@
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
-    if(!menuOpen){
+    if (!menuOpen) {
         menuBtn.classList.toggle('open');
         menuOpen = true;
-    }else{
+    } else {
         menuBtn.classList.toggle('open');
         menuOpen = false;
     }
