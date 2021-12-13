@@ -47,7 +47,7 @@ a {
     text-decoration: none;
 }
 .nav-link:hover {
-    color: var(--link-color);
+    color: #3B94D9;
 }
 .profile {
     background: #FFF;
@@ -122,7 +122,6 @@ a {
     border-bottom: 1px solid #E6ECF0;
     width: calc(100% - .5em);
     padding: .5em;
-    overflow: visible;
 }
 
 .media-image{
@@ -132,6 +131,9 @@ a {
 }
 
 .media-body{
-    float: top;
     width: calc(100% - 1.33em);
+}
+
+.media-body p {
+    padding-left: 50px;
 }
