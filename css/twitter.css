@@ -120,7 +120,7 @@ a {
 .media{
     background-color: white;
     border-bottom: 1px solid #E6ECF0;
-    width: calc(100% - .5em);
+    width: 100%;
     padding: .5em;
 }
 
@@ -131,7 +131,7 @@ a {
 }
 
 .media-body{
-    width: calc(100% - 1.33em);
+    width: 100%
 }
 
 .media-body p {
