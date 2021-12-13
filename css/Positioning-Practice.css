@@ -8,14 +8,13 @@
 .box {
     height: 100px;
     width: 100px;
-    border-radius: 50px;
-    margin: 5px;
+    /*border-radius: 50px;*/
 }
 
 #one {
     background-color: orange;
-    text-align: center;
     float: left;
+    text-align: center;
 }
 
 #two {
@@ -24,20 +23,51 @@
     text-align: center;
 }
 
-#extra{
+#extra1 {
     background-color:purple;
     float: left;
     text-align: center;
 }
 
-p{
+#extra2 {
+    background-color: red;
+    float: right;
     text-align: center;
-    padding: 20px;
-}
-#three {
-    background-color: blue;
 }
 
-#four {
+p {
+    text-align: center;
+    padding: 21.3px;
+}
+
+.boxes {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    position: relative;
+}
+
+#page1 {
+    background-color: blue;
+    text-align: center;
+    top: 300px;
+}
+
+#page2 {
     background-color: red;
+    text-align: center;
+    left: 300px;
+    bottom: 100px;
+}
+
+#page3 {
+    background-color: green;
+    text-align: center;
+    bottom: 200px;
+}
+
+#page4 {
+    background-color: purple;
+    text-align: center;
+    left: 300px;
 }
