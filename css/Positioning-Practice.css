@@ -1,73 +1,117 @@
-.container {
+/*.container {*/
+/*    border: 2px solid black;*/
+/*    height: 400px;*/
+/*    width: 400px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.box {*/
+/*    height: 100px;*/
+/*    width: 100px;*/
+/*    !*border-radius: 50px;*!*/
+/*}*/
+
+/*#one {*/
+/*    background-color: orange;*/
+/*    float: left;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#two {*/
+/*    background-color: hotpink;*/
+/*    float: right;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#extra1 {*/
+/*    background-color:purple;*/
+/*    float: left;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#extra2 {*/
+/*    background-color: red;*/
+/*    float: right;*/
+/*    text-align: center;*/
+/*}*/
+
+/*p {*/
+/*    text-align: center;*/
+/*    padding: 21.3px;*/
+/*}*/
+
+/*.boxes {*/
+/*    height: 100px;*/
+/*    width: 100px;*/
+/*    border-radius: 50px;*/
+/*    position: relative;*/
+/*}*/
+
+/*#page1 {*/
+/*    background-color: blue;*/
+/*    text-align: center;*/
+/*    top: 300px;*/
+/*}*/
+
+/*#page2 {*/
+/*    background-color: red;*/
+/*    text-align: center;*/
+/*    left: 300px;*/
+/*    bottom: 100px;*/
+/*}*/
+
+/*#page3 {*/
+/*    background-color: green;*/
+/*    text-align: center;*/
+/*    bottom: 200px;*/
+/*}*/
+
+/*#page4 {*/
+/*    background-color: purple;*/
+/*    text-align: center;*/
+/*    left: 300px;*/
+/*}*/
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar {
+    background-color: grey;
     border: 2px solid black;
-    height: 400px;
-    width: 400px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.box {
-    height: 100px;
-    width: 100px;
-    /*border-radius: 50px;*/
+.left {
+    display: flex;
+
 }
 
-#one {
-    background-color: orange;
-    float: left;
-    text-align: center;
+.right {
+/*already aligned*/
 }
 
-#two {
-    background-color: hotpink;
-    float: right;
-    text-align: center;
+.nav-item {
+    padding: 20px;
+    font-size: x-large;
+    transition: 1s;
+}
+a {
+    text-decoration: none;
+    color: white;
 }
 
-#extra1 {
-    background-color:purple;
-    float: left;
-    text-align: center;
+a:hover {
+    color: hotpink;
 }
 
-#extra2 {
-    background-color: red;
-    float: right;
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    padding: 21.3px;
-}
-
-.boxes {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    position: relative;
-}
-
-#page1 {
-    background-color: blue;
-    text-align: center;
-    top: 300px;
-}
-
-#page2 {
-    background-color: red;
-    text-align: center;
-    left: 300px;
-    bottom: 100px;
-}
-
-#page3 {
-    background-color: green;
-    text-align: center;
-    bottom: 200px;
-}
-
-#page4 {
-    background-color: purple;
-    text-align: center;
-    left: 300px;
+.nav-item:hover {
+    transition: 1s;
+    background-color: black;
+    font-weight: bolder;
+    font-size: xxx-large;
+    cursor: pointer;
+    font-family: AppleGothic;
 }
