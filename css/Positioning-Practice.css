@@ -155,11 +155,17 @@ img {
     transform: rotate(1440deg);
 }
 
-#hidden {
+
+
+
+
+
+#surp {
     color: transparent;
+    font-size: xx-small;
 }
 
-#hidden:active {
+#surp:active {
     transition: 2s;
     color: red;
     font-size: xxx-large;
@@ -167,6 +173,11 @@ img {
     transform: rotate(360deg);
     cursor: pointer;
 }
+
+
+
+
+
 
 .material-icons {
     padding: 20px;

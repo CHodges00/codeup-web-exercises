@@ -1,4 +1,4 @@
-var audio = $("#firework")[0];
-$("nav a").mouseenter(function() {
+function play(){
+    var audio = document.getElementById("firework");
     audio.play();
-});
+}
