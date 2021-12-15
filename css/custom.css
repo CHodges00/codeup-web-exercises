@@ -6,7 +6,7 @@
 
 
 .jumbotron {
-    background-image: url("pizza.png");
+    background-image: url("../assets/pizza.png");
     background-size: cover;
 }
 
