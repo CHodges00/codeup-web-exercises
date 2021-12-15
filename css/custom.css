@@ -1,0 +1,31 @@
+@media (max-width: 500px){
+    .jumbotron {
+        display: none;
+    }
+}
+
+
+.jumbotron {
+    background-image: url("pizza.png");
+    background-size: cover;
+}
+
+
+.jumbotron h1{
+    background-color: rgb(245,245,245,0.5);
+}
+
+
+.card {
+    border: 1px solid lightgray;
+}
+
+
+.card-title {
+    font-size: 18px;
+    padding: 10px;
+    color: white;
+}
+
+
+
