@@ -1,65 +1,79 @@
-* {
-    box-sizing: border-box;
-    border: none;
-}
 
 body{
-    margin: 0 auto;
+    margin: 0;
     background-color: yellow;
+    cursor: grabbing;
 }
+
 
 h2 {
     color: black;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     size: 3em;
-    padding-bottom: .2em;
-    padding-top: .2em;
-    margin: auto;
 }
+
 
 a {
     text-decoration: none;
     color: black;
 }
 
+
 li, .right-item {
     list-style: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-
 }
 
+
 nav {
+    width: 100%;
     background-color: grey;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-/*nav li, nav h2, .right-item, .material-icons{*/
-/*    color: black;*/
-/*}*/
 
-.left-list li{
-    display: inline-block;
-    padding: .5em;
+.left-list {
+    display: flex;
 }
+
+
+.left-list > * {
+    padding: 10px;
+}
+
+
+.left-list li:hover {
+    transition: 2s;
+    background-color: lightgray;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.right-list {
+    display: flex;
+}
+
+
+.right-list div {
+    padding: 10px;
+}
+
 
 .logo {
     font-size: x-large;
-    margin: auto;
-    padding-right: 100px;
+    margin-right: 240px;
 }
 
-.right-list div {
-    display: inline-block;
-    padding: .5em;
-}
 
 a:hover {
     color: yellow;
 }
+
 
 footer {
     background-color: black;
@@ -69,24 +83,32 @@ footer {
     text-decoration-color: white;
 }
 
+
 .left {
     padding: 50px 0px 50px 100px;
 }
 
+
 .left img{
     margin-top: 20px;
+    padding-bottom: 20px;
 }
+
 
 footer h2{
     color: white;
 }
+
+
 .material-icons {
     color: white;
 }
 
+
 footer p{
     color: gray;
 }
+
 
 .right {
     padding: 50px 100px 50px 0px;
@@ -99,6 +121,7 @@ footer p{
     padding: 10px 10px 10px 0px;
 }
 
+
 .right input{
     margin-top: 20px;
     padding: 10px 10px 10px 20px;
@@ -106,24 +129,29 @@ footer p{
     border-radius: 25px;
 }
 
-.right button {
+
+button {
     margin-top: 5px;
     border-radius: 25px;
     padding: 10px 10px 10px 10px;
 }
 
+
 button:hover{
-    color: blue;
+    color: hotpink;
 }
+
+button:active {
+    transition: .5s;
+    transform: rotate(720deg);
+    color: orange;
+}
+
 
 .center {
-    padding: 50px 0px 50px 0px;
+    padding: 40px 0px 50px 0px;
+    line-height: 2;
 }
-
-.center strong{
-    color: white;
-}
-
 
 
 section{
@@ -136,28 +164,52 @@ section{
     align-items: center;
 }
 
+
 .bottom-left li{
     display: inline-block;
     align-content: flex-end;
     padding-left: 100px;
 }
 
+
 .bottom-right li{
     flex-grow: 2;
     padding-right: 100px;
 }
 
+
 footer a {
     color: white;
 }
+
 
 .bottom-left a {
     color: black;
 }
 
+
 .bottom-left a:hover {
-    color:hotpink;
+    color:yellow;
 }
 
 
+hr {
+    border: 1px solid yellow;
+}
 
+#surprise {
+    font-size: 100px;
+    padding-left: 400px;
+    color: transparent;
+    cursor: pointer;
+}
+
+#surprise:active {
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: "Arial Rounded MT Bold";
+    color: red;
+    background-color: black;
+    transition: 2s;
+    transform: rotate(720deg);
+}
