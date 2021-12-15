@@ -72,130 +72,145 @@
 /*    left: 300px;*/
 /*}*/
 
-body {
-    padding: 0;
-    margin: 0;
-}
 
-.nav-bar {
-    background-color: grey;
-    border: 2px solid black;
-    display: flex;
-    justify-content: space-between;
-}
 
-.left {
-    display: flex;
-
-}
-
-.right {
-/*already aligned*/
-}
-
-.nav-item {
-    padding: 20px;
-    font-size: x-large;
-    transition: 2s;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.nav-bar a:hover {
-    color: hotpink;
-}
-
-.nav-item:hover {
-    transition: 1s;
-    background-color: black;
-    font-weight: bolder;
-    font-size: xxx-large;
-    cursor: pointer;
-    font-family: AppleGothic;
-}
-
-.card {
-    width: 400px;
-    height: 500px;
-    display: flex;
-    border: 10px solid hotpink;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    margin-left: 700px;
-    margin-top: 100px;
-    background-color: gray;
-    cursor: pointer;
-}
-
-img {
-    border-radius: 50px;
-}
-
-.card-top {
-    color: white;
-    line-height: 3;
-    font-family: Tahoma;
-    font-size: 18px;
-    font-weight: bolder;
-}
-
-.card:hover {
-    transition: 2s;
-    width: 600px;
-    height: 600px;
-    transform: translateX(-75px);
-}
-
-.card-top img:hover{
-    transition: 2s;
-    transform: rotate(1440deg);
-}
+/*body {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
 
 
 
+/*.nav-bar {*/
+/*    background-color: grey;*/
+/*    border: 2px solid black;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
 
 
 
-#surp {
-    color: transparent;
-    font-size: xx-small;
-}
+/*.left {*/
+/*    display: flex;*/
 
-#surp:active {
-    transition: 2s;
-    color: red;
-    font-size: xxx-large;
-    background-color: black;
-    transform: rotate(360deg);
-    cursor: pointer;
-}
+/*}*/
 
 
 
+/*.right {*/
+/*!*already aligned*!*/
+/*}*/
 
 
 
-.material-icons {
-    padding: 20px;
-}
+/*.nav-item {*/
+/*    padding: 20px;*/
+/*    font-size: x-large;*/
+/*    transition: 2s;*/
+/*}*/
 
-.title {
-    border-bottom: 3px solid black;
-}
 
-.card-footer span{
-    transition: 1s;
-}
+/*a {*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*}*/
 
-.card-footer span:hover{
-    transition: 1s;
-    color: hotpink;
-    background-color: black;
-    cursor: pointer;
-    font-size: 50px;
-    border-radius: 50px;
-}
+
+/*.nav-bar a:hover {*/
+/*    color: hotpink;*/
+/*}*/
+
+
+/*.nav-item:hover {*/
+/*    transition: 1s;*/
+/*    background-color: black;*/
+/*    font-weight: bolder;*/
+/*    font-size: xxx-large;*/
+/*    cursor: pointer;*/
+/*    font-family: AppleGothic;*/
+/*}*/
+
+
+/*.card {*/
+/*    width: 400px;*/
+/*    height: 500px;*/
+/*    display: flex;*/
+/*    border: 10px solid hotpink;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: space-around;*/
+/*    text-align: center;*/
+/*    margin-left: 700px;*/
+/*    margin-top: 100px;*/
+/*    background-color: gray;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+/*img {*/
+/*    border-radius: 50px;*/
+/*}*/
+
+
+/*.card-top {*/
+/*    color: white;*/
+/*    line-height: 3;*/
+/*    font-family: Tahoma;*/
+/*    font-size: 18px;*/
+/*    font-weight: bolder;*/
+/*}*/
+
+
+/*.card:hover {*/
+/*    transition: 2s;*/
+/*    width: 600px;*/
+/*    height: 600px;*/
+/*    transform: translateX(-75px);*/
+/*}*/
+
+
+/*.card-top img:hover{*/
+/*    transition: 2s;*/
+/*    transform: rotate(1440deg);*/
+/*}*/
+
+
+/*#surp {*/
+/*    color: transparent;*/
+/*    font-size: xx-small;*/
+/*}*/
+
+
+/*#surp:active {*/
+/*    transition: 2s;*/
+/*    color: red;*/
+/*    font-size: xxx-large;*/
+/*    background-color: black;*/
+/*    transform: rotate(360deg);*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+/*.material-icons {*/
+/*    padding: 20px;*/
+/*}*/
+
+
+/*.title {*/
+/*    border-bottom: 3px solid black;*/
+/*}*/
+
+
+/*.card-footer span{*/
+/*    transition: 1s;*/
+/*}*/
+
+
+/*.card-footer span:hover{*/
+/*    transition: 1s;*/
+/*    color: hotpink;*/
+/*    background-color: black;*/
+/*    cursor: pointer;*/
+/*    font-size: 50px;*/
+/*    border-radius: 50px;*/
+/*}*/
