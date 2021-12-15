@@ -214,3 +214,26 @@
 /*    font-size: 50px;*/
 /*    border-radius: 50px;*/
 /*}*/
+
+
+@media screen and (max-width: 425px){
+
+    h1 {
+        text-align: center;
+    }
+
+    button {
+        margin-left: 125px;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    div ul li {
+        list-style-type: none;
+        text-decoration: none;
+    }
+}
