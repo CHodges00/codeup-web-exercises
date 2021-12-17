@@ -343,16 +343,21 @@
         height: 60px;
         border: 1px solid black;
         border-radius: 0 0 10px 10px;
-        background-color: grey;
         justify-content: space-between;
         margin-bottom: 100px;
+        background-color: #212529;
     }
     .img-foot p{
-
+    padding-left: 12px;
+        padding-right: 12px;
     }
     .img-foot p span {
-        
+    font-size: 14px;
 }
+    .apple hr {
+        width: 30%;
+        margin-right: 655px;
+    }
 }
 
 
