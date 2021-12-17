@@ -207,14 +207,24 @@
     }
 
     .large-img img {
-        height: 370px;
-        width: 890px;
+        height: 368px;
+        width: 900px;
         border: 1px solid black;
         border-radius: 10px;
     }
 
     .bottom-img {
-        
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+    .bottom-img img {
+
+        width: 285px;
+        height: 165px;
+        margin-right: 17px;
+        border: 1px solid black;
+        border-radius: 10px;
     }
 }
 
