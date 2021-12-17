@@ -174,6 +174,49 @@
 /*-------------------*/
 /*------------------*/
 
+@media screen and (max-width: 980px) {
+
+
+    body {
+        background-color: #353630;
+        color: white;
+        font-family: 'Karla', sans-serif;
+    }
+
+    a {
+        color: white;
+    }
+
+
+    .whole {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        display: flex;
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    .large-img {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 13px;
+    }
+
+    .large-img img {
+        height: 370px;
+        width: 890px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .bottom-img {
+        
+    }
+}
 
 
 
@@ -182,11 +225,8 @@
 
 
 
-
-
-
-
-
+/* !!!!!!!!!! SET MEDIA QUERY FOR MAX WITH THAT PAGE CAN BE CLOSED, NOT ''(MAX-WIDTH)''
+               LIKE APPLE TV APP !!!!!!!!!!!!!!!!*/
 
 
 
