@@ -186,6 +186,14 @@
     a {
         color: white;
     }
+    hr {
+        width: 93%;
+        border:  1px solid grey;
+        height: 1px;
+        background-color: #353630;
+        border-radius: 100px;
+        margin-bottom: 50px;
+    }
 
 
     .whole {
@@ -194,10 +202,14 @@
     }
 
     .header {
-        display: flex;
         margin-top: 30px;
-        margin-left: 40px;
+        margin-left: 33px;
     }
+    .header2 {
+        margin-left: 33px;
+        margin-bottom: 0;
+    }
+
 
     .large-img {
         display: flex;
@@ -219,12 +231,15 @@
         margin-left: 30px;
     }
     .bottom-img img {
-
         width: 285px;
         height: 165px;
         margin-right: 17px;
         border: 1px solid black;
         border-radius: 10px;
+    }
+    .bottom-img p {
+        padding: 0;
+        margin: 5px 0px 18px 0px;
     }
 }
 
