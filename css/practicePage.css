@@ -1,170 +1,212 @@
-body, html {
-    background-color: gray;
-    margin: 0;
-}
+/*body, html {*/
+/*    background-color: gray;*/
+/*    margin: 0;*/
+/*}*/
 
-a {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: white;
-}
+/*a {*/
+/*    display: inline-block;*/
+/*    position: relative;*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*}*/
 
-a:hover {
-    color: hotpink;
-}
-
-
-.nav-bar {
-    background-color: black;
-    box-shadow: 0 3px 5px hotpink;
-    display: flex;
-    width: 100%;
-}
+/*a:hover {*/
+/*    color: hotpink;*/
+/*}*/
 
 
-#nav-logo {
-    margin-right: 300px;
-    margin-left: 480px;
-}
+/*.nav-bar {*/
+/*    background-color: black;*/
+/*    box-shadow: 0 3px 5px hotpink;*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*}*/
 
-.nav-bar a {
-    margin: auto;
-    align-content: center;
-}
 
-.menu-btn {
-    margin-left: 60px;
-    margin-top: 70px;
-    transition: all 1s ease-in-out;
-}
+/*#nav-logo {*/
+/*    margin-right: 300px;*/
+/*    margin-left: 480px;*/
+/*}*/
 
-.menu-btn_burger {
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 5px hotpink;
-    transition: all 1s ease-in-out;
-}
+/*.nav-bar a {*/
+/*    margin: auto;*/
+/*    align-content: center;*/
+/*}*/
 
-.menu-btn_burger::before,
-.menu-btn_burger::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px hotpink;
-    transition: all 2s ease-in-out;
-}
+/*.menu-btn {*/
+/*    margin-left: 60px;*/
+/*    margin-top: 70px;*/
+/*    transition: all 1s ease-in-out;*/
+/*}*/
 
-.menu-btn_burger::before {
-    transform: translateY(-15px);
-}
+/*.menu-btn_burger {*/
+/*    width: 50px;*/
+/*    height: 6px;*/
+/*    background: white;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 3px 5px hotpink;*/
+/*    transition: all 1s ease-in-out;*/
+/*}*/
 
-.menu-btn_burger::after {
-    transform: translateY(15px);
-}
+/*.menu-btn_burger::before,*/
+/*.menu-btn_burger::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 50px;*/
+/*    height: 6px;*/
+/*    background: white;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 2px 5px hotpink;*/
+/*    transition: all 2s ease-in-out;*/
+/*}*/
 
-.menu-btn.open .menu-btn_burger {
-    transform: translateY(0px);
-    background: transparent;
-}
+/*.menu-btn_burger::before {*/
+/*    transform: translateY(-15px);*/
+/*}*/
 
-.menu-btn.open .menu-btn_burger::before {
-    transform: rotate(300deg) translate(15px, -30px);
-}
+/*.menu-btn_burger::after {*/
+/*    transform: translateY(15px);*/
+/*}*/
 
-.menu-btn.open .menu-btn_burger::after {
-    transform: rotate(300deg) translate(-20px, 30px);
-}
+/*.menu-btn.open .menu-btn_burger {*/
+/*    transform: translateY(0px);*/
+/*    background: transparent;*/
+/*}*/
 
-.middle {
-    display: flex;
-    /*display: flex;*/
-    flex-direction: row;
-    align-items: center;
-    margin-top: 200px;
-    background-color: black;
-    box-shadow: 0px 0px 10px 10px hotpink;
-    border: 100px solid black;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+/*.menu-btn.open .menu-btn_burger::before {*/
+/*    transform: rotate(300deg) translate(15px, -30px);*/
+/*}*/
 
-.middle h2 {
-    color: white;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-size: 25px;
-    margin-right: 20px;
-}
+/*.menu-btn.open .menu-btn_burger::after {*/
+/*    transform: rotate(300deg) translate(-20px, 30px);*/
+/*}*/
 
-.middle a {
-    font-size: 25px;
-    margin-left: 100px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    text-align: center;
-    justify-items: center;
-}
+/*.middle {*/
+/*    display: flex;*/
+/*    !*display: flex;*!*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    margin-top: 200px;*/
+/*    background-color: black;*/
+/*    box-shadow: 0px 0px 10px 10px hotpink;*/
+/*    border: 100px solid black;*/
+/*    padding-top: 20px;*/
+/*    padding-bottom: 20px;*/
+/*}*/
 
-.middle img {
-    border: 10px double black;
-    margin-right: 20px;
-}
+/*.middle h2 {*/
+/*    color: white;*/
+/*    writing-mode: vertical-rl;*/
+/*    text-orientation: upright;*/
+/*    font-size: 25px;*/
+/*    margin-right: 20px;*/
+/*}*/
 
-.middle2 {
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-}
+/*.middle a {*/
+/*    font-size: 25px;*/
+/*    margin-left: 100px;*/
+/*    writing-mode: vertical-rl;*/
+/*    text-orientation: upright;*/
+/*    text-align: center;*/
+/*    justify-items: center;*/
+/*}*/
 
-#head2 {
-    text-align: center;
-    font-size: 100px;
-}
+/*.middle img {*/
+/*    border: 10px double black;*/
+/*    margin-right: 20px;*/
+/*}*/
 
-.middle2 h3 {
-    text-align: center;
-}
+/*.middle2 {*/
+/*    display: inline-flex;*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*}*/
 
-.middle2 p {
-    margin-left: 220px;
-    margin-right: 220px;
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px 10px hotpink;
-}
-footer {
-    display: flex;
-    border: 2px solid black;
-    margin-top: 10px;
-    justify-content: space-between;
-}
+/*#head2 {*/
+/*    text-align: center;*/
+/*    font-size: 100px;*/
+/*}*/
 
-.foot-left {
-    border: 2px solid black;
-    margin-left: 60px;
-    padding-top: 20px;
-}
+/*.middle2 h3 {*/
+/*    text-align: center;*/
+/*}*/
 
-footer h2 {
-    margin-left: 10px;
-}
+/*.middle2 p {*/
+/*    margin-left: 220px;*/
+/*    margin-right: 220px;*/
+/*    border: 1px solid black;*/
+/*    box-shadow: 0px 0px 10px 10px hotpink;*/
+/*}*/
+/*footer {*/
+/*    display: flex;*/
+/*    border: 2px solid black;*/
+/*    margin-top: 10px;*/
+/*    justify-content: space-between;*/
+/*}*/
 
-.foot-right {
-    align-content: flex-end;
-    border: 2px solid black;
-    margin: auto;
-}
+/*.foot-left {*/
+/*    border: 2px solid black;*/
+/*    margin-left: 60px;*/
+/*    padding-top: 20px;*/
+/*}*/
 
-.icons {
-    margin-top: 20px;
-    margin-right: 75px;
-}
+/*footer h2 {*/
+/*    margin-left: 10px;*/
+/*}*/
 
-.material-icons {
+/*.foot-right {*/
+/*    align-content: flex-end;*/
+/*    border: 2px solid black;*/
+/*    margin: auto;*/
+/*}*/
 
-}
+/*.icons {*/
+/*    margin-top: 20px;*/
+/*    margin-right: 75px;*/
+/*}*/
+
+/*.material-icons {*/
+
+/*}*/
+
+/*-----------NEW PRACTICE !!!!! ---------*/
+/*--------------------*/
+/*-------------------*/
+/*------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
