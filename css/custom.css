@@ -32,5 +32,11 @@
     color: grey;
 }
 
+.form-inline button{
+    height: 35px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+}
 
 
