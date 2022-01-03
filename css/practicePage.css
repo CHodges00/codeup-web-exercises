@@ -174,195 +174,230 @@
 /*-------------------*/
 /*------------------*/
 
-@media screen and (max-width: 980px) {
+/*@media screen and (max-width: 980px) {*/
 
 
-    body {
-        background-color: #353630;
-        color: white;
-        font-family: 'Karla', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+/*    body {*/
+/*        background-color: #353630;*/
+/*        color: white;*/
+/*        font-family: 'Karla', sans-serif;*/
+/*        margin: 0;*/
+/*        padding: 0;*/
+/*    }*/
 
-    a {
-        color: white;
-    }
-
-
-    .whole {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
-    }
-
-    .header {
-        margin-top: 100px;
-        margin-left: 40px;
-    }
-
-    .header2 {
-        margin-left: 40px;
-        margin-top: 15px;
-    }
+/*    a {*/
+/*        color: white;*/
+/*    }*/
 
 
-    .large-img {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+/*    .whole {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        margin-top: 30px;*/
+/*    }*/
 
-    .large-img img {
-        height: 368px;
-        width: 902px;
-        border: 1px solid black;
-        border-radius: 10px;
-    }
+/*    .header {*/
+/*        margin-top: 100px;*/
+/*        margin-left: 40px;*/
+/*    }*/
 
-
-    .bottom-img {
-        display: flex;
-        flex-direction: row;
-        margin-left: 40px;
-    }
-
-    .bottom-img img {
-        width: 285px;
-        height: 155px;
-        margin-right: 17px;
-        border: 1px solid black;
-        border-radius: 10px;
-    }
-
-    .bottom-img p {
-        padding: 0;
-        margin-bottom: 20px;
-        margin-top: 9px;
-    }
+/*    .header2 {*/
+/*        margin-left: 40px;*/
+/*        margin-top: 15px;*/
+/*    }*/
 
 
-    .bonus {
-        margin-left: 40px;
-    }
+/*    .large-img {*/
+/*        display: flex;*/
+/*        justify-content: space-around;*/
+/*        align-items: center;*/
+/*    }*/
 
-    .bonus-img img {
-        width: 285px;
-        height: 160px;
-        margin-right: 17px;
-        border: 1px solid black;
-        border-radius: 10px;
-    }
-
-    .bonus-img {
-        display: flex;
-    }
-
-    .bonus-img p {
-        padding: 0;
-        margin-bottom: 20px;
-        margin-top: 9px;
-    }
+/*    .large-img img {*/
+/*        height: 368px;*/
+/*        width: 902px;*/
+/*        border: 1px solid black;*/
+/*        border-radius: 10px;*/
+/*    }*/
 
 
-    .related {
-        margin-left: 40px;
-    }
+/*    .bottom-img {*/
+/*        display: flex;*/
+/*        flex-direction: row;*/
+/*        margin-left: 40px;*/
+/*    }*/
 
-    .link-line {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 40px;
-    }
+/*    .bottom-img img {*/
+/*        width: 285px;*/
+/*        height: 155px;*/
+/*        margin-right: 17px;*/
+/*        border: 1px solid black;*/
+/*        border-radius: 10px;*/
+/*    }*/
 
-    .link-line a {
-        text-decoration: none;
-        color: #0096C7;
-    }
-
-    .related-img img {
-        width: 285px;
-        height: 160px;
-        margin-right: 17px;
-        border: 1px solid black;
-        border-radius: 10px;
-    }
-
-    .related-img {
-        display: flex;
-        margin-bottom: 20px;
-    }
-
-    .cast {
-        margin-left: 40px;
-    }
-    .crew-img {
-        display: flex;
-        text-align: center;
-    }
-    .crew-img img{
-        width: 135px;
-        height: 135px;
-        border: 1px solid black;
-        border-radius: 100px;
-        margin-right: 15px;
-    }
-    .crew-img p {
-        padding: 0;
-        margin: 0;
-        font-size: 13px;
-    }
-    .cast h3 {
-    margin-bottom: 10px;
-        padding: 0;
-    }
-    .crew-img span {
-        font-size: small;
-        color: #ADB5BD;
-    }
+/*    .bottom-img p {*/
+/*        padding: 0;*/
+/*        margin-bottom: 20px;*/
+/*        margin-top: 9px;*/
+/*    }*/
 
 
+/*    .bonus {*/
+/*        margin-left: 40px;*/
+/*    }*/
+
+/*    .bonus-img img {*/
+/*        width: 285px;*/
+/*        height: 160px;*/
+/*        margin-right: 17px;*/
+/*        border: 1px solid black;*/
+/*        border-radius: 10px;*/
+/*    }*/
+
+/*    .bonus-img {*/
+/*        display: flex;*/
+/*    }*/
+
+/*    .bonus-img p {*/
+/*        padding: 0;*/
+/*        margin-bottom: 20px;*/
+/*        margin-top: 9px;*/
+/*    }*/
 
 
-    .how {
-        margin-top: 20px;
-        margin-left: 40px;
-    }
-    .apple img {
-        width: 285px;
-        height: 160px;
-        border: 1px solid black;
-        border-radius: 10px 10px 0 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    .img-foot {
-        display: flex;
-        width: 285px;
-        height: 60px;
-        border: 1px solid black;
-        border-radius: 0 0 10px 10px;
-        justify-content: space-between;
-        margin-bottom: 100px;
-        background-color: #212529;
-    }
-    .img-foot p{
-    padding-left: 12px;
-        padding-right: 12px;
-    }
-    .img-foot p span {
-    font-size: 14px;
+/*    .related {*/
+/*        margin-left: 40px;*/
+/*    }*/
+
+/*    .link-line {*/
+/*        display: flex;*/
+/*        justify-content: space-between;*/
+/*        align-items: center;*/
+/*        margin-right: 40px;*/
+/*    }*/
+
+/*    .link-line a {*/
+/*        text-decoration: none;*/
+/*        color: #0096C7;*/
+/*    }*/
+
+/*    .related-img img {*/
+/*        width: 285px;*/
+/*        height: 160px;*/
+/*        margin-right: 17px;*/
+/*        border: 1px solid black;*/
+/*        border-radius: 10px;*/
+/*    }*/
+
+/*    .related-img {*/
+/*        display: flex;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+
+/*    .cast {*/
+/*        margin-left: 40px;*/
+/*    }*/
+/*    .crew-img {*/
+/*        display: flex;*/
+/*        text-align: center;*/
+/*    }*/
+/*    .crew-img img{*/
+/*        width: 135px;*/
+/*        height: 135px;*/
+/*        border: 1px solid black;*/
+/*        border-radius: 100px;*/
+/*        margin-right: 15px;*/
+/*    }*/
+/*    .crew-img p {*/
+/*        padding: 0;*/
+/*        margin: 0;*/
+/*        font-size: 13px;*/
+/*    }*/
+/*    .cast h3 {*/
+/*    margin-bottom: 10px;*/
+/*        padding: 0;*/
+/*    }*/
+/*    .crew-img span {*/
+/*        font-size: small;*/
+/*        color: #ADB5BD;*/
+/*    }*/
+
+
+/*    .how {*/
+/*        margin-top: 20px;*/
+/*        margin-left: 40px;*/
+/*    }*/
+/*    .apple img {*/
+/*        width: 285px;*/
+/*        height: 160px;*/
+/*        border: 1px solid black;*/
+/*        border-radius: 10px 10px 0 0;*/
+/*        margin-bottom: 0;*/
+/*        padding-bottom: 0;*/
+/*    }*/
+/*    .img-foot {*/
+/*        display: flex;*/
+/*        width: 285px;*/
+/*        height: 60px;*/
+/*        border: 1px solid black;*/
+/*        border-radius: 0 0 10px 10px;*/
+/*        justify-content: space-between;*/
+/*        margin-bottom: 100px;*/
+/*        background-color: #212529;*/
+/*    }*/
+/*    .img-foot p{*/
+/*    padding-left: 12px;*/
+/*        padding-right: 12px;*/
+/*    }*/
+/*    .img-foot p span {*/
+/*    font-size: 14px;*/
+/*}*/
+/*    .apple hr {*/
+/*        width: 30%;*/
+/*        margin-right: 655px;*/
+/*    }*/
+/*}*/
+
+
+/*!* !!!!!!!!!! SET MEDIA QUERY FOR MAX WITH THAT PAGE CAN BE CLOSED, NOT ''(MAX-WIDTH)''*/
+/*               LIKE APPLE TV APP !!!!!!!!!!!!!!!!*/
+
+
+
+body {
+    background-color: lightgray;
 }
-    .apple hr {
-        width: 30%;
-        margin-right: 655px;
-    }
+
+main {
+    background-color: grey;
+    padding-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    color: lightsteelblue;
 }
 
 
-/* !!!!!!!!!! SET MEDIA QUERY FOR MAX WITH THAT PAGE CAN BE CLOSED, NOT ''(MAX-WIDTH)''
-               LIKE APPLE TV APP !!!!!!!!!!!!!!!!*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
