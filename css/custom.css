@@ -1,55 +1,55 @@
-@media (max-width: 500px){
-    .jumbotron {
-        display: none;
-    }
-}
+/*@media (max-width: 500px){*/
+/*    .jumbotron {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
 
 
-.jumbotron {
-    background-image: url("../assets/pizza.png");
-    background-size: cover;
-}
+/*.jumbotron {*/
+/*    background-image: url("../assets/pizza.png");*/
+/*    background-size: cover;*/
+/*}*/
 
 
-.jumbotron h1{
-    background-color: rgb(245,245,245,0.5);
-    text-align: center;
-}
+/*.jumbotron h1{*/
+/*    background-color: rgb(245,245,245,0.5);*/
+/*    text-align: center;*/
+/*}*/
 
 
-.card {
-    border: 1px solid lightgray;
-}
+/*.card {*/
+/*    border: 1px solid lightgray;*/
+/*}*/
 
 
-.card-title {
-    font-size: 18px;
-    padding: 10px;
-    color: white;
-}
+/*.card-title {*/
+/*    font-size: 18px;*/
+/*    padding: 10px;*/
+/*    color: white;*/
+/*}*/
 
-#right a{
-    color: grey;
-}
+/*#right a{*/
+/*    color: grey;*/
+/*}*/
 
-.form-inline button{
-    height: 35px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    color: grey;
-}
+/*.form-inline button{*/
+/*    height: 35px;*/
+/*    border: 1px solid grey;*/
+/*    border-radius: 5px;*/
+/*    color: grey;*/
+/*}*/
 
-.form-group {
-    padding-left: 20px;
-    padding-right: 20px;
-}
+/*.form-group {*/
+/*    padding-left: 20px;*/
+/*    padding-right: 20px;*/
+/*}*/
 
-.form-check {
-    border: 1px solid lightgray;
-    padding-left: 35px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+/*.form-check {*/
+/*    border: 1px solid lightgray;*/
+/*    padding-left: 35px;*/
+/*    padding-top: 5px;*/
+/*    padding-bottom: 5px;*/
+/*}*/
 
 
 
