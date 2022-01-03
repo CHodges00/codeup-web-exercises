@@ -1,0 +1,161 @@
+body {
+    display: inline-block;
+    padding: 15px;
+}
+
+alert-info a {
+    display: none;
+}
+
+.alert-info {
+    background-color: lightcyan;
+    border: 2px solid lightgray;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 3px;
+}
+
+
+.alert-info a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    font-family: "Arial Unicode MS";
+}
+
+.nav-links {
+    display: flex;
+    width: auto;
+    list-style-type: none;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.nav-links li {
+    background-color: lightgray;
+    text-align: center;
+    margin-left: 0;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.header-img img {
+    width: 100%;
+}
+
+.main {
+    font-family: "Arial Unicode MS";
+}
+
+.main p {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.main h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.sub-section {
+    margin-bottom: 80px;
+    font-family: "Arial Unicode MS";
+    font-style: italic;
+}
+
+.sub-section h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.sub-section p {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1;
+}
+
+footer p {
+    font-family: "Arial Unicode MS";
+    font-size: 12px;
+
+}
+
+
+/*Desktop styling*/
+@media screen and (min-width: 768px) {
+
+    body {
+        font-family: "Arial Unicode MS";
+        padding-top: 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .alert-info {
+        display: none;
+    }
+
+    h1 {
+        position: absolute;
+        font-size: 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        padding-bottom: 20px;
+    }
+
+    .nav-links li {
+        background-color: white;
+    }
+
+    .nav-links a {
+        color: blue;
+    }
+
+    .main {
+        line-height: 1;
+        display: inline-block;
+        width: 55%;
+    }
+
+    .main h2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .sub-section {
+        line-height: 1;
+        width: 40%;
+        float: right;
+        margin-right: 10px;
+    }
+
+    .sub-section h2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    footer {
+        font-size: small;
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+
+}
+
