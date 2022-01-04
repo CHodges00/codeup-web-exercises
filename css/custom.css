@@ -5,39 +5,28 @@
 /*}*/
 
 
-/*.jumbotron {*/
-/*    background-image: url("../assets/pizza.png");*/
-/*    background-size: cover;*/
-/*}*/
+.jumbotron {
+    background-image: url("../assets/pizza.png");
+    background-size: cover;
+}
 
 
-/*.jumbotron h1{*/
-/*    background-color: rgb(245,245,245,0.5);*/
-/*    text-align: center;*/
-/*}*/
+.jumbotron h1{
+    background-color: rgb(245,245,245,0.5);
+    text-align: center;
+}
 
 
-/*.card {*/
-/*    border: 1px solid lightgray;*/
-/*}*/
+#right a{
+    color: grey;
+}
 
-
-/*.card-title {*/
-/*    font-size: 18px;*/
-/*    padding: 10px;*/
-/*    color: white;*/
-/*}*/
-
-/*#right a{*/
-/*    color: grey;*/
-/*}*/
-
-/*.form-inline button{*/
-/*    height: 35px;*/
-/*    border: 1px solid grey;*/
-/*    border-radius: 5px;*/
-/*    color: grey;*/
-/*}*/
+.form-inline button{
+    height: 35px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+}
 
 /*.form-group {*/
 /*    padding-left: 20px;*/
