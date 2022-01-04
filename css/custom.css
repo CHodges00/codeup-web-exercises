@@ -2,6 +2,14 @@ body {
     margin: 10px;
 }
 
+#world {
+    color: black;
+}
+
+#menu{
+    color: black;
+}
+
 
 .jumbotron {
     background-image: url("../assets/pizza.png");
@@ -10,7 +18,9 @@ body {
 
 
 .jumbotron h1{
-    background-color: rgb(245,245,245,0.5);
+    background-color: white;
+    opacity: 55%;
+    font-size: xxx-large;
     text-align: center;
 }
 
