@@ -1,8 +1,8 @@
-/*@media (max-width: 500px){*/
-/*    .jumbotron {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
+@media (max-width: 500px){
+    .jumbotron {
+        display: none;
+    }
+}
 
 
 .jumbotron {
@@ -28,18 +28,29 @@
     color: grey;
 }
 
-/*.form-group {*/
-/*    padding-left: 20px;*/
-/*    padding-right: 20px;*/
-/*}*/
+.form-group {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
-/*.form-check {*/
-/*    border: 1px solid lightgray;*/
-/*    padding-left: 35px;*/
-/*    padding-top: 5px;*/
-/*    padding-bottom: 5px;*/
-/*}*/
+.form-check {
+    border: 1px solid lightgray;
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.words {
+    color: white;
+}
 
 
+.card-footer {
+    text-align: right;
+}
+
+button {
+    border-radius: 5px;
+}
 
 
