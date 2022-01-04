@@ -64,7 +64,95 @@ button {
 
 .navbar-nav a:hover {
     background-color: lightgray;
-} {
+}
+
+
+@media screen and (max-width:834px){
+
+    .form-inline {
+        display: none;
+    }
+
 
 }
 
+@media screen and (max-width:767px){
+
+    h2 {
+        text-align: center;
+        margin-top: 15px;
+        background-color: lightgray;
+    }
+
+
+}
+
+/*@media screen and (max-width:686px){*/
+/*    body {*/
+/*        background-color: #303A2B;*/
+/*    }*/
+
+
+
+/*    #home-tab, #profile-tab, #contact-tab {*/
+/*        text-align: center;*/
+/*        margin-left: 40px;*/
+/*        margin-top: 15px;*/
+/*        background-color: #F0DFAD;*/
+/*    }*/
+/*    #sign {*/
+/*        display: none;*/
+/*    }*/
+/*    .card-header {*/
+/*        background-color: #A89B8C;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    h2 {*/
+/*        background-color: #A89B8C;*/
+/*        border-radius: 5px;*/
+/*        text-shadow: 2.2px 1px #F0DFAD;*/
+/*    }*/
+
+/*    .card-header {*/
+/*        color: #F0DFAD;*/
+/*    }*/
+
+/*    .card-body {*/
+/*        background-color: #F0DFAD;*/
+/*    }*/
+
+/*    .card {*/
+/*        background-color: #A89B8C;*/
+/*    }*/
+
+/*    .form-control {*/
+/*        margin-top: 10px;*/
+/*        background-color: #F0DFAD;*/
+/*    }*/
+
+/*    input {*/
+/*        height: 20px;*/
+/*    }*/
+
+/*    .input-group-text {*/
+/*        margin-top: 10px;*/
+/*    }*/
+
+/*    .navbar {*/
+/*        background-color: #F0DFAD;*/
+/*    }*/
+
+/*    .navbar-nav {*/
+/*        display: flex;*/
+/*        flex-direction: row;*/
+/*        justify-content: space-evenly;*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .form-check {*/
+/*        border: 2px solid #303A2B;*/
+/*        box-shadow: 2px 2px #A89B8C;*/
+/*        margin: 4px;*/
+/*    }*/
+/*}*/
