@@ -1,5 +1,10 @@
 body {
     margin: 10px;
+    transform: rotate(360deg);
+    transition-delay: 3s;
+    transform: rotate3d(100,100,100,360deg);
+    transition-duration: 1s;
+
 }
 
 #world {
@@ -64,6 +69,12 @@ button {
 
 .navbar-nav a:hover {
     background-color: lightgray;
+}
+
+h1 {
+
+    transition: opacity;
+    transition-duration: 5s;
 }
 
 
