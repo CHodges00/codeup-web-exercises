@@ -10,3 +10,10 @@ $('#next-step').click(function (){
     $('#contact-tab').tab('show');
 });
 
+function addCheeseToOrder (){
+    let cheese = document.forms[2]
+    let x = $('#cheese option:selected').val();
+    console.log(x);
+    }
+
+
