@@ -78,8 +78,6 @@ h1 {
     .form-inline {
         display: none;
     }
-
-
 }
 
 @media screen and (max-width:767px){
@@ -87,10 +85,12 @@ h1 {
     h2 {
         text-align: center;
         margin-top: 15px;
-        background-color: lightgray;
+        background-color: #F0DFAD;
     }
-
-
+        .card-header {
+            background-color: #F0DFAD;
+            text-align: center;
+        }
 }
 
 /*@media screen and (max-width:686px){*/
@@ -109,10 +109,7 @@ h1 {
 /*    #sign {*/
 /*        display: none;*/
 /*    }*/
-/*    .card-header {*/
-/*        background-color: #A89B8C;*/
-/*        text-align: center;*/
-/*    }*/
+
 
 /*    h2 {*/
 /*        background-color: #A89B8C;*/
