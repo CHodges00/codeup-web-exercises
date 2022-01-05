@@ -10,10 +10,27 @@ $('#next-step').click(function (){
     $('#contact-tab').tab('show');
 });
 
-function addCheeseToOrder (){
+function addFirstToOrder (){
+    let crust = document.forms[1]
+    let order = '';
+    for (let i = 0; i < crust.length; i++){
+        if (crust[i].checked){
+            order = crust[i].value;
+        }
+    }console.log(order)
+}
+
+
+function addSecondToOrder (){
     let cheese = document.forms[2]
-    let x = $('#cheese option:selected').val();
-    console.log(x);
-    }
+    let a = $('#cheese option:selected').val();
+    console.log(a);
+    let b = $('#sauce option:selected').val();
+    console.log(b);
+    let c = $('#amount-sauce option:selected').val();
+    console.log(c);
+}
+
+
 
 
