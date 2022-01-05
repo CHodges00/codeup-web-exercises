@@ -56,7 +56,7 @@
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
-                                <input type="radio" name="crusts" value="hand-small" >
+                                <input type="radio" name="crusts" value="hand tossed small" >
                             </div>
                         </div>
                         <input type="text" class="form-control" placeholder=' Small (10")'>
@@ -65,7 +65,7 @@
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
-                                <input type="radio" name="crusts" value="hand-medium" >
+                                <input type="radio" name="crusts" value="hand tossed medium" >
                             </div>
                         </div>
                         <input type="text" class="form-control" placeholder='Medium (12")'>
@@ -79,7 +79,7 @@
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
-                                <input type="radio" name="crusts" value="thin-medium" >
+                                <input type="radio" name="crusts" value="thin crust medium" >
                             </div>
                         </div>
                         <input type="text" class="form-control" placeholder='Medium (12")'>
@@ -87,7 +87,7 @@
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
-                                <input type="radio" name="crusts" value="thin-large" >
+                                <input type="radio" name="crusts" value="thin crust large" >
                             </div>
                         </div>
                         <input type="text" class="form-control" placeholder='Large (14")'>
@@ -111,10 +111,10 @@
                         <div class="card-body">How Much?</div>
                         <div class="form-group">
                             <select class="form-control" id="cheese" >
-                                <option>Regular</option>
-                                <option>Normal</option>
-                                <option>Extra</option>
-                                <option>Double</option>
+                                <option value="no cheese" >None</option>
+                                <option value="normal cheese" >Normal</option>
+                                <option value="extra cheese" >Extra</option>
+                                <option value="double cheese" >Double</option>
                             </select>
                         </div>
                     </div>
@@ -161,25 +161,26 @@
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
         <div class="card">
             <div class="card-header white bg-primary active words">Choose Toppings</div>
+            <form id="toppings">
             <div class="card-body">
                 <div class="card">
                     <div class="card-header">Choose Meats</div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Beef</label>
+                            <input type="checkbox" class="form-check-input" value="+beef ">Beef</label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Ham</label>
+                            <input type="checkbox" class="form-check-input" value="+ham ">Ham</label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Philly Steak
+                            <input type="checkbox" class="form-check-input" value="+steak ">Philly Steak
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Bacon</label>
+                            <input type="checkbox" class="form-check-input" value="+bacon ">Bacon</label>
                     </div>
                 </div>
             </div>
@@ -188,26 +189,27 @@
                     <div class="card-header">Non-Meats</div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Green Peppers</label>
+                            <input type="checkbox" class="form-check-input" value="+green-pepper ">Green Peppers</label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Mushrooms</label>
+                            <input type="checkbox" class="form-check-input" value="+mushroom ">Mushrooms</label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Onions</label>
+                            <input type="checkbox" class="form-check-input" value="+onion ">Onions</label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Jalapeno Peppers</label>
+                            <input type="checkbox" class="form-check-input" value="+jalapeno">Jalapeno Peppers</label>
                     </div>
                 </div>
                 <br>
             </div>
             <div class="card-footer">
-                <button class="btn-primary btn-large ">Checkout <i class="bi bi-cart-fill"></i></button>
+                <button class="btn-primary btn-large" type="button" onclick="addThirdToOrder()" >Checkout <i class="bi bi-cart-fill"></i></button>
             </div>
+            </form>
         </div>
     </div>
 </div>

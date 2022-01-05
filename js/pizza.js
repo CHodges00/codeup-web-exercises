@@ -26,9 +26,18 @@ function addSecondToOrder (){
     let a = $('#cheese option:selected').val();
     console.log(a);
     let b = $('#sauce option:selected').val();
-    console.log(b);
     let c = $('#amount-sauce option:selected').val();
-    console.log(c);
+    console.log(b + ' ' + c);
+}
+
+function addThirdToOrder() {
+    let toppings = document.forms[3]
+    let extras = " ";
+    for (let i = 0; i < toppings.length; i++) {
+        if (toppings[i].checked) {
+            extras += toppings[i].value;
+        }
+    }console.log(extras);
 }
 
 
