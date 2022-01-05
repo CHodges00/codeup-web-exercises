@@ -10,9 +10,12 @@ $('#next-step').click(function (){
     $('#contact-tab').tab('show');
 });
 
+
+
+// CRUST FUNCTION
+let crust = document.forms[1]
+let order = '';
 function addFirstToOrder (){
-    let crust = document.forms[1]
-    let order = '';
     for (let i = 0; i < crust.length; i++){
         if (crust[i].checked){
             order = crust[i].value;
@@ -21,18 +24,21 @@ function addFirstToOrder (){
 }
 
 
+// CHEESE AND SAUCE FUNCTION
+let a = $('#cheese option:selected').val();
+let b = $('#sauce option:selected').val();
+let c = $('#amount-sauce option:selected').val();
 function addSecondToOrder (){
     let cheese = document.forms[2]
-    let a = $('#cheese option:selected').val();
     console.log(a);
-    let b = $('#sauce option:selected').val();
-    let c = $('#amount-sauce option:selected').val();
-    console.log(b + ' ' + c);
+    console.log(c + ' ' + b);
 }
 
+
+// TOPPINGS FUNCTION
+let toppings = document.forms[3]
+let extras = " ";
 function addThirdToOrder() {
-    let toppings = document.forms[3]
-    let extras = " ";
     for (let i = 0; i < toppings.length; i++) {
         if (toppings[i].checked) {
             extras += toppings[i].value;
@@ -40,6 +46,10 @@ function addThirdToOrder() {
     }console.log(extras);
 }
 
+// ALERT FUNCTION
+function sendOrder () {
+    alert('Order Recieved For: ' + ' ' + order + ', ' + a + ', ' + c + ' ' + b + ', ' + extras)
+}
 
 
 
