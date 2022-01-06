@@ -1,0 +1,11 @@
+hr {
+    border: 3px solid green;
+}
+
+#head {
+    text-align: center;
+}
+
+.links p {
+    margin: 0;
+}
