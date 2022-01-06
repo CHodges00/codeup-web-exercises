@@ -1,5 +1,6 @@
 hr {
-    border: 3px solid green;
+    border: 3px solid mintcream;
+    box-shadow: 2px 2px purple;
 }
 
 #head {
@@ -8,4 +9,21 @@ hr {
 
 .links p {
     margin: 0;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    font-size: x-large;
+    background-color: grey;
+    color: mintcream;
+}
+
+h1 {
+    color: mintcream;
+    text-shadow: 2px 2px purple;
+}
+
+h2 {
+    color: mintcream;
+    text-shadow: 2px 2px purple;
 }
