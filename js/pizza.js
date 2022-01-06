@@ -31,7 +31,7 @@ let c = $('#amount-sauce option:selected').val();
 function addSecondToOrder (){
     let cheese = document.forms[2]
     console.log(a);
-    console.log(c + ' ' + b);
+    console.log(b + ' ' + c);
 }
 
 
