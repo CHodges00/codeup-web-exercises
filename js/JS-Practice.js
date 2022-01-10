@@ -74,6 +74,11 @@ console.log('next function')
 console.log('next function');
 
     // RETURN STR 133*
-function return133 (str){
-    
+var str133 = '1';
+for (var i = 0; i < 3; i += 1){ // i < 134
+    console.log(str133)
 }
+
+console.log('next function');
+
+
