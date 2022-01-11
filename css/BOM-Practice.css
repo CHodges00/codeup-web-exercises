@@ -1,0 +1,20 @@
+
+
+#top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button {
+    border: 5px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 40px red;
+}
+
