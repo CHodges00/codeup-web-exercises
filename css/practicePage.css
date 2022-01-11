@@ -461,8 +461,8 @@ h5 {
 /*    align-content: center;*/
 /*}*/
 .ipad {
-    margin-left: 25px;
-    width: 90%;
+
+    width: 100%;
     border: 10px solid #e6e6e6;
     border-radius: 10px;
 }
@@ -470,8 +470,8 @@ h5 {
 figcaption {
     /*padding-left: 20px;*/
     /*padding-right: 40px;*/
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
 }
 
 
@@ -489,11 +489,7 @@ figcaption {
 #circle8 {
     margin-right: 40px;
 }
-#p1 {
-    margin-left: 20px;
-    margin-bottom: 0;
-    margin-top: 6px;
-}
+
 .font-size-48 {
     font-size: 64px;
 }
@@ -561,6 +557,15 @@ figcaption {
     }
 }
 
+@media screen and (min-width:768px) {
+
+    #codeup {
+        font-size: 28px;
+        position: relative;
+        right: 20px;
+        top: 7px;
+    }
+}
 
 
 
