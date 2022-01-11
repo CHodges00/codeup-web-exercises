@@ -19,7 +19,7 @@
     var interval = 1000;
     let timer = setInterval(updateTimer,interval);
     function updateTimer() {
-        if (detonationTimer == 0) {
+        if (detonationTimer === 0) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
