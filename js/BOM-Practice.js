@@ -64,6 +64,14 @@
     }
     var defuser = document.getElementById('button');
     defuser.addEventListener('click', defuse);
+
 })();
+
+
+// var delay = 5000; // delay time in milliseconds
+//
+// var timeoutId = setTimeout(function () {
+//     window.location = 'https://www.google.com';
+// }, delay);
 
 

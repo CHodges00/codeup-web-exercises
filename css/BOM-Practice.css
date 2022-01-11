@@ -5,16 +5,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 650px;
+    margin-left: 600px;
 }
 body {
-    height: 500px;
+    height: 600px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url("../assets/endofworld.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: red;
+    text-shadow: 0 0 5px black;
 }
 #button {
+    font-size: 20px;
     border: 5px solid black;
     border-radius: 20px;
-    box-shadow: 0 0 40px red;
+    box-shadow: 0 0 10px red;
 }
 
