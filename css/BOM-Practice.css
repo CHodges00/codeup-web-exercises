@@ -1,4 +1,8 @@
-
+#body img, #body video{
+    width: 1500px;
+    height: 850px;
+    position: absolute;
+}
 
 #top {
     display: flex;
@@ -7,13 +11,13 @@
     align-items: center;
     margin-top: 650px;
     margin-left: 600px;
+    z-index: 1000;
 }
 body {
     height: 600px;
     display: flex;
-    background-image: url("../assets/endofworld.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
     color: red;
     text-shadow: 0 0 5px black;
 }

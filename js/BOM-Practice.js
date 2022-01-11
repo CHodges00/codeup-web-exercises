@@ -39,7 +39,7 @@
 
 
 (function detonate () {
-    var time = 10;
+    var time = 7;
     var interval = 1000;
     let timer = setInterval(updateTimer, interval);
 
@@ -55,12 +55,19 @@
 
     function defuse(){
         clearInterval(timer);
+        document.getElementById('header').innerHTML = 'Hello, World !';
         document.getElementById('message').innerHTML = 'You live to fight another day !'
+        document.getElementById('body').innerHTML = '<video autoplay muted loop class="puppiness">\n' +
+            '    <source src="../assets/puppiness.webm">\n' +
+            '    <source src="../assets/puppiness.mp4">\n' +
+            '    <source src="../assets/puppiness.ogv">\n' +
+            '</video>';
         document.getElementById('button').innerHTML = 'Or do you ?'
         document.getElementById('button').addEventListener('click', newButton);
     }
     let newButton = function (){
         location.reload();
+
     }
     var defuser = document.getElementById('button');
     defuser.addEventListener('click', defuse);
