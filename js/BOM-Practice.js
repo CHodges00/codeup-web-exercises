@@ -57,7 +57,8 @@
         clearInterval(timer);
         document.getElementById('header').innerHTML = 'Hello, World !';
         document.getElementById('message').innerHTML = 'You live to fight another day !'
-        document.getElementById('body').innerHTML = '<video autoplay muted loop class="puppiness">\n' +
+        document.getElementById('body').innerHTML =
+            '<video autoplay muted loop class="puppiness">\n' +
             '    <source src="../assets/puppiness.webm">\n' +
             '    <source src="../assets/puppiness.mp4">\n' +
             '    <source src="../assets/puppiness.ogv">\n' +
