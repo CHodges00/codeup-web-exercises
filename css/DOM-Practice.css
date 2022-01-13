@@ -1,9 +1,7 @@
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background-color: grey;
+    color: white;
 }
 
 /*WHOLE*/
@@ -13,27 +11,71 @@ body {
 
 /*TOP*/
 .top {
-
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+h1 {
+    font-size: 62px;
+}
+
 
 /*MIDDLE*/
 .middle {
-
+    display: flex;
+    justify-content: space-around;
+    font-size: 36px;
 }
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 /*BOTTOM*/
 .bottom {
-display: flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
 }
 
 /*BUTTONS*/
 button {
-    width: 100px;
+    width: 150px;
     height: 45px;
     color: blue;
     font-size: 32px;
     font-family: Phosphate, sans-serif;
     font-weight: bolder;
+    background-color: lightgray;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 2px blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CARDS*/
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 2px blue;
+}
+
+/*IMAGES*/
+img {
+    width: 250px;
+    height: 400px;
+    margin-bottom: 30px;
 }
