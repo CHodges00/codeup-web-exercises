@@ -66,6 +66,12 @@ let newMovies = '  <div class="col-5 cards">\n' +
     '        </div>';
 
 
+// let html = '<div>\n' +
+//     '    <h2>\' + coffee.name + \'</h2>\n' +
+//     '    <p>\' + coffee.roast +\'</p>\n' +
+//     '</div>'
+
+
 
 
 
