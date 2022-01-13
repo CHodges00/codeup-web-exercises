@@ -1,0 +1,39 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*WHOLE*/
+.whole {
+
+}
+
+/*TOP*/
+.top {
+
+}
+
+/*MIDDLE*/
+.middle {
+
+}
+
+/*BOTTOM*/
+.bottom {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*BUTTONS*/
+button {
+    width: 100px;
+    height: 45px;
+    color: blue;
+    font-size: 32px;
+    font-family: Phosphate, sans-serif;
+    font-weight: bolder;
+}
