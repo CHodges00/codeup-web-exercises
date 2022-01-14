@@ -128,27 +128,41 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+              integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/DOM-Practice.css">
 </head>
 <body>
-<h1>Coffee!</h1>
+<h1>Coffees !!!!!!!!!!!!</h1>
 
 <form>
+    <h2>NAME IT</h2>
     <label for="searched-coffee"></label>
     <input id="searched-coffee">
-    <button id="searched-btn"></button>
+    <button id="searched-btn">SEARCH</button>
     <label for="roast-selection"></label>
+    <h2>THE ROAST</h2>
     <select id="roast-selection">
         <option>all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
+        <option>americano</option>
+        <option>iced</option>
+        <option>mocha</option>
     </select>
     <input id="submit" type="submit" />
+    <br>
 </form>
 
-<div id="cards">
+
+<div class='row' id="cards">
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
 <script src="js/DOM-Practice.js"></script>
 </body>
 </html>

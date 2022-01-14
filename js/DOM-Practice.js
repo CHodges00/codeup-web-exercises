@@ -111,7 +111,7 @@
 
 // RENDER HTML FOR COFFEES
 function renderCoffee(coffee) {
-    var html = '<div id=card><h2>' + coffee.name + '</h2><p>' + coffee.roast +'</p></div>';
+    var html = '<div class="col-3 mx-2 mb-5 p-0" id=card><h2>' + coffee.name + '</h2><img src="' + coffee.image + '"><p>' + coffee.roast +'</p></div>';
     return html;
 }
 
@@ -149,20 +149,20 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'americano', image:" assets/coffe-americano.jpeg"},
+    {id: 2, name: 'Half City', roast: 'americano', image:" assets/coffe-americano.jpeg"},
+    {id: 3, name: 'Cinnamon', roast: 'americano', image:" assets/coffe-americano.jpeg"},
+    {id: 4, name: 'City', roast: 'iced', image:" assets/coffee-iced.jpeg"},
+    {id: 5, name: 'American', roast: 'iced', image:" assets/coffee-iced.jpeg"},
+    {id: 6, name: 'Breakfast', roast: 'iced', image:" assets/coffee-iced.jpeg"},
+    {id: 7, name: 'High', roast: 'iced', image:" assets/coffee-iced.jpeg"},
+    {id: 8, name: 'Continental', roast: 'iced', image:" assets/coffee-iced.jpeg"},
+    {id: 9, name: 'New Orleans', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 10, name: 'European', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 11, name: 'Espresso', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 12, name: 'Viennese', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 13, name: 'Italian', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 14, name: 'French', roast: 'mocha', image:" assets/coffee-mocha.jpeg"}
 ];
 
 
@@ -173,7 +173,7 @@ var coffees = [
 
 
 
-// SHOW SEARCHED COFFEES WITH EXACT NAME ENTERED
+// SHOWS SEARCHED COFFEES WITH EXACT NAME ENTERED
 function searchCoffee(e) {
     e.preventDefault();
     let searched = document.getElementById('searched-coffee').value;
@@ -185,6 +185,18 @@ function searchCoffee(e) {
         }
     });
     tbody.innerHTML = renderCoffees(coffeeShowed);
+}
+
+function searchForACoffee() {
+    let desiredCoffee = document.getElementById('searched-coffee').value;
+    let coffeeChoice = [];
+
+    coffees.forEach(function (coffee) {
+        if (coffe.name.toLowerCase().replace(/\s+/g, '').includes(desiredCoffee)) {
+            coffeeChoice.push(coffee);
+        }
+    });
+    tbody.innerHTML = createColumns(coffeeChoice);
 }
 
 // BOTTOM OF JS

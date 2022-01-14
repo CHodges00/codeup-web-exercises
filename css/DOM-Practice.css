@@ -1,81 +1,41 @@
-
 body {
     background-color: grey;
-    color: white;
+    color: sandybrown;
+    text-shadow: 1px 1px 10px red;
 }
 
-/*WHOLE*/
-.whole {
-
-}
-
-/*TOP*/
-.top {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-h1 {
-    font-size: 62px;
-}
-
-
-/*MIDDLE*/
-.middle {
-    display: flex;
-    justify-content: space-around;
-    font-size: 36px;
-}
-h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-/*BOTTOM*/
-.bottom {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 70px;
-}
-
-/*BUTTONS*/
-button {
-    width: 150px;
-    height: 45px;
-    color: blue;
-    font-size: 32px;
-    font-family: Phosphate, sans-serif;
-    font-weight: bolder;
-    background-color: lightgray;
-    border: 3px solid black;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 2px blue;
+form {
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    background-color: sandybrown;
+}
+
+.col-3 {
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 1px 1px 50px darkgoldenrod ;
+}
+
+.row {
     justify-content: center;
 }
 
-/*CARDS*/
-.cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 2px blue;
+p {
+    font-size: 36px;
+    border-top: 10px solid goldenrod;
 }
 
-/*IMAGES*/
-img {
-    width: 250px;
-    height: 400px;
-    margin-bottom: 30px;
+.row h2 {
+    border-bottom: 10px solid goldenrod;
+    margin-bottom: 0;
 }
+
+
+
+
