@@ -180,7 +180,7 @@ function searchCoffee(e) {
     let coffeeShowed = [];
 
     coffees.forEach(function (coffee) {
-        if (coffee.name === searched) {
+        if (coffee.name.toLowerCase().replace(/\s+/g, '').includes(coffeeShowed)) {
             coffeeShowed.push(coffee)
         }
     });
@@ -193,14 +193,6 @@ search.addEventListener('click', searchCoffee);
 
 var tbody = document.querySelector('#cards');
 tbody.innerHTML = renderCoffees(coffees);
-
-
-
-
-
-
-
-
 
 
 
