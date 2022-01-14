@@ -40,30 +40,30 @@
 
 
 
-let newMovies = '  <div class="col-5 cards">\n' +
-    '            <h2 class="titles">HAPPY FEET TWO</h2>\n' +
-    '            <img src="assets/movie1.jpeg">\n' +
-    '            <p>RELEASE YEAR : 2011</p>\n' +
-    '            <p>LIFETIME GROSS : $157,956,466</p>\n' +
-    '        </div>\n' +
-    '        <div class="col-5 cards">\n' +
-    '            <h2 class="titles">STAR WARS</h2>\n' +
-    '            <img src="assets/movie2.jpeg">\n' +
-    '            <p>RELEASE YEAR : 2019</p>\n' +
-    '            <p>LIFETIME GROSS : $1,072,848,487</p>\n' +
-    '        </div>\n' +
-    '        <div class="col-5 cards">\n' +
-    '            <h2 class="titles">HARRY-POTTER</h2>\n' +
-    '            <img src="assets/movie3.jpeg">\n' +
-    '            <p>RELEASE YEAR : 2007</p>\n' +
-    '            <p>LIFETIME GROSS : $940,043,931</p>\n' +
-    '        </div>\n' +
-    '        <div class="col-5 cards">\n' +
-    '            <h2 class="titles">BEACHBUM</h2>\n' +
-    '            <img src="assets/movie4.jpeg">\n' +
-    '            <p>RELEASE YEAR : 2019</p>\n' +
-    '            <p>LIFETIME GROSS : $4,267,808</p>\n' +
-    '        </div>';
+// let newMovies = '  <div class="col-5 cards">\n' +
+//     '            <h2 class="titles">HAPPY FEET TWO</h2>\n' +
+//     '            <img src="assets/movie1.jpeg">\n' +
+//     '            <p>RELEASE YEAR : 2011</p>\n' +
+//     '            <p>LIFETIME GROSS : $157,956,466</p>\n' +
+//     '        </div>\n' +
+//     '        <div class="col-5 cards">\n' +
+//     '            <h2 class="titles">STAR WARS</h2>\n' +
+//     '            <img src="assets/movie2.jpeg">\n' +
+//     '            <p>RELEASE YEAR : 2019</p>\n' +
+//     '            <p>LIFETIME GROSS : $1,072,848,487</p>\n' +
+//     '        </div>\n' +
+//     '        <div class="col-5 cards">\n' +
+//     '            <h2 class="titles">HARRY-POTTER</h2>\n' +
+//     '            <img src="assets/movie3.jpeg">\n' +
+//     '            <p>RELEASE YEAR : 2007</p>\n' +
+//     '            <p>LIFETIME GROSS : $940,043,931</p>\n' +
+//     '        </div>\n' +
+//     '        <div class="col-5 cards">\n' +
+//     '            <h2 class="titles">BEACHBUM</h2>\n' +
+//     '            <img src="assets/movie4.jpeg">\n' +
+//     '            <p>RELEASE YEAR : 2019</p>\n' +
+//     '            <p>LIFETIME GROSS : $4,267,808</p>\n' +
+//     '        </div>';
 
 
 // let html = '<div>\n' +
@@ -72,6 +72,20 @@ let newMovies = '  <div class="col-5 cards">\n' +
 //     '</div>'
 
 
+// MORNING PRACTICE
 
+// Make a program that filters through this array:
+// ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
+// and returns a new array that contains only those whose name have only 4 letters in them.
 
+let names = ['ryan', 'kieran', 'jason', 'mary', 'jo', 'jake']
 
+function findNames () {
+    let newArr = [];
+    for (i = 0; i < names.length; i++) {
+        if (names[i].length === 4) {
+            newArr += names[i];
+        }
+        return newArr;
+    }
+}
