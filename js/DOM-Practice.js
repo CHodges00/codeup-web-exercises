@@ -89,7 +89,8 @@
 //         return newArr;
 //     }
 // }
-
+//
+// console.log(findNames());
 
 
 
@@ -129,6 +130,7 @@ var coffees = [
 
 
 
+
 // RENDER HTML FOR COFFEES
 function renderCoffee(coffee) {
     var html = '<div class="col-3 mx-2 mb-5 p-0" id=card><h2>' + coffee.name + '</h2><img src="' + coffee.image + '"><p>' + coffee.roast +'</p></div>';
@@ -142,8 +144,6 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-//
-
 
 
 
@@ -169,13 +169,25 @@ function updateCoffees(e) {
 
 
 // SHOWS SEARCHED COFFEES WITH EXACT NAME ENTERED
-function searchCoffee(e) {
-    e.preventDefault();
-    let desiredCoffee = document.getElementById('searched-coffee').value;
+// function searchCoffee(e) {
+//     e.preventDefault();
+//     let desiredCoffee = document.getElementById('searched-coffee').value;
+//     let coffeeChoice = [];
+//
+//     coffees.forEach(function (coffee) {
+//         if (coffee.name == desiredCoffee) {
+//             coffeeChoice.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(coffeeChoice);
+// }
+
+function searchCoffee() {
+    let desiredCoffee = document.getElementById('searched-coffee').value.toLowerCase();
     let coffeeChoice = [];
 
     coffees.forEach(function (coffee) {
-        if (coffee.name === desiredCoffee) {
+        if (coffee.name.toLowerCase().replace(/\s+/g, '').includes(desiredCoffee)) {
             coffeeChoice.push(coffee);
         }
     });
@@ -186,8 +198,8 @@ function searchCoffee(e) {
 
 
 // BOTTOM OF JS
-var search = document.querySelector('#searched-btn')
-search.addEventListener('click', searchCoffee);
+// var search = document.querySelector('#searched-btn')
+// search.addEventListener('click', searchCoffee);
 
 var tbody = document.querySelector('#cards');
 tbody.innerHTML = renderCoffees(coffees);
@@ -200,8 +212,6 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 submitButton.addEventListener('click', updateCoffees);
-
-
 
 
 

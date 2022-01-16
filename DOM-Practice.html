@@ -91,36 +91,13 @@
 <!--</html>-->
 
 
-
-
-
-
-
-
-
 <!--<div>-->
 <!--    <h2>' + coffee.name + '</h2>-->
 <!--    <p>' + coffee.roast +'</p>-->
 <!--</div>-->
 
 
-
 <!--MORNING PRACTICE-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -128,20 +105,21 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-              integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="css/DOM-Practice.css">
 </head>
 <body>
-<h1>Coffees !!!!!!!!!!!!</h1>
+<h1>COFFEES !!!!!!!!!!!!</h1>
 
-<form>
-    <h2>NAME IT</h2>
+<form id="search-box">
+    <h2>-- NAME IT --</h2>
     <label for="searched-coffee"></label>
-    <input id="searched-coffee">
-    <button id="searched-btn">SEARCH</button>
+    <input type="text" class="form-control" id="searched-coffee" onkeyup="searchCoffee()"
+           onkeydown="searchCoffee()">
+<!--    <button id="searched-btn">SEARCH</button>-->
     <label for="roast-selection"></label>
-    <h2>THE ROAST</h2>
+    <h2>-- THE ROAST --</h2>
     <select id="roast-selection">
         <option>all</option>
         <option>americano</option>
@@ -153,8 +131,15 @@
 </form>
 
 
+
+
+
+
+
+
 <div class='row' id="cards">
 </div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
