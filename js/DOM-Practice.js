@@ -133,7 +133,7 @@ var coffees = [
 
 // RENDER HTML FOR COFFEES
 function renderCoffee(coffee) {
-    var html = '<div class="col-3 mx-2 mb-5 p-0" id=card><h2>' + coffee.name + '</h2><img src="' + coffee.image + '"><p>' + coffee.roast +'</p></div>';
+    var html = '<div class="col-3 mx-2 mb-5 p-0" id=card><h2>' +   coffee.name  +  '</h2><img src="' + coffee.image + '"><p>' + '-' +   coffee.roast  + '-' + '</p></div>';
     return html;
 }
 
