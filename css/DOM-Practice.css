@@ -10,10 +10,17 @@ form {
     flex-direction: column;
 }
 h1{
+    font-family: 'Hi Melody', cursive;
     display: flex;
     justify-content: center;
-    font-size: 80px;
+    font-size: 100px;
     background-color: black;
+    margin-bottom: 50px;
+}
+#neon {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .col-3 {
@@ -28,17 +35,12 @@ h1{
 
 p {
     font-size: 36px;
-    border-top: 10px solid black;
+
 }
 
-.row h2 {
-    border-bottom: 10px solid black;
-    margin-bottom: 0;
-}
 
-img {
-    box-shadow: 1px 1px 50px black ;
-}
+
+
 
 #search-box {
     display: flex;
@@ -51,6 +53,11 @@ img {
 
 #searched-coffee {
     width: 30%;
+}
+
+input {
+    width: 200px;
+    height: 30px;
 }
 
 
@@ -130,4 +137,19 @@ h1:focus {
         text-shadow: none;
         box-shadow: none;
     }
+}
+
+
+#card {
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
+}
+#card h2 {
+    font-size: 36px;
+    margin-top: 10px;
 }
