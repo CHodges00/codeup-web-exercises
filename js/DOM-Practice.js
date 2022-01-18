@@ -139,7 +139,7 @@ let coffees = function () {
 
 // RENDER HTML FOR COFFEES
 function renderCoffee(coffee) {
-    var html = '<div class="col-3 mx-2 mb-5 p-0" id=card><h2>' +   coffee.name  +  '</h2><img src="' + coffee.image + '"><p>' + '-' +   coffee.roast  + '-' + '</p></div>';
+    var html = '<div class="col-3 mx-3 mb-5 p-0" id=card><h2>' +   coffee.name  +  '</h2><hr><img src="' + coffee.image + '"><hr><p>' + '-' +   coffee.roast  + '-' + '</p></div>';
     return html;
 }
 
@@ -214,7 +214,7 @@ function newCoffee(e) {
 // CANT BE DUPLICATE COFFEE
     for (let i = 0; i < coffees.length; i++) {
         if (newCoffeeName.value.toLowerCase().replace(/\s+/g, '') === coffees[i].name.toLowerCase().replace(/\s+/g, '')) {
-            dupeAlert.innerHTML = "Someone Beat You To That One, Try Again A ";
+            dupeAlert.innerHTML = "Someone Beat You To That One, Try Again ! ";
             return;
             // THIS ADDS IMAGE TO THE NEW COFFEE
         } else {

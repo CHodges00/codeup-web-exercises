@@ -1,7 +1,5 @@
 body {
-    background-color: grey;
     color: sandybrown;
-    text-shadow: 1px 1px 30px red;
 }
 
 form {
@@ -27,8 +25,7 @@ h1 {
 
 .col-3 {
     text-align: center;
-    border: 1px solid black;
-    box-shadow: 1px 1px 50px black;
+
 }
 
 .row {
@@ -51,7 +48,7 @@ p {
 }
 
 #searched-coffee {
-    width: 30%;
+    width: 20%;
 }
 
 input {
@@ -109,6 +106,32 @@ input {
 #added-coffee-roast {
     width: 50%;
 }
+hr {
+    box-shadow: 0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem var(--neon-border-color),
+    inset 0 0 2rem var(--neon-border-color),
+    0 0 4rem var(--neon-border-color),
+    inset 0 0 4rem var(--neon-border-color);
+    color: #fff;
+    background-color: #fff;
+    border: 2px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*NEON*/
 :root {
@@ -121,7 +144,6 @@ input {
 }
 
 body {
-
     background: #000;
 }
 
@@ -129,13 +151,10 @@ h1 {
     margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-style: italic;
     color: #fff;
-    /*padding: 4rem 6rem 5.5rem;*/
     border: 0.4rem solid #fff;
     border-radius: 2rem;
-    text-transform: uppercase;
-    animation: flicker 1.5s infinite alternate;
+    animation: flicker 1s infinite alternate;
 }
 
 h1::-moz-selection {

@@ -114,21 +114,29 @@
 </head>
 <body>
 
+
+
+
+
+
 <!--HEADER-->
 <div id="neon">
     <h1>C O F F E E</h1>
 </div>
 
 
+
+
+
 <!--SEARCH FOR COFFEES SECTION-->
 <form id="search-box">
-    <h2>-- NAME IT --</h2>
+    <h2>-- SEARCH NAME --</h2>
     <label for="searched-coffee"></label>
     <input type="text" class="form-control" id="searched-coffee" onkeyup="searchCoffee()"
            onkeydown="searchCoffee()">
 <!--    <button id="searched-btn">SEARCH</button>-->
     <label for="roast-selection"></label>
-    <h2>-- THE ROAST --</h2>
+    <h2>-- SEARCH TYPE --</h2>
     <select id="roast-selection">
         <option>all</option>
         <option>Americano</option>
@@ -140,15 +148,20 @@
 </form>
 <br>
 
+
+
+
 <!--COFFEE CARDS ADDED INTO HERE-->
 <div class='row' id="cards">
 </div>
 
 
+
+
 <!--ADD COFFEE SECTION-->
 <div class="add-coffee">
     <h2> - - - - Add Your Own Coffee Here! - - - - </h2>
-    <hr>
+    <br>
     <label for="added-coffee-name">Enter New Coffee Name</label>
     <input type="text" class="form-control" id="added-coffee-name" placeholder="Name of New Coffee">
     <label for="added-coffee-roast"><br>Enter Type Of New Coffee</label>
@@ -162,6 +175,9 @@
     <h6 id="duplicate-coffee"></h6>
     <button id="contribute-coffee">Add Coffee !</button>
 </div>
+
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
