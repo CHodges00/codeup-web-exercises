@@ -9,7 +9,8 @@ form {
     align-items: center;
     flex-direction: column;
 }
-h1{
+
+h1 {
     font-family: 'Hi Melody', cursive;
     display: flex;
     justify-content: center;
@@ -17,6 +18,7 @@ h1{
     background-color: black;
     margin-bottom: 50px;
 }
+
 #neon {
     width: 75%;
     margin-left: auto;
@@ -26,7 +28,7 @@ h1{
 .col-3 {
     text-align: center;
     border: 1px solid black;
-    box-shadow: 1px 1px 50px black ;
+    box-shadow: 1px 1px 50px black;
 }
 
 .row {
@@ -37,9 +39,6 @@ p {
     font-size: 36px;
 
 }
-
-
-
 
 
 #search-box {
@@ -65,9 +64,28 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 70%;
+    margin: 40px auto 20px auto;
+    padding: 20px;
+
+    box-shadow: 0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem var(--neon-border-color),
+    inset 0 0 2rem var(--neon-border-color),
+    0 0 4rem var(--neon-border-color),
+    inset 0 0 4rem var(--neon-border-color);
+}
+
+.add-coffee label {
+    font-size: 20px;
+}
+
+option {
+    text-align: center;
+}
+
+input {
+    text-align: center;
 }
 
 #contribute-coffee {
@@ -76,10 +94,21 @@ input {
     margin-bottom: 30px;
 }
 
-
-
-
-
+#roast-selection {
+    width: 80px;
+    height: 20px;
+}
+#submit {
+    width: 120px;
+    height: 25px;
+    margin-top: 10px;
+}
+#added-coffee-name {
+    width: 50%;
+}
+#added-coffee-roast {
+    width: 50%;
+}
 
 /*NEON*/
 :root {
@@ -92,10 +121,7 @@ input {
 }
 
 body {
-    /*font-family: 'Exo 2', sans-serif;*/
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
+
     background: #000;
 }
 
@@ -131,22 +157,20 @@ h1:focus {
 
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
 
-        text-shadow:
-                -0.2rem -0.2rem 1rem #fff,
-                0.2rem 0.2rem 1rem #fff,
-                0 0 2rem var(--neon-text-color),
-                0 0 4rem var(--neon-text-color),
-                0 0 6rem var(--neon-text-color),
-                0 0 8rem var(--neon-text-color),
-                0 0 10rem var(--neon-text-color);
+        text-shadow: -0.2rem -0.2rem 1rem #fff,
+        0.2rem 0.2rem 1rem #fff,
+        0 0 2rem var(--neon-text-color),
+        0 0 4rem var(--neon-text-color),
+        0 0 6rem var(--neon-text-color),
+        0 0 8rem var(--neon-text-color),
+        0 0 10rem var(--neon-text-color);
 
-        box-shadow:
-                0 0 .5rem #fff,
-                inset 0 0 .5rem #fff,
-                0 0 2rem var(--neon-border-color),
-                inset 0 0 2rem var(--neon-border-color),
-                0 0 4rem var(--neon-border-color),
-                inset 0 0 4rem var(--neon-border-color);
+        box-shadow: 0 0 .5rem #fff,
+        inset 0 0 .5rem #fff,
+        0 0 2rem var(--neon-border-color),
+        inset 0 0 2rem var(--neon-border-color),
+        0 0 4rem var(--neon-border-color),
+        inset 0 0 4rem var(--neon-border-color);
     }
 
     20%, 24%, 55% {
@@ -157,14 +181,14 @@ h1:focus {
 
 
 #card {
-    box-shadow:
-            0 0 .5rem #fff,
-            inset 0 0 .5rem #fff,
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            inset 0 0 4rem var(--neon-border-color);
+    box-shadow: 0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem var(--neon-border-color),
+    inset 0 0 2rem var(--neon-border-color),
+    0 0 4rem var(--neon-border-color),
+    inset 0 0 4rem var(--neon-border-color);
 }
+
 #card h2 {
     font-size: 36px;
     margin-top: 10px;
