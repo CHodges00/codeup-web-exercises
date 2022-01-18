@@ -460,115 +460,184 @@ h5 {
 /*    justify-content: center;*/
 /*    align-content: center;*/
 /*}*/
-.ipad {
+/*.ipad {*/
 
-    width: 100%;
-    border: 10px solid #e6e6e6;
-    border-radius: 10px;
+/*    width: 100%;*/
+/*    border: 10px solid #e6e6e6;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*figcaption {*/
+/*    !*padding-left: 20px;*!*/
+/*    !*padding-right: 40px;*!*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+
+/*.bottom-circles {*/
+/*    border: 0 solid;*/
+/*    border-radius: 50%;*/
+/*    height: 30px;*/
+/*    width: 30px;*/
+/*    margin: 2px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    font-weight: bolder;*/
+/*}*/
+/*#circle8 {*/
+/*    margin-right: 40px;*/
+/*}*/
+
+/*.font-size-48 {*/
+/*    font-size: 64px;*/
+/*}*/
+/*#top {*/
+/*    padding: 0;*/
+/*    margin-bottom: 60px;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+/*}*/
+
+
+
+
+
+/*@media screen and (max-width:575px){*/
+/*    #circle1, #circle2, #circle3, #circle4 {*/
+/*        border: 15px solid white;*/
+/*        border-radius: 50%;*/
+/*        height: 250px;*/
+/*        max-width: 240px;*/
+/*        margin: 5px;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+/*    #top {*/
+/*        justify-content: center;*/
+/*    }*/
+/*    figcaption {*/
+/*        margin-left: 30px;*/
+/*        margin-right: 30px;*/
+/*    }*/
+
+/*}*/
+
+/*@media screen and (min-width:576px){*/
+/*    #circle1, #circle2, #circle3, #circle4 {*/
+/*        border: 5px solid white;*/
+/*        border-radius: 50%;*/
+/*        height: 150px;*/
+/*        max-width: 150px;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*        font-size: 24px;*/
+/*        font-weight: bolder;*/
+/*        padding-top: 15px;*/
+/*    }*/
+
+/*    .bottom-circles {*/
+/*        border: 0 solid;*/
+/*        border-radius: 50%;*/
+/*        height: 20px;*/
+/*        width: 20px;*/
+/*        margin: 1px;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*        font-weight: bolder;*/
+/*    }*/
+/*    .p1 {*/
+/*        margin-top: 0;*/
+/*        margin-left: 25px;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width:768px) {*/
+
+/*    #codeup {*/
+/*        font-size: 28px;*/
+/*        position: relative;*/
+/*        right: 20px;*/
+/*        top: 7px;*/
+/*    }*/
+/*}*/
+
+
+
+
+ body	{
+     background-color : black;
+ }
+@keyframes 			firework-animation {
+    0% {background-color : #ff8426;}
+    25% {background-color : #fffc84;}
+    50% {background-color : #ff83f4;}
+    75% {background-color : #83b6ff;}
+    100% {background-color : #ff8426;}
 }
-
-figcaption {
-    /*padding-left: 20px;*/
-    /*padding-right: 40px;*/
-    display: flex;
-    justify-content: space-between;
+@-webkit-keyframes 	firework-animation {
+    0% {background-color : #ff8426;}
+    25% {background-color : #fffc84;}
+    50% {background-color : #ff83f4;}
+    75% {background-color : #83b6ff;}
+    100% {background-color : #ff8426;}
 }
-
-
-.bottom-circles {
-    border: 0 solid;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    margin: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
+@keyframes 			firework-seed-animation	{
+    0% {background-color : #ff8426;}
+    25% {background-color : #fffc84;}
+    100% {background-color : #ff8426;}
 }
-#circle8 {
-    margin-right: 40px;
+@-webkit-keyframes	firework-seed-animation	{
+    0% {background-color : #ff8426;}
+    25% {background-color : #fffc84;}
+    100% {background-color : #ff8426;}
 }
-
-.font-size-48 {
-    font-size: 64px;
+@keyframes 			firework-fade-animation {
+    0% {opacity : 1;}
+    50% {opacity : 1;}
+    100% {opacity : 0;}
 }
-#top {
-    padding: 0;
-    margin-bottom: 60px;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+@-webkit-keyframes 	firework-fade-animation {
+    0% {opacity : 1;}
+    50% {opacity : 1;}
+    100% {opacity : 0;}
 }
-
-
-
-
-
-@media screen and (max-width:575px){
-    #circle1, #circle2, #circle3, #circle4 {
-        border: 15px solid white;
-        border-radius: 50%;
-        height: 250px;
-        max-width: 240px;
-        margin: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #top {
-        justify-content: center;
-    }
-    figcaption {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
+.fireWorkBatch {
+    z-index : 999;
+    position: absolute;
+    top : 0px;
+    left : 0px;
+    animation-name : firework-fade-animation;
+    animation-timing-function : cubic-bezier(0.5, 0, 1. 1);
+    animation-duration : 2.5s;
 }
-
-@media screen and (min-width:576px){
-    #circle1, #circle2, #circle3, #circle4 {
-        border: 5px solid white;
-        border-radius: 50%;
-        height: 150px;
-        max-width: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-        font-weight: bolder;
-        padding-top: 15px;
-    }
-
-    .bottom-circles {
-        border: 0 solid;
-        border-radius: 50%;
-        height: 20px;
-        width: 20px;
-        margin: 1px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bolder;
-    }
-    .p1 {
-        margin-top: 0;
-        margin-left: 25px;
-    }
+.fireWorkParticle {
+    z-index : 999;
+    position: absolute;
+    height : 5px;
+    width : 5px;
+    border-radius : 2.5px;
+    animation-name : firework-animation;
+    animation-timing-function : linear;
+    animation-duration : 1s;
+    animation-iteration-count : infinite;
 }
-
-@media screen and (min-width:768px) {
-
-    #codeup {
-        font-size: 28px;
-        position: relative;
-        right: 20px;
-        top: 7px;
-    }
+.fireWorkSeed {
+    z-index : 999;
+    position: absolute;
+    height : 5px;
+    width : 5px;
+    border-radius : 5px;
+    animation-name : firework-seed-animation;
+    animation-timing-function : linear;
+    animation-duration : 0.5s;
+    animation-iteration-count : infinite;
 }
-
-
-
 
 
 

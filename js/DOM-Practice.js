@@ -258,8 +258,6 @@ function newCoffee(e) {
 
 
 
-
-
 // BOTTOM OF JS
 
 // DONT NEED AFTER LIVESEARCH WAS IMPLEMENTED
