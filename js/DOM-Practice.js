@@ -264,6 +264,8 @@ function newCoffee(e) {
 // var search = document.querySelector('#searched-btn')
 // search.addEventListener('click', searchCoffee);
 
+
+
 // CREATES COFFEE CARDS IN DIV.ROW
 var tbody = document.querySelector('#cards');
 
