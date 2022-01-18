@@ -114,20 +114,20 @@
 let coffees = function () {
     if (window.localStorage.getItem("coffees") === null) {
         return [
-    {id: 1, name: 'Light City', roast: 'americano', image:" assets/coffe-americano.jpeg"},
-    {id: 2, name: 'Half City', roast: 'americano', image:" assets/coffe-americano.jpeg"},
-    {id: 3, name: 'Cinnamon', roast: 'americano', image:" assets/coffe-americano.jpeg"},
-    {id: 4, name: 'City', roast: 'iced', image:" assets/coffee-iced.jpeg"},
-    {id: 5, name: 'American', roast: 'iced', image:" assets/coffee-iced.jpeg"},
-    {id: 6, name: 'Breakfast', roast: 'iced', image:" assets/coffee-iced.jpeg"},
-    {id: 7, name: 'High', roast: 'iced', image:" assets/coffee-iced.jpeg"},
-    {id: 8, name: 'Continental', roast: 'iced', image:" assets/coffee-iced.jpeg"},
-    {id: 9, name: 'New Orleans', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
-    {id: 10, name: 'European', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
-    {id: 11, name: 'Espresso', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
-    {id: 12, name: 'Viennese', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
-    {id: 13, name: 'Italian', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
-    {id: 14, name: 'French', roast: 'mocha', image:" assets/coffee-mocha.jpeg"}
+    {id: 1, name: 'Light City', roast: 'Americano', image:" assets/coffe-americano.jpeg"},
+    {id: 2, name: 'Half City', roast: 'Americano', image:" assets/coffe-americano.jpeg"},
+    {id: 3, name: 'Cinnamon', roast: 'Americano', image:" assets/coffe-americano.jpeg"},
+    {id: 4, name: 'City', roast: 'Iced', image:" assets/coffee-iced.jpeg"},
+    {id: 5, name: 'American', roast: 'Iced', image:" assets/coffee-iced.jpeg"},
+    {id: 6, name: 'Breakfast', roast: 'Iced', image:" assets/coffee-iced.jpeg"},
+    {id: 7, name: 'High', roast: 'Iced', image:" assets/coffee-iced.jpeg"},
+    {id: 8, name: 'Continental', roast: 'Iced', image:" assets/coffee-iced.jpeg"},
+    {id: 9, name: 'New Orleans', roast: 'Mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 10, name: 'European', roast: 'Mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 11, name: 'Espresso', roast: 'Mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 12, name: 'Viennese', roast: 'Mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 13, name: 'Italian', roast: 'Mocha', image:" assets/coffee-mocha.jpeg"},
+    {id: 14, name: 'French', roast: 'Mocha', image:" assets/coffee-mocha.jpeg"}
         ]
     } else {
         return JSON.parse(window.localStorage.getItem("coffees"));
@@ -214,18 +214,18 @@ function newCoffee(e) {
 // CANT BE DUPLICATE COFFEE
     for (let i = 0; i < coffees.length; i++) {
         if (newCoffeeName.value.toLowerCase().replace(/\s+/g, '') === coffees[i].name.toLowerCase().replace(/\s+/g, '')) {
-            dupeAlert.innerHTML = "Someone Beat You To That One ";
+            dupeAlert.innerHTML = "Someone Beat You To That One, Try Again A ";
             return;
             // THIS ADDS IMAGE TO THE NEW COFFEE
         } else {
             newCoffeeSubmission.name = newSubmissionName;
             newCoffeeSubmission.roast = newSubmissionRoast;
             dupeAlert.innerHTML = '';
-            if (newSubmissionRoast === 'americano') {
+            if (newSubmissionRoast === 'Americano') {
                 newCoffeeSubmission.image = " assets/coffe-americano.jpeg";
-            } else if (newSubmissionRoast === 'iced') {
+            } else if (newSubmissionRoast === 'Iced') {
                 newCoffeeSubmission.image = ' assets/coffee-iced.jpeg'
-            } else (newSubmissionRoast === 'mocha')
+            } else (newSubmissionRoast === 'Mocha')
                 newCoffeeSubmission.image = ' assets/coffee-mocha.jpeg';
         }
     }
