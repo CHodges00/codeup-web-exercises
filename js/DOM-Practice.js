@@ -111,7 +111,9 @@
 
 
 
-var coffees = [
+let coffees = function () {
+    if (window.localStorage.getItem("coffees") === null) {
+        return [
     {id: 1, name: 'Light City', roast: 'americano', image:" assets/coffe-americano.jpeg"},
     {id: 2, name: 'Half City', roast: 'americano', image:" assets/coffe-americano.jpeg"},
     {id: 3, name: 'Cinnamon', roast: 'americano', image:" assets/coffe-americano.jpeg"},
@@ -126,7 +128,11 @@ var coffees = [
     {id: 12, name: 'Viennese', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
     {id: 13, name: 'Italian', roast: 'mocha', image:" assets/coffee-mocha.jpeg"},
     {id: 14, name: 'French', roast: 'mocha', image:" assets/coffee-mocha.jpeg"}
-];
+        ]
+    } else {
+        return JSON.parse(window.localStorage.getItem("coffees"));
+    }
+}();
 
 
 
@@ -168,20 +174,7 @@ function updateCoffees(e) {
 
 
 
-// SHOWS SEARCHED COFFEES WITH EXACT NAME ENTERED
-// function searchCoffee(e) {
-//     e.preventDefault();
-//     let desiredCoffee = document.getElementById('searched-coffee').value;
-//     let coffeeChoice = [];
-//
-//     coffees.forEach(function (coffee) {
-//         if (coffee.name == desiredCoffee) {
-//             coffeeChoice.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(coffeeChoice);
-// }
-
+// LIVE SEARCH FUNCTION
 function searchCoffee() {
     let desiredCoffee = document.getElementById('searched-coffee').value.toLowerCase();
     let coffeeChoice = [];
@@ -195,26 +188,105 @@ function searchCoffee() {
 }
 
 
+// ADD A COFFEE FUNCTION
+// FOOTER FUNCTION STARTS HERE
+function newCoffee(e) {
+    e.preventDefault();
+    let newCoffeeSubmission = {};
+    let newSubmissionName = (newCoffeeName.value).toLowerCase();
+    let newSubmissionRoast = newCoffeeRoast.value;
+    newCoffeeSubmission.id = coffees.length + 1;
+    newCoffeeSubmission.name = newSubmissionName;
+    newCoffeeSubmission.roast = newSubmissionRoast;
+
+// HAVE TO ENTER NAME
+    if (newSubmissionName === '') {
+        dupeAlert.innerHTML = "Please Enter A Coffee Name"
+        return;
+    }
+
+// HAVE TO ENTER ROAST
+    if (newSubmissionRoast === ''){
+        dupeAlert.innerHTML = "What Kind Of Coffee Is It ?"
+        return;
+    }
+
+// CANT BE DUPLICATE COFFEE
+    for (let i = 0; i < coffees.length; i++) {
+        if (newCoffeeName.value.toLowerCase().replace(/\s+/g, '') === coffees[i].name.toLowerCase().replace(/\s+/g, '')) {
+            dupeAlert.innerHTML = "Someone Beat You To That One ";
+            return;
+            // THIS ADDS IMAGE TO THE NEW COFFEE
+        } else {
+            newCoffeeSubmission.name = newSubmissionName;
+            newCoffeeSubmission.roast = newSubmissionRoast;
+            dupeAlert.innerHTML = '';
+            if (newSubmissionRoast === 'americano') {
+                newCoffeeSubmission.image = " assets/coffe-americano.jpeg";
+            } else if (newSubmissionRoast === 'iced') {
+                newCoffeeSubmission.image = ' assets/coffee-iced.jpeg'
+            } else (newSubmissionRoast === 'mocha')
+                newCoffeeSubmission.image = ' assets/coffee-mocha.jpeg';
+        }
+    }
+    coffees.push(newCoffeeSubmission);
+    console.log(coffees);
+    tbody.innerHTML = renderCoffees(coffees);
+    window.localStorage.setItem('coffees', JSON.stringify(coffees));
+    location.reload();
+}
+
+
+
+
+// SHOWS SEARCHED COFFEES WITH EXACT NAME ENTERED
+// DONT NEED AFTER LIVESEARCH WAS IMPLEMENTED
+// function searchCoffee(e) {
+//     e.preventDefault();
+//     let desiredCoffee = document.getElementById('searched-coffee').value;
+//     let coffeeChoice = [];
+//
+//     coffees.forEach(function (coffee) {
+//         if (coffee.name == desiredCoffee) {
+//             coffeeChoice.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(coffeeChoice);
+// }
+
+
+
+
+
 
 
 // BOTTOM OF JS
+
+// DONT NEED AFTER LIVESEARCH WAS IMPLEMENTED
 // var search = document.querySelector('#searched-btn')
 // search.addEventListener('click', searchCoffee);
 
+// CREATES COFFEE CARDS IN DIV.ROW
 var tbody = document.querySelector('#cards');
-tbody.innerHTML = renderCoffees(coffees);
 
+// ADD NEW COFFEE VALUES
+let submitCoffee = document.querySelector('#contribute-coffee')
+let newCoffeeName = document.querySelector('#added-coffee-name');
+let newCoffeeRoast = document.querySelector('#added-coffee-roast');
 
+// SHOWS ALERT FOR DUPLICATE/NOT EXISTANT
+let dupeAlert = document.querySelector('#duplicate-coffee');
 
-
-
+// SELECT BY ROAST
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
 submitButton.addEventListener('click', updateCoffees);
 
+// ADD NEW COFFEE BUTTON
+submitCoffee.addEventListener('click', newCoffee)
 
-
+// CREATES COFFEE CARDS
+tbody.innerHTML = renderCoffees(coffees);
 
 
 
