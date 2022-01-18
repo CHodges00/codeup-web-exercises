@@ -113,10 +113,14 @@
     <link rel="stylesheet" href="css/DOM-Practice.css">
 </head>
 <body>
+
+<!--HEADER-->
 <div id="neon">
     <h1>C O F F E E</h1>
 </div>
 
+
+<!--SEARCH FOR COFFEES SECTION-->
 <form id="search-box">
     <h2>-- NAME IT --</h2>
     <label for="searched-coffee"></label>
@@ -136,16 +140,28 @@
 </form>
 <br>
 
-
-
-
-
-
-
-
+<!--COFFEE CARDS ADDED INTO HERE-->
 <div class='row' id="cards">
 </div>
 
+
+<!--ADD COFFEE SECTION-->
+<div class="add-coffee">
+    <h2>Add Your Own Coffee Here!</h2>
+    <hr>
+    <label for="added-coffee-name">name ?</label>
+    <input type="text" class="form-control" id="added-coffee-name" placeholder="Name of New Coffee">
+    <label for="added-coffee-roast"><br>roast ?</label>
+    <select class="form-control" id="added-coffee-roast">
+        <option value="" disabled selected>Choose a roast</option>
+        <option value="Iced">Iced</option>
+        <option value="Mocha">Mocha</option>
+        <option value="Americano">Americano</option>
+    </select>
+    <br>
+    <h6 id="duplicate-coffee"></h6>
+    <button id="contribute-coffee">Add Coffee !</button>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -157,7 +173,6 @@
 <script src="js/DOM-Practice.js"></script>
 </body>
 </html>
-
 
 
 
