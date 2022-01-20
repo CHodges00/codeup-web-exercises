@@ -960,7 +960,7 @@ let string = 'cDvr3444GBdv'
 function returnLetter(){
 
     for(var i = 0; i <= string.length; i++){
-        if (string[i] === $.isNumeric(string)){
+        if (string[i].isNumeric){
             console.log("Not Character")
         }
         else if (string[i] == string[i].toUpperCase())
