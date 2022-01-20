@@ -1,9 +1,9 @@
 "use strict";
 
 // ALERT FOR WHEN DOCUMENT IS READY/LOADED
-$(document).ready(function() {
-    alert('READY !')
-});
+// $(document).ready(function() {
+//     alert('READY !')
+// });
 
 
 
@@ -40,9 +40,9 @@ $('li').css('font-size', '20px')
 
 // Craft selectors that highlight all the h1, p, and li elements.
 
-$('h1').css('background-color', 'yellow')
-$('p').css('background-color', 'blue')
-$('li').css('background-color', 'green')
+// $('h1').css('background-color', 'yellow')
+// $('p').css('background-color', 'blue')
+// $('li').css('background-color', 'green')
 
 // Create a jQuery statement to alert the contents of your h1 element(s).
 
@@ -60,12 +60,16 @@ $('#header-1').click(
         $(this).css('background-color', 'red');
     }
 )
+
+
     // Make all paragraphs have a font size of 18px when they are double clicked.
 $('p').dblclick(
     function (){
         $(this).css('font-size', '18px');
     }
 )
+
+
     // Set all li text color to red when the mouse is hovering; reset to black when it is not.
 $('li').hover(
     function() {
