@@ -130,32 +130,41 @@
     })
 
     // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-    $('#header-one').click(function (){
-        $('li').each(function(index) {
-            if (index === 0 || index === 1 || index === 2 || index === 3) {
-                $(this).css('font-weight', 'bold');
-            }
-        });
-    })
+    // $('#header-one').click(function (){
+    //     $('li').each(function(index) {
+    //         if (index === 0 || index === 1 || index === 2 || index === 3) {
+    //             $(this).css('font-weight', 'bold');
+    //         }
+    //     });
+    // })
+    //
+    // $('#header-two').click(function (){
+    //     $('li').each(function(index) {
+    //         if (index === 4 || index === 5 || index === 6 || index === 7) {
+    //             $(this).css('font-weight', 'bold');
+    //         }
+    //     });
+    // })
+    //
+    // $('#header-three').click(function (){
+    //     $('li').each(function(index) {
+    //         if (index === 8 || index === 9 || index === 10 || index === 11) {
+    //             $(this).css('font-weight', 'bold');
+    //         }
+    //     });
+    // })
 
-    $('#header-two').click(function (){
-        $('li').each(function(index) {
-            if (index === 4 || index === 5 || index === 6 || index === 7) {
-                $(this).css('font-weight', 'bold');
-            }
-        });
-    })
 
-    $('#header-three').click(function (){
-        $('li').each(function(index) {
-            if (index === 8 || index === 9 || index === 10 || index === 11) {
-                $(this).css('font-weight', 'bold');
-            }
-        });
-    })
+    // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    $('h3').click(function (){
+    $(this).next('ul').children().css('font-weight', 'bold')
+    });
 
     // When any list item is clicked, first li of the parent ul should have a font color of blue.
-    
+    $('li').click(function (){
+        $(this).parent().children().first().css('color', 'blue')
+    });
+
 
 </script>
 </body>
