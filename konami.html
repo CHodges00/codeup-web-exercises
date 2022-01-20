@@ -4,7 +4,7 @@
     <title>Konami Code</title>
 </head>
 <body>
-<h1>Konami Code</h1>
+<h1 style="text-align: center">Just wake up !</h1>
 
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -25,8 +25,9 @@
     let keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     // START AT 0 PROGRESS
     let progress = 0;
+
     let skyrim = new Audio("assets/youre-finally-awake.mp3");
-    let video = <img src="assets/">
+
 
 
 
@@ -41,6 +42,7 @@
             // WHAT TO DO AFTER CODE IS ENTERED
             skyrim.play();
             $("body").css({"background-color":"#222", "background-image":"https://teno.com/view/hey-you-youre-finally-awake-skyrim-intro-gaming-playthrough-gif-17212225"})
+            $("h1").html("Hey, you !").css({"text-align":"center", "color":"white"})
 
 
             
