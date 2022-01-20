@@ -3,6 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Attributes and CSS</title>
+    <style>
+        .left-image{
+            background-image: url("assets/faq1.jpeg.crdownload");
+            background-size: contain;
+            /*background-repeat: no-repeat;*/
+            width: 300px;
+            height: 300px;
+        }
+        .right-image{
+            background-image: url('assets/faq2.jpeg');
+            background-size: contain;
+            width: 300px;
+            height: 300px;
+        }
+        .center-image {
+            background-image: url("assets/faq3.jpeg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 </head>
 <body>
 
@@ -96,15 +118,19 @@
 
 
 <div class="photos" style="margin-top: 50px">
-<div class="photo" id="image1"><img src="assets/faq1.jpeg.crdownload" style="width: 300px; height: 300px" class="left-image"></div>
-<div class="photo" id="image2"><img src="assets/faq2.jpeg" style="width: 300px; height: 300px" class="center-image"></div>
-<div class="photo" id="image3"><img src="assets/faq3.jpeg" style="width: 300px; height: 300px" class="right-image"></div>
+
+<div class="photo left-image" id="image1"></div>
+<div class="photo center-image" id="image2"></div>
+<div class="photo right-image" id="image3"></div>
+
 </div>
 
 <div class="buttons" style="display: flex; justify-content: space-around">
+
 <button id="btn-left">Change Photo</button>
 <button id="btn-center">Change Photo</button>
 <button id="btn-right">Change Photo</button>
+
 </div>
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -116,8 +142,7 @@
     $('.invisible').css('visibility', 'hidden');
 
     // ADD SELECTOR
-    $('body').prepend('<input type="checkbox" id="switch" name="switch">\n' +
-        '    <label for="switch" class="switch">Select to see answers</label>');
+    $('body').prepend('<button id="switch">Select to see answers</button>');
 
     // SELECTOR TOGGLES INVISIBLE
     $('#switch').click(function () {
@@ -198,28 +223,30 @@
     $('.photos').css({'display':'flex', 'justify-content':'space-around', 'align-items':'center'})
 
 
-    
+
     // IMAGE1 TAKES PLACE OF IMAGE 3 AND FILLS WITH IMAGE2, IMAGE2 SWAPS RANDOMLY, IMAGE3 SWAPS TO IMAGE1 AND TAKES CENTER IMAGE
-    // $('#btn-left').click(function(){
-    //     $('#image1').toggleClass('left-image').toggleClass('center-image');
-    //     $('#image2').toggleClass('center-image').toggleClass('left-image');
-    // })
-    //
-    // $('#btn-right').click(function(){
-    //     $('#image3').toggleClass('right-image').toggleClass('center-image');
-    //     $('#image2').toggleClass('center-image').toggleClass('right-image');
-    // })
-    //
-    // $('#btn-center').click(function(){
-    //     let decide = Math.floor((Math.random() * 2) + 1);
-    //     if(decide === 1){
-    //         $('#image3').toggleClass('right-image').toggleClass('center-image');
-    //         $('#image2').toggleClass('right-image').toggleClass('center-image');
-    //     }else{
-    //         $('#image1').toggleClass('left-image').toggleClass('center-image');
-    //         $('#image3').toggleClass('center-image').toggleClass('left-image');
-    //     }
-    // })
+    $('#btn-center').click(function(){
+        let decide = Math.floor((Math.random() * 100) + 1);
+        if(decide % 2 === 0){
+            $('#image3').toggleClass('right-image').toggleClass('center-image');
+            $('#image2').toggleClass('center-image').toggleClass('right-image');
+        }else{
+            $('#image1').toggleClass('left-image').toggleClass('center-image');
+            $('#image2').toggleClass('center-image').toggleClass('left-image');
+        }
+    })
+
+    $('#btn-left').click(function(){
+        $('#image1').toggleClass('left-image').toggleClass('center-image');
+        $('#image2').toggleClass('center-image').toggleClass('left-image');
+    })
+
+    $('#btn-right').click(function(){
+        $('#image3').toggleClass('right-image').toggleClass('center-image');
+        $('#image2').toggleClass('center-image').toggleClass('right-image');
+    })
+
+
 
 </script>
 </body>
