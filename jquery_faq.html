@@ -6,54 +6,93 @@
 </head>
 <body>
 
-
 <dl>
-    <dt>Who is the director of the National Park Service?</dt>
-    <dd>Charles F. "Chuck" Sams III is the Director of the National Park Service.</dd>
-
-    <dt>How many employees are in the National Park Service?</dt>
-    <dd>Permanent, temporary, and seasonal employees: Approximately 20,000</dd>
-
-    <dt>How many people visit the national parks?</dt>
-    <dd>Total recreation visitors to the national parks in 2019 was 327,516,619.</dd>
-
-    <dt>Can I bring my pet to a national park?</dt>
-    <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities. Call ahead to be sure.</dd>
-
-    <dt>How many national parks are there in total in the United States?</dt>
-    <dd>There are currently 63 national parks in the United States. The most recently established national park is New River Gorge National Park, </dd>
-
-    <dt>Which national parks have the most visitors?</dt>
-    <dd>The parks with the most overnight visitors are: Grand Canyon, Yosemite & Yellowstone.</dd>
-
-    <dt>In which national parks can I observe/see the most wild animals?</dt>
-    <dd>All national parks have wildlife from snakes and birds to larger animals, such as wolves, bears, moose and buffalo. </dd>
-
-    <dt>How many people come to visit each year?</dt>
-    <dd>Last year there were 327 million national park visits in the United States.</dd>
-
-    <dt>Can I drive into a national park? If so, do I need to pre-order an entrance ticket? </dt>
-    <dd>Most of the national parks in the United States are accessible by car, RV or bus. </dd>
-
-    <dt>Who is in charge of the national parks?</dt>
-    <dd>All national parks in the United States are managed and supervised by the National Park Service, which is a federal agency of the Department of Interior.</dd>
+    <div>
+        <dt> - Who is the director of the National Park Service?</dt>
+        <dd>Charles F. "Chuck" Sams III is the Director of the National Park Service.</dd>
+    </div>
+    <div>
+        <dt> - How many employees are in the National Park Service?</dt>
+        <dd>Permanent, temporary, and seasonal employees: Approximately 20,000</dd>
+    </div>
+    <div>
+        <dt> - How many people visit the national parks?</dt>
+        <dd>Total recreation visitors to the national parks in 2019 was 327,516,619.</dd>
+    </div>
+    <div>
+        <dt> - Can I bring my pet to a national park?</dt>
+        <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging
+            facilities. Call ahead to be sure.
+        </dd>
+    </div>
+    <div>
+        <dt> - How many national parks are there in total in the United States?</dt>
+        <dd>There are currently 63 national parks in the United States. The most recently established national park is
+            New River Gorge National Park,
+        </dd>
+    </div>
+    <div>
+        <dt> - Which national parks have the most visitors?</dt>
+        <dd>The parks with the most overnight visitors are: Grand Canyon, Yosemite & Yellowstone.</dd>
+    </div>
+    <div>
+        <dt> - In which national parks can I observe/see the most wild animals?</dt>
+        <dd>All national parks have wildlife from snakes and birds to larger animals, such as wolves, bears, moose and
+            buffalo.
+        </dd>
+    </div>
+    <div>
+        <dt> - How many people come to visit each year?</dt>
+        <dd>Last year there were 327 million national park visits in the United States.</dd>
+    </div>
+    <div>
+        <dt> - Can I drive into a national park? If so, do I need to pre-order an entrance ticket?</dt>
+        <dd>Most of the national parks in the United States are accessible by car, RV or bus.</dd>
+    </div>
+    <div>
+        <dt> - Who is in charge of the national parks?</dt>
+        <dd>All national parks in the United States are managed and supervised by the National Park Service, which is a
+            federal agency of the Department of Interior.
+        </dd>
+    </div>
 </dl>
 
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
+    // SET DD CLASS INVISIBLE
     $('dd').addClass('invisible');
+
+    // .INVISIBLE CSS VISIBILITY=HIDDEN
     $('.invisible').css('visibility', 'hidden');
+
+    // ADD SELECTOR
     $('body').prepend('<input type="checkbox" id="switch" name="switch">\n' +
         '    <label for="switch" class="switch">Select to see answers</label>');
 
-    $('#switch').click(function (){
+    // SELECTOR TOGGLES INVISIBLE
+    $('#switch').click(function () {
         $('.invisible').toggle().css('visibility', 'revert')
     })
 
-    $('dt').click(function (){
-        $(this).effect('highlight', {color:'yellow'});
+    // STYLING
+    $('dt').css({
+        'text-align': 'center',
+        'margin-bottom': '5px',
+        'font-size': '26px',
+        'color': 'black'
     })
+    $('dd').css({'text-align': 'center', 'margin-bottom': '30px', 'font-size': '22px', 'border-top':'2px solid red', 'margin-left':'0'})
+
+    // EACH DT IS HIGHLIGHTED WHEN CLICKED
+    $('dt').click(function () {
+        $(this).css('background-color', 'yellow');
+    })
+    $('dt').dblclick(function () {
+        $(this).css('background-color', 'revert')
+    })
+    $('div').css({'border': '2px solid black', 'margin-bottom':'20px'})
+
 
 </script>
 </body>
