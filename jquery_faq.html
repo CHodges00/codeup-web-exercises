@@ -58,7 +58,7 @@
 </dl>
 <button id="lastItem-button">Highlight las li</button>
 
-<h3>Yellow Stone</h3>
+<h3 id="header-one">Yellow Stone</h3>
 <ul id="first-park">
     <li>Yellowstone National Park is the first established national park in the United States, and is widely held to be the first established national park in the world.</li>
     <li>Yellowstone National Park spans an area of over 3,450 square miles that is made up of lakes, geysers, canyons, rivers, and mountain ranges.</li>
@@ -66,7 +66,7 @@
     <li>The majority of the national park is located in Wyoming and is truly one of America’s greatest treasures.</li>
 </ul>
 
-<h3>Black Canyon</h3>
+<h3 id="header-two">Black Canyon</h3>
 <ul id="second-park">
     <li>The Gunnison River drops an average of 43 feet per mile through the canyon.</li>
     <li>Black Canyon has inspired dread for centuries.</li>
@@ -75,7 +75,7 @@
 
 </ul>
 
-<h3>Channel Islands</h3>
+<h3 id="header-three">Channel Islands</h3>
 <ul id="third-park">
     <li>Painted Cave and the other sea caves on Santa Cruz Island were the inspiration for some of the sets on Pirates of the Caribbean.</li>
     <li>The oldest human remains in North America, dating to 13,000 B.C., were discovered in 1959 on Santa Rosa Island. </li>
@@ -120,14 +120,43 @@
     $('div').css({'border': '2px solid black', 'margin-bottom':'20px'})
 
 
-    // HIGHLIGHT LAST LI
+    // HIGHLIGHT LAST LI in each UL
     $('#lastItem-button').click(function (){
         $('li').each(function(index) {
-            if (index % 8 !== 0) {
+            if (index === 3 || index === 7 || index === 11) {
                 $(this).css('background-color', 'yellow');
             }
         });
     })
+
+    // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    $('#header-one').click(function (){
+        $('li').each(function(index) {
+            if (index === 0 || index === 1 || index === 2 || index === 3) {
+                $(this).css('font-weight', 'bold');
+            }
+        });
+    })
+
+    $('#header-two').click(function (){
+        $('li').each(function(index) {
+            if (index === 4 || index === 5 || index === 6 || index === 7) {
+                $(this).css('font-weight', 'bold');
+            }
+        });
+    })
+
+    $('#header-three').click(function (){
+        $('li').each(function(index) {
+            if (index === 8 || index === 9 || index === 10 || index === 11) {
+                $(this).css('font-weight', 'bold');
+            }
+        });
+    })
+
+    // When any list item is clicked, first li of the parent ul should have a font color of blue.
+    
+
 </script>
 </body>
 </html>
