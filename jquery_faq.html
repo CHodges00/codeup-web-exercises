@@ -8,52 +8,63 @@
 
 <dl>
     <div>
-        <dt> - Who is the director of the National Park Service?</dt>
+        <dt> --------- Who is the director of the National Park Service? ----------</dt>
+
         <dd>Charles F. "Chuck" Sams III is the Director of the National Park Service.</dd>
+        <hr>
     </div>
     <div>
-        <dt> - How many employees are in the National Park Service?</dt>
+        <dt> --------- How many employees are in the National Park Service? ----------</dt>
         <dd>Permanent, temporary, and seasonal employees: Approximately 20,000</dd>
+        <hr>
     </div>
     <div>
-        <dt> - How many people visit the national parks?</dt>
+        <dt> --------- How many people visit the national parks? ----------</dt>
         <dd>Total recreation visitors to the national parks in 2019 was 327,516,619.</dd>
+        <hr>
     </div>
     <div>
-        <dt> - Can I bring my pet to a national park?</dt>
+        <dt> --------- Can I bring my pet to a national park? ----------</dt>
         <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging
             facilities. Call ahead to be sure.
         </dd>
+        <hr>
     </div>
     <div>
-        <dt> - How many national parks are there in total in the United States?</dt>
+        <dt> --------- How many national parks are there in total in the United States? ----------</dt>
         <dd>There are currently 63 national parks in the United States. The most recently established national park is
             New River Gorge National Park,
         </dd>
+        <hr>
     </div>
     <div>
-        <dt> - Which national parks have the most visitors?</dt>
+        <dt> --------- Which national parks have the most visitors? ----------</dt>
         <dd>The parks with the most overnight visitors are: Grand Canyon, Yosemite & Yellowstone.</dd>
+        <hr>
     </div>
     <div>
-        <dt> - In which national parks can I observe/see the most wild animals?</dt>
+        <dt> --------- In which national parks can I observe/see the most wild animals? ----------</dt>
         <dd>All national parks have wildlife from snakes and birds to larger animals, such as wolves, bears, moose and
             buffalo.
         </dd>
+        <hr>
     </div>
     <div>
-        <dt> - How many people come to visit each year?</dt>
+        <dt> --------- How many people come to visit each year? ----------</dt>
         <dd>Last year there were 327 million national park visits in the United States.</dd>
+        <hr>
     </div>
     <div>
-        <dt> - Can I drive into a national park? If so, do I need to pre-order an entrance ticket?</dt>
+        <dt> --------- Can I drive into a national park? If so, do I need to pre-order an entrance ticket? ----------</dt>
         <dd>Most of the national parks in the United States are accessible by car, RV or bus.</dd>
+        <hr>
     </div>
     <div>
-        <dt> - Who is in charge of the national parks?</dt>
+        <dt> --------- Who is in charge of the national parks? ----------</dt>
         <dd>All national parks in the United States are managed and supervised by the National Park Service, which is a
             federal agency of the Department of Interior.
         </dd>
+        <hr>
     </div>
 </dl>
 <button id="lastItem-button">Highlight las li</button>
@@ -84,6 +95,18 @@
 </ul>
 
 
+<div class="photos" style="margin-top: 50px">
+<div class="photo" id="image1"><img src="assets/faq1.jpeg.crdownload" style="width: 300px; height: 300px" class="left-image"></div>
+<div class="photo" id="image2"><img src="assets/faq2.jpeg" style="width: 300px; height: 300px" class="center-image"></div>
+<div class="photo" id="image3"><img src="assets/faq3.jpeg" style="width: 300px; height: 300px" class="right-image"></div>
+</div>
+
+<div class="buttons" style="display: flex; justify-content: space-around">
+<button id="btn-left">Change Photo</button>
+<button id="btn-center">Change Photo</button>
+<button id="btn-right">Change Photo</button>
+</div>
+
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     // SET DD CLASS INVISIBLE
@@ -108,7 +131,7 @@
         'font-size': '26px',
         'color': 'black'
     })
-    $('dd').css({'text-align': 'center', 'margin-bottom': '30px', 'font-size': '22px', 'border-top':'2px solid red', 'margin-left':'0'})
+    $('dd').css({'text-align': 'center', 'margin-bottom': '30px', 'font-size': '22px', 'margin-left':'50px', 'margin-right':'50px'})
 
     // EACH DT IS HIGHLIGHTED WHEN CLICKED
     $('dt').click(function () {
@@ -117,17 +140,21 @@
     $('dt').dblclick(function () {
         $(this).css('background-color', 'revert')
     })
-    $('div').css({'border': '2px solid black', 'margin-bottom':'20px'})
+    $('div').css({'margin-bottom':'20px'})
 
 
     // HIGHLIGHT LAST LI in each UL
-    $('#lastItem-button').click(function (){
-        $('li').each(function(index) {
-            if (index === 3 || index === 7 || index === 11) {
-                $(this).css('background-color', 'yellow');
-            }
-        });
+    $('#lastItem-button').click(function(event){
+        event.preventDefault();
+        $('ul li:last-child').css('background-color', 'yellow');
     })
+    // $('#lastItem-button').click(function (){
+    //     $('li').each(function(index) {
+    //         if (index === 3 || index === 7 || index === 11) {
+    //             $(this).css('background-color', 'yellow');
+    //         }
+    //     });
+    // })
 
     // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
     // $('#header-one').click(function (){
@@ -165,6 +192,34 @@
         $(this).parent().children().first().css('color', 'blue')
     });
 
+
+    // BUTTONS
+    $('.photo').css({'border': '10px solid brown', 'display':'flex', 'flex-direction':'column'})
+    $('.photos').css({'display':'flex', 'justify-content':'space-around', 'align-items':'center'})
+
+
+    
+    // IMAGE1 TAKES PLACE OF IMAGE 3 AND FILLS WITH IMAGE2, IMAGE2 SWAPS RANDOMLY, IMAGE3 SWAPS TO IMAGE1 AND TAKES CENTER IMAGE
+    // $('#btn-left').click(function(){
+    //     $('#image1').toggleClass('left-image').toggleClass('center-image');
+    //     $('#image2').toggleClass('center-image').toggleClass('left-image');
+    // })
+    //
+    // $('#btn-right').click(function(){
+    //     $('#image3').toggleClass('right-image').toggleClass('center-image');
+    //     $('#image2').toggleClass('center-image').toggleClass('right-image');
+    // })
+    //
+    // $('#btn-center').click(function(){
+    //     let decide = Math.floor((Math.random() * 2) + 1);
+    //     if(decide === 1){
+    //         $('#image3').toggleClass('right-image').toggleClass('center-image');
+    //         $('#image2').toggleClass('right-image').toggleClass('center-image');
+    //     }else{
+    //         $('#image1').toggleClass('left-image').toggleClass('center-image');
+    //         $('#image3').toggleClass('center-image').toggleClass('left-image');
+    //     }
+    // })
 
 </script>
 </body>
