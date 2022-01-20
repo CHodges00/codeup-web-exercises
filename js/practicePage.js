@@ -949,8 +949,32 @@
 
 
 
+<!--write a function that accepts a string and checks whether each character is upperCase or lowerCase and returns -->
+<!--"letter  [insert letter] is uppercase/lowercase", accordingly.  -->
 
+<!--Bonus: return "is not a character" if it's not a letter-->
 
+<!--input example: "bJIENsdfRAIRVIrsRFAijgRar"-->
+
+let string = 'cDvr3444GBdv'
+function returnLetter(){
+
+    for(var i = 0; i <= string.length; i++){
+        if (string[i] === $.isNumeric(string)){
+            console.log("Not Character")
+        }
+        else if (string[i] == string[i].toUpperCase())
+        {
+            console.log("Uppercase");
+        }
+        else
+        {
+            console.log("Lowercase");
+        }
+    }
+}
+
+console.log(returnLetter(string))
 
 
 
