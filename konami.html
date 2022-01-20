@@ -1,10 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Konami Code</title>
 </head>
 <body>
-$END$
+<h1>Konami Code</h1>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+
+    // logs key codes !
+    // $(document).keyup(function(event){
+    //     console.log(event.keyCode);
+    // });
+
+
+    // ON KEYPRESS ON DOCUMENT RUN THIS
+    $(document).keydown(codeComplete);
+
+    // ARRAY OF KEYCODES
+    let keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    // START AT 0 PROGRESS
+    let progress = 0;
+    let skyrim = new Audio("assets/youre-finally-awake.mp3");
+    let video = <img src="assets/">
+
+
+
+    function codeComplete(event) {
+        if (event.keyCode === keys[progress]) {
+            progress += 1;
+        } else {
+            progress = 0;
+        }
+        // IF ALL ENTERED
+        if (progress === 11) {
+            // WHAT TO DO AFTER CODE IS ENTERED
+            skyrim.play();
+            $("body").css({"background-color":"#222", "background-image":"https://teno.com/view/hey-you-youre-finally-awake-skyrim-intro-gaming-playthrough-gif-17212225"})
+
+
+            
+
+
+
+
+        }
+        // SHOW WHEN CODE IS ENTERED
+        console.log(progress);
+    }
+
+
+
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
