@@ -56,6 +56,32 @@
         </dd>
     </div>
 </dl>
+<button id="lastItem-button">Highlight las li</button>
+
+<h3>Yellow Stone</h3>
+<ul id="first-park">
+    <li>Yellowstone National Park is the first established national park in the United States, and is widely held to be the first established national park in the world.</li>
+    <li>Yellowstone National Park spans an area of over 3,450 square miles that is made up of lakes, geysers, canyons, rivers, and mountain ranges.</li>
+    <li>Yellowstone National Park is so large that is covers three states, Wyoming, Idaho, and Montana. </li>
+    <li>The majority of the national park is located in Wyoming and is truly one of America’s greatest treasures.</li>
+</ul>
+
+<h3>Black Canyon</h3>
+<ul id="second-park">
+    <li>The Gunnison River drops an average of 43 feet per mile through the canyon.</li>
+    <li>Black Canyon has inspired dread for centuries.</li>
+    <li>Colorado’s biggest cliff is the Black Canyon’s Painted Wall.</li>
+    <li>Black Canyon gets its name because some parts of the gorge receive only 33 total minutes of sunlight per day.</li>
+
+</ul>
+
+<h3>Channel Islands</h3>
+<ul id="third-park">
+    <li>Painted Cave and the other sea caves on Santa Cruz Island were the inspiration for some of the sets on Pirates of the Caribbean.</li>
+    <li>The oldest human remains in North America, dating to 13,000 B.C., were discovered in 1959 on Santa Rosa Island. </li>
+    <li>The Channel Islands were created by tectonic forces, which caused them to rise up out of the ocean five million years ago. </li>
+    <li>Diablo Peak (Devil’s Peak), on Santa Cruz Island, is the tallest peak on the Channel Islands at 2,450 feet. </li>
+</ul>
 
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -94,6 +120,14 @@
     $('div').css({'border': '2px solid black', 'margin-bottom':'20px'})
 
 
+    // HIGHLIGHT LAST LI
+    $('#lastItem-button').click(function (){
+        $('li').each(function(index) {
+            if (index % 8 !== 0) {
+                $(this).css('background-color', 'yellow');
+            }
+        });
+    })
 </script>
 </body>
 </html>
