@@ -396,6 +396,12 @@
 
 
 
+
+
+
+
+
+
 <!--LIGHT SWITCH-->
 <!--    <!DOCTYPE html>-->
 <!--    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">-->
@@ -420,6 +426,10 @@
 
 
 
+
+
+
+
 <!--SPACE INVADERS-->
 <!--<link href="css/practicePage.css" rel="stylesheet">-->
 <!--<link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>-->
@@ -431,11 +441,26 @@
 
 
 
+
+
+
+
+
+
+
+
 <!--CYBERPUNK BUTTON-->
 <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
 <!--<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">-->
 
 <!--<button>AVAILABLE NOW</button>-->
+
+
+
+
+
+
+
 
 
 
@@ -470,217 +495,306 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Keyboard Events Lecture</title>
-    <style>
-        body {min-height: 2000px;}
-    </style>
-</head>
-<body>
-<main>
-    <h1 id="some-header">Keyboard Events Lecture</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid blanditiis delectus enim est itaque molestiae necessitatibus pariatur quo, rerum sunt tempore temporibus unde ut vel. Eaque necessitatibus quos temporibus.</p>
-    <input id="input-example" type="text">
-</main>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
 
-    $(document).ready(function() {
 
-        "use strict";
-        // TODO: when the user types the letter 'a', pop up an alert that says "Welcome!"
-        $(document).keydown(function (e) {
-            // console.log(e.keyCode);
-            if (e.keyCode === 65) {
-                alert("Welcome !");
-            }
-        })
 
 
-        // TODO: when the user types the letter 'c', pop up a confirm that says "Logout?"
-        $(document).keydown(function (e) {
-            if (e.keyCode === 67) {
-                confirm('Logout ?');
-            }
-        })
-        // TODO: when the user types the letter 'p', prompt the user to enter their username
 
 
-        $(document).keydown(function (e) {
-            if (e.keyCode === 80) {
-                var user = prompt('Enter your Username');
-                console.log("Username = " + user);
-            }
 
-        })
 
-        // !! key events fired in the following order: keydown->keypress->keyup !!
 
-        // ===== keydown
-// ENCOPASES ALL KEYS ON KEYBOARD
-        // recognizes all keyboard keys when they are pushed down
-        // repeats as key is held down
 
-        // $(document).keydown(function() {
-        //     console.log("Key down");
-        // });
 
 
-        // ===== keypress
-// INCLUDES ALL KEYS WITH VALUES / NOT ARROWS-CTR-ETC
-        // recognizes the character that is typed
-        // only recognizes keys that can have a typed output
 
-        // $(document).keypress(function() {
-        //     console.log("Key press");
-        // });
 
 
-        // ===== keyup
 
-        // recognizes all keyboard keys when they are pushed down
-        // recognizes all keyboard keys when they are released
-        // will fire only once per key push
 
-        // $(document).keyup(function() {
-        //     console.log("Key up");
-        // });
 
-        // keyboard events listeners can be bound to specific DOM elements
-// LOGS ALL KEYS ENTERED INTO INPUT
-//         $('#input-example').keyup(function(e) {
-//             console.log('From input element: ' + $(e.target).val());
-//         });
 
-        /*
 
-            Question 1:
 
-            A keyup event will repeat while a key is held down
 
-            A) True
-            *B) False
-
-
-            Question 2:
-
-            A keypress event will not fire when the arrow keys are pressed.
-
-            *A) True
-            B) False
-
-
-            Question 3:
-
-            Keydown, keypress and keyup event listeners are bound to the document. When a key is typed, all
-            events will fire simultaneously.
-
-            A) True
-            *B) False
-
-         */
-
-
-        // ===== on
-
-        // https://stackoverflow.com/questions/9122078/difference-between-onclick-vs-click
-        // https://www.pdiniz.com/why-you-should-always-use-jquerys-onclick-instead-of-click/
-        // recognizes vanilla JS events, NOT jQuery event names
-        // dynamically added elements will also listen for .on() events
-
-        // $('h1').click(function() {
-        //     console.log('h1 clicked');
-        // });
-
-        // ^^^^^ USING ON
-        // $('h1').on('click', function (){
-        //     console.log('h1 clicked');
-        // })
-
-// SELECT ANY ELEMENT IN DOM/MAIN TO RUN FUNCTION
-//         MORE EFFICIENT THEN ABOVE ^^^
-// ADD ANOTHER ELEMENT OF SAME INTO MAIN
-        // $('main').append('<h1>Another h1</h1>');
-
-        // $('main').on('click', 'h1', function() {
-        //     console.log('h1 clicked');
-        // });
-
-
-        //
-        // $(document).on("keydown", function() {
-        //     console.log('key down event');
-        // });
-
-
-
-        // ===== off
-
-        // removes all events from a selector or a specific event/selector/handler
-
-        // $(document).off("keydown");
-
-
-        // ===== preventDefault()
-
-        // $(document).keydown(function(e) {
-        //     console.log(e.key);
-        //     if (e.key === " ") {
-        //         e.preventDefault();
-        //     }
-        // });
-
-
-        /*
-
-            Question 1:
-
-            Why is the .on() method preferred over the more specific event methods?
-
-            A) Events can still be fired for dynamically added elements
-            B) Events can be removed from an element
-            C) The .on method can save more memory in applying one handler rather than many to a group of elements
-            D) A and C
-           *E) A, B and C
-
-            Question 2:
-
-            The event object can be used for:
-
-            A) Preventing default behavior
-            B) Obtaining information about what key was typed
-           *C) All of the above
-            D) None of the above
-
-         */
-
-        // ===== konami code!
-
-        // https://www.goskills.com/
-
-
-    });
-</script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="js/practicePage.js"></script>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <title>Keyboard Events Lecture</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            min-height: 2000px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<main>-->
+<!--    <h1 id="some-header">Keyboard Events Lecture</h1>-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid blanditiis delectus enim est itaque-->
+<!--        molestiae necessitatibus pariatur quo, rerum sunt tempore temporibus unde ut vel. Eaque necessitatibus quos-->
+<!--        temporibus.</p>-->
+<!--    <input id="input-example" type="text">-->
+<!--</main>-->
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"-->
+<!--        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+<!--<script>-->
+
+<!--    $(document).ready(function () {-->
+
+<!--        "use strict";-->
+<!--        // TODO: when the user types the letter 'a', pop up an alert that says "Welcome!"-->
+<!--        // $(document).keydown(function (e) {-->
+<!--        //     // console.log(e.keyCode);-->
+<!--        //     if (e.keyCode === 65) {-->
+<!--        //         alert("Welcome !");-->
+<!--        //     }-->
+<!--        //      else if (e.keyCode === 67) {-->
+<!--        //         confirm('Logout ?');-->
+<!--        //     } else {-->
+<!--        //         (e.keyCode === 80)-->
+<!--        //         var user = prompt('Enter your Username');-->
+<!--        //         console.log("Username = " + user);-->
+<!--        //     }-->
+<!--        // })-->
+<!---->
+<!---->
+<!--        // TODO: when the user types the letter 'c', pop up a confirm that says "Logout?"-->
+<!--        // $(document).keydown(function (e) {-->
+<!--        //     if (e.keyCode === 67) {-->
+<!--        //         confirm('Logout ?');-->
+<!--        //     }-->
+<!--        // })-->
+<!--        // TODO: when the user types the letter 'p', prompt the user to enter their username-->
+<!---->
+<!---->
+<!--        // $(document).keydown(function (e) {-->
+<!--        //     if (e.keyCode === 80) {-->
+<!--        //         var user = prompt('Enter your Username');-->
+<!--        //         console.log("Username = " + user);-->
+<!--        //     }-->
+<!--        //-->
+<!--        // })-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--        // !! key events fired in the following order: keydown->keypress->keyup !!-->
+<!---->
+<!--        // ===== keydown-->
+<!--// ENCOPASES ALL KEYS ON KEYBOARD-->
+<!--        // recognizes all keyboard keys when they are pushed down-->
+<!--        // repeats as key is held down-->
+<!---->
+<!--        // $(document).keydown(function() {-->
+<!--        //     console.log("Key down");-->
+<!--        // });-->
+<!---->
+<!---->
+<!--        // ===== keypress-->
+<!--// INCLUDES ALL KEYS WITH VALUES / NOT ARROWS-CTR-ETC-->
+<!--        // recognizes the character that is typed-->
+<!--        // only recognizes keys that can have a typed output-->
+<!---->
+<!--        // $(document).keypress(function() {-->
+<!--        //     console.log("Key press");-->
+<!--        // });-->
+<!---->
+<!---->
+<!--        // ===== keyup-->
+<!---->
+<!--        // recognizes all keyboard keys when they are pushed down-->
+<!--        // recognizes all keyboard keys when they are released-->
+<!--        // will fire only once per key push-->
+<!---->
+<!--        // $(document).keyup(function() {-->
+<!--        //     console.log("Key up");-->
+<!--        // });-->
+<!---->
+<!--        // keyboard events listeners can be bound to specific DOM elements-->
+<!--// LOGS ALL KEYS ENTERED INTO INPUT-->
+<!--//         $('#input-example').keyup(function(e) {-->
+<!--//             console.log('From input element: ' + $(e.target).val());-->
+<!--//         });-->
+<!---->
+<!--        /*-->
+<!---->
+<!--            Question 1:-->
+<!---->
+<!--            A keyup event will repeat while a key is held down-->
+<!---->
+<!--            A) True-->
+<!--            *B) False-->
+<!---->
+<!---->
+<!--            Question 2:-->
+<!---->
+<!--            A keypress event will not fire when the arrow keys are pressed.-->
+<!---->
+<!--            *A) True-->
+<!--            B) False-->
+<!---->
+<!---->
+<!--            Question 3:-->
+<!---->
+<!--            Keydown, keypress and keyup event listeners are bound to the document. When a key is typed, all-->
+<!--            events will fire simultaneously.-->
+<!---->
+<!--            A) True-->
+<!--            *B) False-->
+<!---->
+<!--         */-->
+<!---->
+<!---->
+<!--        // ===== on-->
+<!---->
+<!--        // https://stackoverflow.com/questions/9122078/difference-between-onclick-vs-click-->
+<!--        // https://www.pdiniz.com/why-you-should-always-use-jquerys-onclick-instead-of-click/-->
+<!--        // recognizes vanilla JS events, NOT jQuery event names-->
+<!--        // dynamically added elements will also listen for .on() events-->
+<!---->
+<!--        // $('h1').click(function() {-->
+<!--        //     console.log('h1 clicked');-->
+<!--        // });-->
+<!---->
+<!--        // ^^^^^ USING ON-->
+<!--        // $('h1').on('click', function (){-->
+<!--        //     console.log('h1 clicked');-->
+<!--        // })-->
+<!---->
+<!--// SELECT ANY ELEMENT IN DOM/MAIN TO RUN FUNCTION-->
+<!--//         MORE EFFICIENT THEN ABOVE ^^^-->
+<!--// ADD ANOTHER ELEMENT OF SAME INTO MAIN-->
+<!--        // $('main').append('<h1>Another h1</h1>');-->
+<!---->
+<!--        // $('main').on('click', 'h1', function() {-->
+<!--        //     console.log('h1 clicked');-->
+<!--        // });-->
+<!---->
+<!---->
+<!--        //-->
+<!--        // $(document).on("keydown", function() {-->
+<!--        //     console.log('key down event');-->
+<!--        // });-->
+<!---->
+<!---->
+<!--        // ===== off-->
+<!---->
+<!--        // removes all events from a selector or a specific event/selector/handler-->
+<!---->
+<!--        // $(document).off("keydown");-->
+<!---->
+<!---->
+<!--        // ===== preventDefault()-->
+<!---->
+<!--        // $(document).keydown(function(e) {-->
+<!--        //     console.log(e.key);-->
+<!--        //     if (e.key === " ") {-->
+<!--        //         e.preventDefault();-->
+<!--        //     }-->
+<!--        // });-->
+<!---->
+<!---->
+<!--        /*-->
+<!---->
+<!--            Question 1:-->
+<!---->
+<!--            Why is the .on() method preferred over the more specific event methods?-->
+<!---->
+<!--            A) Events can still be fired for dynamically added elements-->
+<!--            B) Events can be removed from an element-->
+<!--            C) The .on method can save more memory in applying one handler rather than many to a group of elements-->
+<!--            D) A and C-->
+<!--           *E) A, B and C-->
+<!---->
+<!--            Question 2:-->
+<!---->
+<!--            The event object can be used for:-->
+<!---->
+<!--            A) Preventing default behavior-->
+<!--            B) Obtaining information about what key was typed-->
+<!--           *C) All of the above-->
+<!--            D) None of the above-->
+<!---->
+<!--         */-->
+<!---->
+<!--        // ===== konami code!-->
+<!---->
+<!--        // https://www.goskills.com/-->
+<!---->
+<!---->
+<!--    });-->
+<!--    -->
+<!--    -->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!---->
+<!---->
+<!--<script src="js/practicePage.js"></script>-->
+<!---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--PASSWORD MUST BE 8 CHAR AND HAVE 1 NUM-->
+<!--<body>-->
+<!--<header>-->
+<!--    <h1>Keyboard Events</h1>-->
+<!--</header>-->
+<!--<main>-->
+<!--    <p>Passwords must be 8 or more characters long and contain at least one number.</p>-->
+<!--    <form action="#">-->
+<!--        <label for="password-input">Password</label>-->
+<!--        <br>-->
+<!--        <input id="password-input" type="password" placeholder="Enter a password" name="password">-->
+<!--        <br><br>-->
+<!--        <button id="submit-btn" disabled>Sign Up</button>-->
+<!--    </form>-->
+<!--</main>-->
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+<!--<script>-->
+<!--    $(document).ready(function() {-->
+<!--        "use strict";-->
+
+<!--        // returns true if the passed password string is at least 8 characters long and contains at least 1 number-->
+<!--        function isValidPass(str) {-->
+<!--            return (str.length >= 8 && '1234567890'.split('').some(e => str.includes(e)));-->
+<!--        }-->
+
+<!--        // disables and enables submit button based on passed boolean-->
+<!--        function controlSubmitButton(boolean) {-->
+<!--            if (boolean) {-->
+<!--                $('#submit-btn').prop('disabled', false);-->
+<!--            } else {-->
+<!--                $('#submit-btn').prop('disabled', true);-->
+<!--            }-->
+<!--        }-->
+
+<!--        // for each keyup event in the text input, check if password is valid or invalid-->
+<!--        $('#password-input').on('keyup', function(e) {-->
+<!--            var enableBtn = isValidPass($('#password-input').val());-->
+<!--            controlSubmitButton(enableBtn);-->
+<!--        });-->
+
+<!--    });-->
+<!--</script>-->
