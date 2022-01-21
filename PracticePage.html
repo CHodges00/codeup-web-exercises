@@ -494,7 +494,7 @@
         "use strict";
         // TODO: when the user types the letter 'a', pop up an alert that says "Welcome!"
         $(document).keydown(function (e) {
-            console.log(e.keyCode);
+            // console.log(e.keyCode);
             if (e.keyCode === 65) {
                 alert("Welcome !");
             }
@@ -508,10 +508,14 @@
             }
         })
         // TODO: when the user types the letter 'p', prompt the user to enter their username
+
+
         $(document).keydown(function (e) {
             if (e.keyCode === 80) {
-                prompt('Enter your Username');
+                var user = prompt('Enter your Username');
+                console.log("Username = " + user);
             }
+
         })
 
         // !! key events fired in the following order: keydown->keypress->keyup !!
