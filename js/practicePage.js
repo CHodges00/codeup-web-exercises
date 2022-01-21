@@ -956,25 +956,25 @@
 
 <!--input example: "bJIENsdfRAIRVIrsRFAijgRar"-->
 
-let string = 'cDvr3444GBdv'
-function returnLetter(){
-
-    for(var i = 0; i <= string.length; i++){
-        if (string[i].isNumeric){
-            console.log("Not Character")
-        }
-        else if (string[i] == string[i].toUpperCase())
-        {
-            console.log("Uppercase");
-        }
-        else
-        {
-            console.log("Lowercase");
-        }
-    }
-}
-
-console.log(returnLetter(string))
+// let string = 'cDvr3444GBdv'
+// function returnLetter(){
+//
+//     for(var i = 0; i <= string.length; i++){
+//         if (string[i].isNumeric){
+//             console.log("Not Character")
+//         }
+//         else if (string[i] == string[i].toUpperCase())
+//         {
+//             console.log("Uppercase");
+//         }
+//         else
+//         {
+//             console.log("Lowercase");
+//         }
+//     }
+// }
+//
+// console.log(returnLetter(string))
 
 
 
