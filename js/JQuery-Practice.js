@@ -37,11 +37,11 @@
 ////////////////   LAURA PRACTICE //////////////////
 
 // 1. give all table cells a black border
-
+$('td').css('border', '1px solid black')
 
 
 // 2. remove all bullet points from the unordered list items
-
+$('ul').children().css('list-style', 'none')
 
 
 // 3. change the font family of the entire page to luxurious roman
@@ -56,17 +56,25 @@
 
 // 4. give each section a unique id
 
+// #first
+// #second
+// #third
+// #fourth
 
 
 // 5. using the unique id’s give each section a different background color
-
+$('#first').css('background-color', 'yellow')
+$('#second').css('background-color', 'blue')
+$('#third').css('background-color', 'green')
+$('#fourth').css('background-color', 'red')
 
 
 // 6. give 3 elements the same class name of “highlight”
-
-
-
 // 7. give each of those 3 elements a bright yellow background
+$('.highlight').css('background-color', 'yellow')
+
+
+
 
 
 
