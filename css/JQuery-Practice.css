@@ -13,6 +13,7 @@ tr {
 .floofers {
     width: 300px;
     height: auto;
+    transition: 2s;
 }
 
 .floofersAfter{

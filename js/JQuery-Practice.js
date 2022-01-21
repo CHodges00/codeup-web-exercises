@@ -74,7 +74,7 @@ $('.highlight').css('background-color', 'yellow')
 
 // 8. BONUS: when you click on the image, make the image larger than what it currently is
 $('img').click(function (){
-    $(this).toggleClass('floofers').toggleClass('floofersAfter')
+    $(this).toggleClass('floofersAfter')
 })
 
 
