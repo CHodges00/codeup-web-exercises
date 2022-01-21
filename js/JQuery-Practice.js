@@ -45,17 +45,11 @@ $('ul').children().css('list-style', 'none')
 
 
 // 3. change the font family of the entire page to luxurious roman
-// ---> <link rel=“preconnect” href=“https://fonts.googleapis.com”>
-//     <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
-//     <link href=“https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap” rel=“stylesheet”>
-//     --->font-family: ‘Abril Fatface’, cursive;
-// font-family: ‘Questrial’, sans-serif;
-
+$('*').css('font-family', 'Abril Fatface, cursive');
 
 
 
 // 4. give each section a unique id
-
 // #first
 // #second
 // #third
@@ -64,7 +58,7 @@ $('ul').children().css('list-style', 'none')
 
 // 5. using the unique id’s give each section a different background color
 $('#first').css('background-color', 'yellow')
-$('#second').css('background-color', 'blue')
+$('#second').css('background-color', 'cyan')
 $('#third').css('background-color', 'green')
 $('#fourth').css('background-color', 'red')
 
@@ -79,7 +73,9 @@ $('.highlight').css('background-color', 'yellow')
 
 
 // 8. BONUS: when you click on the image, make the image larger than what it currently is
-
+$('img').click(function (){
+    $(this).toggleClass('floofers').toggleClass('floofersAfter')
+})
 
 
 
