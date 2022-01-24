@@ -12,6 +12,14 @@
             background-color: yellow;
         }
 
+        .bold {
+            font-weight: bold;
+        }
+
+        .blue {
+            color: blue;
+        }
+
         .left-image {
             background-image: url("assets/faq1.jpeg.crdownload");
             background-size: contain;
@@ -237,15 +245,17 @@
 
     // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
     $('h3').click(function () {
-        $(this).next('ul').children().css('font-weight', 'bold')
+        $(this).next('ul').children().toggleClass('bold')
     });
 
     // When any list item is clicked, first li of the parent ul should have a font color of blue.
     $('li').click(function () {
-        $(this).parent().children().first().css('color', 'blue')
+        $(this).parent().children().first().toggleClass('blue')
     });
 
 
+
+    // //////////////////// BONUS ////////////////////////
     // PHOTO STYLING
     $('.photo').css({'border': '10px solid brown', 'display': 'flex', 'flex-direction': 'column'})
     $('.photos').css({'display': 'flex', 'justify-content': 'space-around', 'align-items': 'center'})
@@ -253,8 +263,8 @@
 
     // IMAGE1 TAKES PLACE OF IMAGE 3 AND FILLS WITH IMAGE2, IMAGE2 SWAPS RANDOMLY, IMAGE3 SWAPS TO IMAGE1 AND TAKES CENTER IMAGE
     $('#btn-center').click(function () {
-        let decide = Math.floor((Math.random() * 100) + 1);
-        if (decide % 2 === 0) {
+        let randomNum = Math.floor((Math.random() * 100) + 1);
+        if (randomNum % 2 === 0) {
             $('#image3').toggleClass('right-image').toggleClass('center-image');
             $('#image2').toggleClass('center-image').toggleClass('right-image');
         } else {
