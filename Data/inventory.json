@@ -1,45 +1,46 @@
 [
   {
     "title": "Hammer",
-    "quantity": 25,
+    "quantity": [17, 6],
     "categories": [
-      " tool "
+      " Irwin "
     ],
-    "price": 20
+    "price": [28, 15]
   },
   {
     "title": "Drill",
-    "quantity": 5,
+    "quantity": [5 , 23],
     "categories": [
-      " tool ",
-      " powered "
+      " Craftsman ",
+      " Dewalt "
     ],
-    "price": 100
+    "price": [140, 180]
   },
   {
     "title": "Mower",
-    "quantity": 5,
+    "quantity": [22, 19],
     "categories": [
-      " tool ",
-      " gas ",
-      " outdoor "
+      " Craftsman ",
+      " John Deere "
     ],
-    "price": 200
+    "price": [200, 330]
   },
   {
     "title": "Screwdrivers",
-    "quantity": 25,
+    "quantity":[2, 64],
     "categories": [
-      "tool"
+      " Craftsman ",
+      " Torx "
     ],
-    "price": 10
+    "price": [10, 56]
   },
   {
     "title": "Saws",
-    "quantity": 90,
+    "quantity": [20, 11],
     "categories": [
-      "tool"
+      " Craftsman ",
+      " Stanley "
     ],
-    "price": 18
+    "price": [181, 240]
   }
 ]

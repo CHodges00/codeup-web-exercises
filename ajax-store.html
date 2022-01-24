@@ -3,6 +3,12 @@
 <head>
     <title>Online Store</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,34 +22,14 @@
     <tr>
         <th scope="col">Product</th>
         <th scope="col"># In Stock</th>
-        <th scope="col">Categories</th>
+        <th scope="col">Brand</th>
         <th scope="col">Unit Price</th>
     </tr>
     </thead>
 
 
     <tbody id="insertProducts">
-<!--    <tr>-->
-<!--        <th scope="row">TH 1</th>-->
-<!--        <td class="title">TD .title</td>-->
-<!--        <td class="quantity">TD .quantity</td>-->
-<!--        <td class="price">TD .price</td>-->
 
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <th scope="row">TH 2</th>-->
-<!--        <td class="title">TD .title</td>-->
-<!--        <td class="quantity">TD .quantity</td>-->
-<!--        <td class="price">TD .price</td>-->
-
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <th scope="row">TH 3</th>-->
-<!--        <td class="title">TD .title</td>-->
-<!--        <td class="quantity">TD .quantity</td>-->
-<!--        <td class="price">TD .price</td>-->
-
-<!--    </tr>-->
     </tbody>
 </table>
 
@@ -72,7 +58,7 @@
 
 
         for (var i = 0; i < data.length; i ++){
-        $('#insertProducts').append('<tr scope="row"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + data[i].price + '</td></tr>')
+        $('#insertProducts').append('<tr scope="row"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity[0] + ' , ' + data[i].quantity[1] + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + '$' + data[i].price[0] + ' , ' + '$' + data[i].price[1] + '</td></tr>')
     }
     })
 
