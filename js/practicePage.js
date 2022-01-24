@@ -980,5 +980,50 @@
 
 
 
+// ACCEPT STR OF NUMS AND RETURN SUM
+
+
+
+function sum(str){
+    for (var i = 0; i < str.length; i++){
+        console.log( ' + ' + str[i])
+    }
+}
+
+sum('22222')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
