@@ -1018,7 +1018,7 @@ console.log('after setting ' + $("h1").html());
 
 
 
-// ADD/REMOVE CLASS ON H2
+// ADD/REMOVE CLASSES ON H2
 $('#red').addClass('one two three');
 $('#red'). removeClass('two')
 
@@ -1028,8 +1028,10 @@ $('h2').click(function (){
  $(this).toggleClass('highlight')
 });
 
-
-
+// GRABBING LI'S
+$('li').first().css('background-color', 'blue')
+$('li').last().css('background-color', 'red')
+$('li').last().parent().css('background-color', 'yellow')
 
 
 
