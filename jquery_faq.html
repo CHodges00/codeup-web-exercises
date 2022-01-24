@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <title>Attributes and CSS</title>
     <style>
-        .left-image{
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .left-image {
             background-image: url("assets/faq1.jpeg.crdownload");
             background-size: contain;
             /*background-repeat: no-repeat;*/
             width: 300px;
             height: 300px;
         }
-        .right-image{
+
+        .right-image {
             background-image: url('assets/faq2.jpeg');
             background-size: contain;
             width: 300px;
             height: 300px;
         }
+
         .center-image {
             background-image: url("assets/faq3.jpeg");
             background-size: contain;
@@ -77,7 +87,8 @@
         <hr>
     </div>
     <div>
-        <dt> --------- Can I drive into a national park? If so, do I need to pre-order an entrance ticket? ----------</dt>
+        <dt> --------- Can I drive into a national park? If so, do I need to pre-order an entrance ticket? ----------
+        </dt>
         <dd>Most of the national parks in the United States are accessible by car, RV or bus.</dd>
         <hr>
     </div>
@@ -93,9 +104,13 @@
 
 <h3 id="header-one">Yellow Stone</h3>
 <ul id="first-park">
-    <li>Yellowstone National Park is the first established national park in the United States, and is widely held to be the first established national park in the world.</li>
-    <li>Yellowstone National Park spans an area of over 3,450 square miles that is made up of lakes, geysers, canyons, rivers, and mountain ranges.</li>
-    <li>Yellowstone National Park is so large that is covers three states, Wyoming, Idaho, and Montana. </li>
+    <li>Yellowstone National Park is the first established national park in the United States, and is widely held to be
+        the first established national park in the world.
+    </li>
+    <li>Yellowstone National Park spans an area of over 3,450 square miles that is made up of lakes, geysers, canyons,
+        rivers, and mountain ranges.
+    </li>
+    <li>Yellowstone National Park is so large that is covers three states, Wyoming, Idaho, and Montana.</li>
     <li>The majority of the national park is located in Wyoming and is truly one of America’s greatest treasures.</li>
 </ul>
 
@@ -104,32 +119,39 @@
     <li>The Gunnison River drops an average of 43 feet per mile through the canyon.</li>
     <li>Black Canyon has inspired dread for centuries.</li>
     <li>Colorado’s biggest cliff is the Black Canyon’s Painted Wall.</li>
-    <li>Black Canyon gets its name because some parts of the gorge receive only 33 total minutes of sunlight per day.</li>
+    <li>Black Canyon gets its name because some parts of the gorge receive only 33 total minutes of sunlight per day.
+    </li>
 
 </ul>
 
 <h3 id="header-three">Channel Islands</h3>
 <ul id="third-park">
-    <li>Painted Cave and the other sea caves on Santa Cruz Island were the inspiration for some of the sets on Pirates of the Caribbean.</li>
-    <li>The oldest human remains in North America, dating to 13,000 B.C., were discovered in 1959 on Santa Rosa Island. </li>
-    <li>The Channel Islands were created by tectonic forces, which caused them to rise up out of the ocean five million years ago. </li>
-    <li>Diablo Peak (Devil’s Peak), on Santa Cruz Island, is the tallest peak on the Channel Islands at 2,450 feet. </li>
+    <li>Painted Cave and the other sea caves on Santa Cruz Island were the inspiration for some of the sets on Pirates
+        of the Caribbean.
+    </li>
+    <li>The oldest human remains in North America, dating to 13,000 B.C., were discovered in 1959 on Santa Rosa
+        Island.
+    </li>
+    <li>The Channel Islands were created by tectonic forces, which caused them to rise up out of the ocean five million
+        years ago.
+    </li>
+    <li>Diablo Peak (Devil’s Peak), on Santa Cruz Island, is the tallest peak on the Channel Islands at 2,450 feet.</li>
 </ul>
 
 
 <div class="photos" style="margin-top: 50px">
 
-<div class="photo left-image" id="image1"></div>
-<div class="photo center-image" id="image2"></div>
-<div class="photo right-image" id="image3"></div>
+    <div class="photo left-image" id="image1"></div>
+    <div class="photo center-image" id="image2"></div>
+    <div class="photo right-image" id="image3"></div>
 
 </div>
 
 <div class="buttons" style="display: flex; justify-content: space-around">
 
-<button id="btn-left">Change Photo</button>
-<button id="btn-center">Change Photo</button>
-<button id="btn-right">Change Photo</button>
+    <button id="btn-left">Change Photo</button>
+    <button id="btn-center">Change Photo</button>
+    <button id="btn-right">Change Photo</button>
 
 </div>
 
@@ -138,16 +160,20 @@
     // SET DD CLASS INVISIBLE
     $('dd').addClass('invisible');
 
+
     // .INVISIBLE CSS VISIBILITY=HIDDEN
-    $('.invisible').css('visibility', 'hidden');
+    // $('.invisible').css({'visibility': 'hidden','text-align': 'center', 'margin-bottom': '30px', 'font-size': '22px', 'margin-left':'50px', 'margin-right':'50px'});
+
 
     // ADD SELECTOR
     $('body').prepend('<button id="switch">Select to see answers</button>');
 
+
     // SELECTOR TOGGLES INVISIBLE
     $('#switch').click(function () {
-        $('.invisible').toggle().css('visibility', 'revert')
+        $('dd').toggleClass('invisible')
     })
+
 
     // STYLING
     $('dt').css({
@@ -156,7 +182,16 @@
         'font-size': '26px',
         'color': 'black'
     })
-    $('dd').css({'text-align': 'center', 'margin-bottom': '30px', 'font-size': '22px', 'margin-left':'50px', 'margin-right':'50px'})
+    $('dd').css({
+        'text-align': 'center',
+        'margin-bottom': '30px',
+        'font-size': '22px',
+        'margin-left': '50px',
+        'margin-right': '50px'
+    })
+    $('div').css({'margin-bottom': '20px'})
+
+
 
     // EACH DT IS HIGHLIGHTED WHEN CLICKED
     $('dt').click(function () {
@@ -165,21 +200,16 @@
     $('dt').dblclick(function () {
         $(this).css('background-color', 'revert')
     })
-    $('div').css({'margin-bottom':'20px'})
+
 
 
     // HIGHLIGHT LAST LI in each UL
-    $('#lastItem-button').click(function(event){
-        event.preventDefault();
-        $('ul li:last-child').css('background-color', 'yellow');
+
+    $('#lastItem-button').on('click', function (){
+        $('ul li:last-child').toggleClass('highlight')
     })
-    // $('#lastItem-button').click(function (){
-    //     $('li').each(function(index) {
-    //         if (index === 3 || index === 7 || index === 11) {
-    //             $(this).css('background-color', 'yellow');
-    //         }
-    //     });
-    // })
+
+
 
     // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
     // $('#header-one').click(function (){
@@ -208,44 +238,42 @@
 
 
     // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-    $('h3').click(function (){
-    $(this).next('ul').children().css('font-weight', 'bold')
+    $('h3').click(function () {
+        $(this).next('ul').children().css('font-weight', 'bold')
     });
 
     // When any list item is clicked, first li of the parent ul should have a font color of blue.
-    $('li').click(function (){
+    $('li').click(function () {
         $(this).parent().children().first().css('color', 'blue')
     });
 
 
     // BUTTONS
-    $('.photo').css({'border': '10px solid brown', 'display':'flex', 'flex-direction':'column'})
-    $('.photos').css({'display':'flex', 'justify-content':'space-around', 'align-items':'center'})
-
+    $('.photo').css({'border': '10px solid brown', 'display': 'flex', 'flex-direction': 'column'})
+    $('.photos').css({'display': 'flex', 'justify-content': 'space-around', 'align-items': 'center'})
 
 
     // IMAGE1 TAKES PLACE OF IMAGE 3 AND FILLS WITH IMAGE2, IMAGE2 SWAPS RANDOMLY, IMAGE3 SWAPS TO IMAGE1 AND TAKES CENTER IMAGE
-    $('#btn-center').click(function(){
+    $('#btn-center').click(function () {
         let decide = Math.floor((Math.random() * 100) + 1);
-        if(decide % 2 === 0){
+        if (decide % 2 === 0) {
             $('#image3').toggleClass('right-image').toggleClass('center-image');
             $('#image2').toggleClass('center-image').toggleClass('right-image');
-        }else{
+        } else {
             $('#image1').toggleClass('left-image').toggleClass('center-image');
             $('#image2').toggleClass('center-image').toggleClass('left-image');
         }
     })
 
-    $('#btn-left').click(function(){
+    $('#btn-left').click(function () {
         $('#image1').toggleClass('left-image').toggleClass('center-image');
         $('#image2').toggleClass('center-image').toggleClass('left-image');
     })
 
-    $('#btn-right').click(function(){
+    $('#btn-right').click(function () {
         $('#image3').toggleClass('right-image').toggleClass('center-image');
         $('#image2').toggleClass('center-image').toggleClass('right-image');
     })
-
 
 
 </script>
