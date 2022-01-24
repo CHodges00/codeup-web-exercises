@@ -981,12 +981,11 @@
 
 
 // ACCEPT STR OF NUMS AND RETURN SUM
-
-
-
 function sum(str){
     for (var i = 0; i < str.length; i++){
+        sum += sum + [i]
         console.log( ' + ' + str[i])
+        // str += (str[i]);
     }
 }
 
@@ -994,11 +993,29 @@ sum('22222')
 
 
 
+// GRAB P TAGS AND CHANGE BORDER
+$('.para').css({'border': '2px solid blue', 'font-size': '20px'});
+
+// CHANGE HEADER TEXT
+// SETTER
+console.log('before changing ' + $("h1").html());
+$('h1').text('GOODBYE !');
+
+// GETTER
+// $("h1").html()
+console.log('after setting ' + $("h1").html());
 
 
 
+// ADD/REMOVE CLASS ON H2
+$('#red').addClass('one two three');
+$('#red'). removeClass('two')
 
 
+// TOGGLE H1 TO BE HIGHLIGHTED ON CLICK
+$('h2').click(function (){
+ $(this).toggleClass('highlight')
+});
 
 
 
