@@ -162,7 +162,7 @@
 
 
     // .INVISIBLE CSS VISIBILITY=HIDDEN
-    // $('.invisible').css({'visibility': 'hidden','text-align': 'center', 'margin-bottom': '30px', 'font-size': '22px', 'margin-left':'50px', 'margin-right':'50px'});
+    // CREATED IN STYLE SHEET
 
 
     // ADD SELECTOR
@@ -195,11 +195,9 @@
 
     // EACH DT IS HIGHLIGHTED WHEN CLICKED
     $('dt').click(function () {
-        $(this).css('background-color', 'yellow');
+        $(this).toggleClass('highlight')
     })
-    $('dt').dblclick(function () {
-        $(this).css('background-color', 'revert')
-    })
+
 
 
 
@@ -248,7 +246,7 @@
     });
 
 
-    // BUTTONS
+    // PHOTO STYLING
     $('.photo').css({'border': '10px solid brown', 'display': 'flex', 'flex-direction': 'column'})
     $('.photos').css({'display': 'flex', 'justify-content': 'space-around', 'align-items': 'center'})
 
