@@ -212,35 +212,11 @@
     // HIGHLIGHT LAST LI in each UL
 
     $('#lastItem-button').on('click', function (){
-        $('ul li:last-child').toggleClass('highlight')
+        $('ul').each(function (){
+            $(this).children().last().toggleClass('highlight')
+        })
     })
 
-
-
-    // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-    // $('#header-one').click(function (){
-    //     $('li').each(function(index) {
-    //         if (index === 0 || index === 1 || index === 2 || index === 3) {
-    //             $(this).css('font-weight', 'bold');
-    //         }
-    //     });
-    // })
-    //
-    // $('#header-two').click(function (){
-    //     $('li').each(function(index) {
-    //         if (index === 4 || index === 5 || index === 6 || index === 7) {
-    //             $(this).css('font-weight', 'bold');
-    //         }
-    //     });
-    // })
-    //
-    // $('#header-three').click(function (){
-    //     $('li').each(function(index) {
-    //         if (index === 8 || index === 9 || index === 10 || index === 11) {
-    //             $(this).css('font-weight', 'bold');
-    //         }
-    //     });
-    // })
 
 
     // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
@@ -248,7 +224,8 @@
         $(this).next('ul').children().toggleClass('bold')
     });
 
-    // When any list item is clicked, first li of the parent ul should have a font color of blue.
+
+    // When any li is clicked, first li of the parent ul should have a font color of blue.
     $('li').click(function () {
         $(this).parent().children().first().toggleClass('blue')
     });
