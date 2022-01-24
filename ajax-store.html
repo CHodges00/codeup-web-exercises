@@ -24,12 +24,37 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+    $.get("/Data/inventory.json", {
+    }).done(function (data){
+        console.log(data)
+        console.log(data[0]);
+        console.log(data[1]);
+        console.log(data[2]);
+        console.log(data[3]);
+        console.log(data[4]);
+        console.log(data[0].categories[0]);
+        console.log(data[1].title);
+        console.log(data[2].categories[2]);
+        console.log(data[3].price);
+        console.log(data[4].quantity);
+    })
+
+
+    // ADD TO DATA
+    // $.post("/Data/inventory.json", {
+    //     title: 'ladders'
+    // }).done(function (data){
+    //     console.log(data)
+    // })
+
 
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    // $('#insertProducts').
 
 
 })();
