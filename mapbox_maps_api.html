@@ -1,26 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>MAP</title>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
+
+
+    <style>
+
+        .maps {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        p {
+            padding-right: 10px;
+        }
+
+        #map1, #map2, #map3, #map4 {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+    </style>
+
 
 </head>
 <body>
 
+<div class="maps">
+    <!--MAP 1-->
+    <div class="maps">
+        <p>Map 1
+        <br>
+            Zoom = 9
+        </p>
+        <div id='map1' style='width: 500px; height: 400px;'></div>
+    </div>
+
+    <!--MAP 2-->
+    <div class="maps">
+        <p>Map 2
+        <br>
+            Zoom = 5
+        </p>
+        <div id='map2' style='width: 500px; height: 400px;'></div>
+    </div>
+
+    <!--MAP 3-->
+    <div class="maps">
+        <p>Map 3
+        <br>
+            Zoom = 15
+        </p>
+        <div id='map3' style='width: 500px; height: 400px;'></div>
+    </div>
+
+    <!--MAP 4-->
+    <div class="maps">
+        <p>Map 4
+        <br>
+            Zoom = 20
+        </p>
+        <div id='map4' style='width: 500px; height: 400px;'></div>
+    </div>
+
+</div>
 
 
-<div id='map' style='width: 400px; height: 300px;'></div>
 <script>
+    // PORTLAND GEOCODE 45.530639,-122.698456
+
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNreXVtZDRncTFwNzMybnBobzRzMmw0bmsifQ.MHL4uEVg6NoRM2YlHRc5Sw';
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
+    const map1 = new mapboxgl.Map({
+        container: 'map1', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
+        center: [-122.698566, 45.5332], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
+
+
+    const map2 = new mapboxgl.Map({
+        container: 'map2', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-122.698566, 45.5332], // starting position [lng, lat]
+        zoom: 5 // starting zoom
+    });
+
+
+    const map3 = new mapboxgl.Map({
+        container: 'map3', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-122.698566, 45.5332], // starting position [lng, lat]
+        zoom: 15 // starting zoom
+    });
+
+
+    const map4 = new mapboxgl.Map({
+        container: 'map4', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-122.698566, 45.5332], // starting position [lng, lat]
+        zoom: 20 // starting zoom
+    });
+
+
 </script>
 
 </body>
