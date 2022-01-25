@@ -1004,35 +1004,39 @@
 
 
 
-// GRAB P TAGS AND CHANGE BORDER
-$('.para').css({'border': '2px solid blue', 'font-size': '20px'});
+// // GRAB P TAGS AND CHANGE BORDER
+// $('.para').css({'border': '2px solid blue', 'font-size': '20px'});
+//
+// // CHANGE HEADER TEXT
+// // SETTER
+// console.log('before changing ' + $("h1").html());
+// $('h1').text('GOODBYE !');
+//
+// // GETTER
+// // $("h1").html()
+// console.log('after setting ' + $("h1").html());
+//
+//
+//
+// // ADD/REMOVE CLASSES ON H2
+// $('#red').addClass('one two three');
+// $('#red'). removeClass('two')
+//
+//
+// // TOGGLE H1 TO BE HIGHLIGHTED ON CLICK
+// $('h2').click(function (){
+//  $(this).toggleClass('highlight')
+// });
+//
+// // GRABBING LI'S
+// $('li').first().css('background-color', 'blue')
+// $('li').last().css('background-color', 'red')
+// $('li').last().parent().css('background-color', 'yellow')
 
-// CHANGE HEADER TEXT
-// SETTER
-console.log('before changing ' + $("h1").html());
-$('h1').text('GOODBYE !');
 
-// GETTER
-// $("h1").html()
-console.log('after setting ' + $("h1").html());
-
-
-
-// ADD/REMOVE CLASSES ON H2
-$('#red').addClass('one two three');
-$('#red'). removeClass('two')
-
-
-// TOGGLE H1 TO BE HIGHLIGHTED ON CLICK
-$('h2').click(function (){
- $(this).toggleClass('highlight')
-});
-
-// GRABBING LI'S
-$('li').first().css('background-color', 'blue')
-$('li').last().css('background-color', 'red')
-$('li').last().parent().css('background-color', 'yellow')
-
+// Write a function that finds duplicates, or repeating numbers in a string of numbers, and returns an object that shows how many times any repeating number is shown
+// INPUT: “42992338111134”
+// EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4}
 
 
 
