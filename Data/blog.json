@@ -18,5 +18,15 @@
             " sugar "
         ],
         "date": "February 14, 2015"
+    },
+
+    {
+        "title": "The Third Post",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque delectus eaque harum quis reiciendis reprehenderit sequi tempora ullam veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque delectus eaque harum quis reiciendis reprehenderit sequi tempora ullam veniam.",
+        "categories": [
+            " family ",
+            " candy "
+        ],
+        "date": "November 23, 2025"
     }
 ]
