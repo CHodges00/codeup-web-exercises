@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Online Store</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
         body {
             background-image: url("assets/hardware3.jpeg");
@@ -14,17 +15,18 @@
         }
 
 
-
         #products {
             width: 80%;
             margin-left: auto;
             margin-right: auto;
             border: 5px solid sandybrown;
         }
+
         .table {
             color: blue;
-            box-shadow: 0 0  60px black;
+            box-shadow: 0 0 60px black;
         }
+
         h1 {
             display: flex;
             justify-content: center;
@@ -36,16 +38,18 @@
             margin-left: auto;
             margin-right: auto;
             background-color: sandybrown;
-            box-shadow: 0 0  60px black;
+            box-shadow: 0 0 60px black;
         }
+
         .btn-box {
             display: flex;
             justify-content: center;
         }
+
         .btn {
             background-color: cadetblue;
             color: white;
-            box-shadow: 0 0  20px black;
+            box-shadow: 0 0 20px black;
         }
     </style>
 </head>
@@ -55,9 +59,7 @@
 <br>
 
 
-
-
-<table  id='products' class="table">
+<table id='products' class="table">
     <thead>
     <tr class="table-danger">
         <th scope="col">Product</th>
@@ -94,44 +96,44 @@
 </table>
 
 <div class="btn-box">
-<button type="button" class="btn">Show more</button>
+    <button type="button" class="btn">Show more</button>
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
 <script src=js/jquery-2.2.4.js></script>
 <script>
 
 
-
-
     "use strict";
-    $('.btn').one('click' , function() {
+    $('.btn').one('click', function () {
 
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.get("/Data/inventory.json", {
-    }).done(function (data){
-        for (var i = 0; i < data.length; i ++){
-        $('#insertProducts').append('<tr scope="row" class="table-warning"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity[0] + ' , ' + data[i].quantity[1] + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + '$' + data[i].price[0] + ' , ' + '$' + data[i].price[1] + '</td></tr>')
-    }
-    })
-
-
-    // ADD TO DATA
-    // data[4]
-
-
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+        $.get("/Data/inventory.json", {}).done(function (data) {
+            for (var i = 0; i < data.length; i++) {
+                $('#insertProducts').append('<tr scope="row" class="table-warning"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity[0] + ' , ' + data[i].quantity[1] + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + '$' + data[i].price[0] + ' , ' + '$' + data[i].price[1] + '</td></tr>')
+            }
+        })
 
 
 
 
-})();
+        // ADD TO DATA
+        // data[4]
 
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+
+
+    })();
 
 
 </script>
