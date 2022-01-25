@@ -4,9 +4,48 @@
     <title>Online Store</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
+        body {
+            background-image: url("assets/hardware3.jpeg");
+            background-size: cover;
+            background-color: gray;
+            margin-top: 160px;
+            margin-bottom: 200px;
+            color: white;
+        }
+
+
+
+        #products {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid sandybrown;
+        }
+        .table {
+            color: blue;
+            box-shadow: 0 0  60px black;
+        }
         h1 {
             display: flex;
             justify-content: center;
+            font-weight: bold;
+            color: black;
+            font-family: "American Typewriter";
+            border: 2px solid black;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: sandybrown;
+            box-shadow: 0 0  60px black;
+        }
+        .btn-box {
+            display: flex;
+            justify-content: center;
+        }
+        .btn {
+            background-color: cadetblue;
+            color: white;
+            box-shadow: 0 0  20px black;
         }
     </style>
 </head>
@@ -28,34 +67,51 @@
     </tr>
     </thead>
     <tbody id="insertProducts">
+    <tr scope="row" class="table-warning">
+        <th class="title">Wrenches</th>
+        <td class="quantity">42 , 30</td>
+        <td class="category">Craftsman , GearWrench</td>
+        <td class="price">$150 , $90</td>
+    </tr>
+
+    <tr scope="row" class="table-warning">
+        <th class="title">Trimmers</th>
+        <td class="quantity">49 , 3</td>
+        <td class="category">Craftsman , Ryobi</td>
+        <td class="price">$180 , $175</td>
+    </tr>
+
+    <tr scope="row" class="table-warning">
+        <th class="title">Buckets</th>
+        <td class="quantity">115 , 21</td>
+        <td class="category">CarGuys , Plastic</td>
+        <td class="price">$5 , $9</td>
+
+
+    </tr>
 
     </tbody>
 </table>
 
-<button type="button" class="btn-primary" style="text-align: center">Refresh stock</button>
+<div class="btn-box">
+<button type="button" class="btn">Show more</button>
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <script src=js/jquery-2.2.4.js></script>
 <script>
-(function() {
+
+
+
+
     "use strict";
+    $('.btn').one('click' , function() {
+
     // TODO: Create an AJAX GET request for the file under data/inventory.json
     $.get("/Data/inventory.json", {
     }).done(function (data){
-        console.log(data);
-        console.log(data[0]);
-        console.log(data[1]);
-        console.log(data[2]);
-        console.log(data[3]);
-        console.log(data[4]);
-        console.log(data[0].categories[0]);
-        console.log(data[1].title);
-        console.log(data[2].categories[2]);
-        console.log(data[3].price);
-        console.log(data[4].quantity);
-
-
         for (var i = 0; i < data.length; i ++){
         $('#insertProducts').append('<tr scope="row" class="table-warning"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity[0] + ' , ' + data[i].quantity[1] + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + '$' + data[i].price[0] + ' , ' + '$' + data[i].price[1] + '</td></tr>')
     }
@@ -75,6 +131,9 @@
 
 
 })();
+
+
+
 </script>
 
 </body>
