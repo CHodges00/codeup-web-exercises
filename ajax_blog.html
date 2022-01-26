@@ -94,7 +94,22 @@
 
 </head>
 <body>
+<form>
+    <h2> ADD A NEW POST </h2>
+    <br>
+    <label for="newTitle">Title</label>
+    <input placeholder="Title" id='newTitle' name="newTitle" type="text">
+    <label for="newCategory">Category</label>
+    <input placeholder="Category" id='newCategory' name="newCategory">
+    <label for="newDate">Category</label>
+    <input id='newDate' name="newDate" type="date">
+    <hr>
+    <label for="newContent">Content</label>
+    <textarea placeholder="What's on your mind ?" id='newContent' name="newContent"></textarea>
+    <hr>
 
+    <input type="submit" id="newPost">
+</form>
 
 <div class="head bg-dark">
     <h1 class="header">BLOG BLOG BLOG</h1>
@@ -115,8 +130,17 @@
 
 
 <script>
+    let newTitle = $('#newTitle');
 
-    var newPosts = [];
+
+    $('#newPost').on('click', function (e){
+        e.preventDefault();
+        console.log(newTitle);
+        // $('#posts').append(`<div class="block"></block><div class="container bg-dark" id="posts"><div class="row"><div class="col-6 my-3 title">' ! '</div><div class="col-4  category m-2 ml-auto">' ! '<div class="date">' ! '</div></div><div class="col-12 p-3 content">' ! '</div></div></div>`);
+    })
+
+
+
 
     $.get("Data/blog.json").done(function (data) {
         $.each(data, function (i, post) {
