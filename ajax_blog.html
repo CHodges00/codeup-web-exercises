@@ -53,7 +53,7 @@
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 50px;
-            width: 80%;
+            width: 78%;
             height: auto;
             background: linear-gradient(0deg, #000, #272727);
         }
@@ -119,10 +119,9 @@
     var newPosts = [];
 
     $.get("Data/blog.json").done(function (data) {
-        for (var i = 0; i <= data.length; i++) {
-            $('#posts').append('<div class="block"></block><div class="container bg-dark" id="posts"><div class="row"><div class="col-6 my-3 title">' + data[i].title + '</div><div class="col-4  category m-2 ml-auto">' + data[i].categories + '<div class="date">' + data[i].date + '</div></div><div class="col-12 p-3 content">' + data[i].content + '</div></div></div>')
-            console.log(data)
-        }
+        $.each(data, function (i, post) {
+            $('#posts').append(`<div class="block"></block><div class="container bg-dark" id="posts"><div class="row"><div class="col-6 my-3 title">${post.title}</div><div class="col-4  category m-2 ml-auto">${post.categories}<div class="date">${post.date}</div></div><div class="col-12 p-3 content">${post.content}</div></div></div>`)
+        })
     })
 
     // $.post( "Data/blog.json", { "title": "John", "content": "2pm" })
