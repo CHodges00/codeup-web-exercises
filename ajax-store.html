@@ -119,8 +119,8 @@
     //     }
     // })
     $('.btn').one('click', function () {
-
-        // CLEAR THE TABLE
+    //
+    //     // CLEAR THE TABLE
 
 
         $.get('Data/inventory.json').done(function (data) {
@@ -130,7 +130,7 @@
             $.each(data, function (i, tool) {
                 // LOGS OBJECT
                 console.log(tool)
-                console.log(tool.title)
+                // console.log(tool.title)
                 let tools = `<tr scope="row" class="table-warning">
                          <th class="title"> ${tool.title}</th>
                          <td class="quantity">${tool.quantity}</td>
