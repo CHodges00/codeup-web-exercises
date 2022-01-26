@@ -17,6 +17,7 @@
             align-items: center;
             flex-wrap: wrap;
         }
+
         p {
             padding-right: 10px;
         }
@@ -25,6 +26,7 @@
             margin-top: 50px;
             margin-bottom: 50px;
         }
+
 
     </style>
 
@@ -36,7 +38,7 @@
     <!--MAP 1-->
     <div class="maps">
         <p>Map 1
-        <br>
+            <br>
             Zoom = 9
         </p>
         <div id='map1' style='width: 500px; height: 400px;'></div>
@@ -45,7 +47,7 @@
     <!--MAP 2-->
     <div class="maps">
         <p>Map 2
-        <br>
+            <br>
             Zoom = 5
         </p>
         <div id='map2' style='width: 500px; height: 400px;'></div>
@@ -54,7 +56,7 @@
     <!--MAP 3-->
     <div class="maps">
         <p>Map 3
-        <br>
+            <br>
             Zoom = 15
         </p>
         <div id='map3' style='width: 500px; height: 400px;'></div>
@@ -63,7 +65,7 @@
     <!--MAP 4-->
     <div class="maps">
         <p>Map 4
-        <br>
+            <br>
             Zoom = 20
         </p>
         <div id='map4' style='width: 500px; height: 400px;'></div>
@@ -71,12 +73,53 @@
 
 </div>
 
-
+<script src="js/jquery-2.2.4.js"></script>
 <script>
     // PORTLAND GEOCODE 45.530639,-122.698456
 
 
+    var restaurants = [
+        {
+            name: 'Whiskey Kitchen',
+            bestFood: 'Chicken Tenders',
+            Hours: 'Mon-Sun 11:00am-2:00am',
+            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+        },
+        {
+            name: "Rock n' Roll Sushi",
+            bestFood: 'Heart Roll',
+            Hours: 'Mon-Sat 10:00am-9:00pm',
+            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+        },
+        {
+            name: 'Kinjo',
+            bestFood: 'Ramen',
+            Hours: 'Mon, Wed-Sat 11:00am-7:30pm',
+            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+        },
+        {
+            name: 'Flying Saucer',
+            bestFood: 'Shrimp Basket',
+            Hours: 'Mon-Sun 10:00am-11:00pm',
+            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+        }
+
+    ]
+
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNreXVtZDRncTFwNzMybnBobzRzMmw0bmsifQ.MHL4uEVg6NoRM2YlHRc5Sw';
+
+
+    // let map = new mapboxgl.Map({
+    //     container: 'map1', // container ID
+    //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    //     center: [-122.698566, 45.5332], // starting position [lng, lat]
+    //     zoom: 15// starting zoom
+    // });
+    //
+    // restaurants.forEach(function (restaurant) {
+    //
+    // });
     const map1 = new mapboxgl.Map({
         container: 'map1', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -109,23 +152,27 @@
     });
 
 
-    // MARKER FOR WHISKEY KITCHEN
+    // MARKERS FOR WHISKEY KITCHEN // popups too
     var marker1 = new mapboxgl.Marker()
         .setLngLat([-122.698566, 45.5332])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
         .addTo(map1);
 
     var marker2 = new mapboxgl.Marker()
         .setLngLat([-122.698566, 45.5332])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
         .addTo(map2);
 
 
     var marker3 = new mapboxgl.Marker()
         .setLngLat([-122.698566, 45.5332])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
         .addTo(map3);
 
 
     var marker4 = new mapboxgl.Marker()
         .setLngLat([-122.698566, 45.5332])
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
         .addTo(map4);
 
 
