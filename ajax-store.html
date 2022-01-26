@@ -111,29 +111,43 @@
 
 
     "use strict";
-    $('.btn').one('click', function () {
 
-        // TODO: Create an AJAX GET request for the file under data/inventory.json
-        $.get("/Data/inventory.json", {}).done(function (data) {
-            for (var i = 0; i < data.length; i++) {
-                $('#insertProducts').append('<tr scope="row" class="table-warning"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity[0] + ' , ' + data[i].quantity[1] + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + '$' + data[i].price[0] + ' , ' + '$' + data[i].price[1] + '</td></tr>')
-            }
-        })
-
-
-
-
-        // ADD TO DATA
-        // data[4]
-
-
-        // TODO: Take the data from inventory.json and append it to the products table
-        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-        //             its contents and fields
-        //       HINT: You will want to target #insertProducts for your new HTML elements
-
-
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    // $.get("/Data/inventory.json", {}).done(function (data) {
+    //     for (var i = 0; i < data.length; i++) {
+    //         $('#insertProducts').append('<tr scope="row" class="table-warning"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity[0] + ' , ' + data[i].quantity[1] + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + '$' + data[i].price[0] + ' , ' + '$' + data[i].price[1] + '</td></tr>')
+    //     }
+    // })
+    $('.btn').click(function () {
+        $('#insertProducts') = ''
+        
+        $.get('Data/inventory.json').done(function (data) {
+            // LOGS ARRAY
+            console.log(data);
+            // FUNCTION ACCEPTS ITERATOR AND NAME OF OBJECT//CAN PICK OBJECT NAME
+            $.each(data, function (i, tool) {
+                // LOGS OBJECT
+                console.log(tool)
+                console.log(tool.title)
+                let title = `<tr scope="row" class="table-warning">
+                         <th class="title"> ${tool.title}</th>
+                         <td class="quantity">${tool.quantity}</td>
+                         <td class="category">${tool.categories}</td>
+                         <td class="price">${tool.price}</td>
+                         </tr>`
+                $('#insertProducts').append(title)
+            })
+        });
     })();
+
+    // ADD TO DATA
+    // data[4]
+
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
 
 
 </script>
