@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <title>MAP</title>
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
 
 
     <style>
 
-        .maps {
+        #map {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             flex-wrap: wrap;
         }
 
-        p {
-            padding-right: 10px;
-        }
+        /*p {*/
+        /*    padding-right: 10px;*/
+        /*}*/
 
-        #map1, #map2, #map3, #map4 {
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
+        /*#map1, #map2, #map3, #map4 {*/
+        /*    margin-top: 50px;*/
+        /*    margin-bottom: 50px;*/
+        /*}*/
 
 
     </style>
@@ -34,146 +34,155 @@
 </head>
 <body>
 
-<div class="maps">
-    <!--MAP 1-->
-    <div class="maps">
-        <p>Map 1
-            <br>
-            Zoom = 9
-        </p>
-        <div id='map1' style='width: 500px; height: 400px;'></div>
-    </div>
-
-    <!--MAP 2-->
-    <div class="maps">
-        <p>Map 2
-            <br>
-            Zoom = 5
-        </p>
-        <div id='map2' style='width: 500px; height: 400px;'></div>
-    </div>
-
-    <!--MAP 3-->
-    <div class="maps">
-        <p>Map 3
-            <br>
-            Zoom = 15
-        </p>
-        <div id='map3' style='width: 500px; height: 400px;'></div>
-    </div>
-
-    <!--MAP 4-->
-    <div class="maps">
-        <p>Map 4
-            <br>
-            Zoom = 20
-        </p>
-        <div id='map4' style='width: 500px; height: 400px;'></div>
-    </div>
+<div id="map" style='width: 500px; height: 400px;'>
 
 </div>
+<!--    &lt;!&ndash;MAP 1&ndash;&gt;-->
+<!--    <div class="maps">-->
+<!--        <p>Map 1-->
+<!--            <br>-->
+<!--            Zoom = 9-->
+<!--        </p>-->
+<!--        <div id='map1' ></div>-->
+<!--    </div>-->
 
-<script src="js/jquery-2.2.4.js"></script>
+<!--    &lt;!&ndash;MAP 2&ndash;&gt;-->
+<!--    <div class="maps">-->
+<!--        <p>Map 2-->
+<!--            <br>-->
+<!--            Zoom = 5-->
+<!--        </p>-->
+<!--        <div id='map2' style='width: 500px; height: 400px;'></div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;MAP 3&ndash;&gt;-->
+<!--    <div class="maps">-->
+<!--        <p>Map 3-->
+<!--            <br>-->
+<!--            Zoom = 15-->
+<!--        </p>-->
+<!--        <div id='map3' style='width: 500px; height: 400px;'></div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;MAP 4&ndash;&gt;-->
+<!--    <div class="maps">-->
+<!--        <p>Map 4-->
+<!--            <br>-->
+<!--            Zoom = 20-->
+<!--        </p>-->
+<!--        <div id='map4' style='width: 500px; height: 400px;'></div>-->
+<!--    </div>-->
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
 <script>
     // PORTLAND GEOCODE 45.530639,-122.698456
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNreXVtZDRncTFwNzMybnBobzRzMmw0bmsifQ.MHL4uEVg6NoRM2YlHRc5Sw';
 
-
-    var restaurants = [
+    let restaurants = [
         {
             name: 'Whiskey Kitchen',
+            location: [-122.698566, 45.5332],
             bestFood: 'Chicken Tenders',
             Hours: 'Mon-Sun 11:00am-2:00am',
             popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
         },
         {
             name: "Rock n' Roll Sushi",
+            location: [-122.698566, 45.5332],
             bestFood: 'Heart Roll',
             Hours: 'Mon-Sat 10:00am-9:00pm',
             popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
         },
         {
             name: 'Kinjo',
+            location: [-122.698566, 45.5332],
             bestFood: 'Ramen',
             Hours: 'Mon, Wed-Sat 11:00am-7:30pm',
             popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
         },
         {
             name: 'Flying Saucer',
+            location: [-122.698566, 45.5332],
             bestFood: 'Shrimp Basket',
             Hours: 'Mon-Sun 10:00am-11:00pm',
-            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+            popup: '<p>asdfghjdfghjkdfghjk</p>'
         }
 
     ]
 
 
-    mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNreXVtZDRncTFwNzMybnBobzRzMmw0bmsifQ.MHL4uEVg6NoRM2YlHRc5Sw';
+    restaurants.forEach(function (restaurant) {
+        console.log(restaurant.location)
+        let map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: restaurant.location, // starting position [lng, lat]
+            zoom: 9 // starting zoom
+        });
+        let marker = new mapboxgl.Marker()
+            .setLngLat[restaurant.location]
+            .setPopup(new mapboxgl.Popup().setHTML("<p>rvevfrevrE</p>")) // add popup
+            // restaurant.name + restaurant.popup + restaurant.bestFood + restaurant.Hours
+            .addTo(map);
+        console.log(marker)
+        });
 
 
-    // let map = new mapboxgl.Map({
+    // const map1 = new mapboxgl.Map({
     //     container: 'map1', // container ID
     //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
     //     center: [-122.698566, 45.5332], // starting position [lng, lat]
-    //     zoom: 15// starting zoom
+    //     zoom: 9 // starting zoom
     // });
     //
-    // restaurants.forEach(function (restaurant) {
     //
+    // const map2 = new mapboxgl.Map({
+    //     container: 'map2', // container ID
+    //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    //     center: [-122.698566, 45.5332], // starting position [lng, lat]
+    //     zoom: 5 // starting zoom
     // });
-    const map1 = new mapboxgl.Map({
-        container: 'map1', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-122.698566, 45.5332], // starting position [lng, lat]
-        zoom: 9 // starting zoom
-    });
-
-
-    const map2 = new mapboxgl.Map({
-        container: 'map2', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-122.698566, 45.5332], // starting position [lng, lat]
-        zoom: 5 // starting zoom
-    });
-
-
-    const map3 = new mapboxgl.Map({
-        container: 'map3', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-122.698566, 45.5332], // starting position [lng, lat]
-        zoom: 15 // starting zoom
-    });
-
-
-    const map4 = new mapboxgl.Map({
-        container: 'map4', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-122.698566, 45.5332], // starting position [lng, lat]
-        zoom: 20 // starting zoom
-    });
-
-
-    // MARKERS FOR WHISKEY KITCHEN // popups too
-    var marker1 = new mapboxgl.Marker()
-        .setLngLat([-122.698566, 45.5332])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
-        .addTo(map1);
-
-    var marker2 = new mapboxgl.Marker()
-        .setLngLat([-122.698566, 45.5332])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
-        .addTo(map2);
-
-
-    var marker3 = new mapboxgl.Marker()
-        .setLngLat([-122.698566, 45.5332])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
-        .addTo(map3);
-
-
-    var marker4 = new mapboxgl.Marker()
-        .setLngLat([-122.698566, 45.5332])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
-        .addTo(map4);
+    //
+    //
+    // const map3 = new mapboxgl.Map({
+    //     container: 'map3', // container ID
+    //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    //     center: [-122.698566, 45.5332], // starting position [lng, lat]
+    //     zoom: 15 // starting zoom
+    // });
+    //
+    //
+    // const map4 = new mapboxgl.Map({
+    //     container: 'map4', // container ID
+    //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    //     center: [-122.698566, 45.5332], // starting position [lng, lat]
+    //     zoom: 20 // starting zoom
+    // });
+    //
+    //
+    // // MARKERS FOR WHISKEY KITCHEN // popups too
+    // var marker1 = new mapboxgl.Marker()
+    //     .setLngLat([-122.698566, 45.5332])
+    //     .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
+    //     .addTo(map1);
+    //
+    // var marker2 = new mapboxgl.Marker()
+    //     .setLngLat([-122.698566, 45.5332])
+    //     .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
+    //     .addTo(map2);
+    //
+    //
+    // var marker3 = new mapboxgl.Marker()
+    //     .setLngLat([-122.698566, 45.5332])
+    //     .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
+    //     .addTo(map3);
+    //
+    //
+    // var marker4 = new mapboxgl.Marker()
+    //     .setLngLat([-122.698566, 45.5332])
+    //     .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>")) // add popup
+    //     .addTo(map4);
 
 
 </script>
