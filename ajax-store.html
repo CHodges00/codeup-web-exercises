@@ -118,9 +118,11 @@
     //         $('#insertProducts').append('<tr scope="row" class="table-warning"><th class="title">' + data[i].title + '</th><td class="quantity">' + data[i].quantity[0] + ' , ' + data[i].quantity[1] + '</td><td class="category">' + data[i].categories + '</td><td class="price">' + '$' + data[i].price[0] + ' , ' + '$' + data[i].price[1] + '</td></tr>')
     //     }
     // })
-    $('.btn').click(function () {
-        $('#insertProducts') = ''
-        
+    $('.btn').one('click', function () {
+
+        // CLEAR THE TABLE
+
+
         $.get('Data/inventory.json').done(function (data) {
             // LOGS ARRAY
             console.log(data);
@@ -129,16 +131,16 @@
                 // LOGS OBJECT
                 console.log(tool)
                 console.log(tool.title)
-                let title = `<tr scope="row" class="table-warning">
+                let tools = `<tr scope="row" class="table-warning">
                          <th class="title"> ${tool.title}</th>
                          <td class="quantity">${tool.quantity}</td>
                          <td class="category">${tool.categories}</td>
                          <td class="price">${tool.price}</td>
                          </tr>`
-                $('#insertProducts').append(title)
+                $('#insertProducts').append(tools)
             })
         });
-    })();
+    });
 
     // ADD TO DATA
     // data[4]
