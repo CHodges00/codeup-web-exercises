@@ -37,7 +37,7 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
 <script>
     // PORTLAND GEOCODE 45.530639,-122.698456
-    mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNreXVtZDRncTFwNzMybnBobzRzMmw0bmsifQ.MHL4uEVg6NoRM2YlHRc5Sw';
+
 
     let restaurants = [
         {
@@ -77,21 +77,21 @@
 
 
     restaurants.forEach(function (restaurant) {
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNreXVtZDRncTFwNzMybnBobzRzMmw0bmsifQ.MHL4uEVg6NoRM2YlHRc5Sw';
+
         $('body').append(`<div><div><p>${restaurant.name}<br>${restaurant.Hours}<br>Best Food: ${restaurant.bestFood}</p></div><div class="maps" id="${restaurant.id}"></div></div>`);
 
         let map = new mapboxgl.Map({
             container: restaurant.id, // container ID
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
             center: restaurant.location, // starting position [lng, lat]
-            zoom: restaurant.zoom // starting zoom
+            zoom: restaurant.zoom, // starting zoom
         });
 
         let marker = new mapboxgl.Marker()
             .setLngLat(restaurant.location)
             .setPopup(new mapboxgl.Popup().setHTML(`${restaurant.name}<br>${restaurant.Hours}<br>Best Food: ${restaurant.bestFood}`)) // add popup
             .addTo(map);
-
-
     });
 
 
