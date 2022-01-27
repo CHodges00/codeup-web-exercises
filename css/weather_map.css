@@ -3,16 +3,27 @@ body {
     padding: 0;
 }
 
+/*NAVBAR*/
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: dodgerblue;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     color: white;
-    height: 35px;
+    height: 40px;
     margin-bottom: 30px;
+}
+
+#cityName{
+    padding-top: 10px;
+}
+
+
+/*INPUT*/
+label{
+    padding-top: 10px;
 }
 
 .input {
@@ -22,5 +33,18 @@ body {
     margin-bottom: 30px;
 }
 
+/*CARDS*/
+.card{
+    text-align: left;
+}
+p{
+    font-size: 10px;
+}
 
+.card-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
