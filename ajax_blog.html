@@ -130,24 +130,32 @@
 
 
 <script>
-    let newTitle = $('#newTitle');
+
+    // FOR NEW POSTS
+    // let newTitle = $('#newTitle');
+    //
+    //
+    // $('#newPost').on('click', function (e){
+    //     e.preventDefault();
+    //     console.log(newTitle);
+    //     // $('#posts').append(`<div class="block"></block><div class="container bg-dark" id="posts"><div class="row"><div class="col-6 my-3 title">' ! '</div><div class="col-4  category m-2 ml-auto">' ! '<div class="date">' ! '</div></div><div class="col-12 p-3 content">' ! '</div></div></div>`);
+    // })
 
 
-    $('#newPost').on('click', function (e){
-        e.preventDefault();
-        console.log(newTitle);
-        // $('#posts').append(`<div class="block"></block><div class="container bg-dark" id="posts"><div class="row"><div class="col-6 my-3 title">' ! '</div><div class="col-4  category m-2 ml-auto">' ! '<div class="date">' ! '</div></div><div class="col-12 p-3 content">' ! '</div></div></div>`);
-    })
 
-
-
-
+// EXERCISE
     $.get("Data/blog.json").done(function (data) {
         $.each(data, function (i, post) {
             $('#posts').append(`<div class="block"></block><div class="container bg-dark" id="posts"><div class="row"><div class="col-6 my-3 title">${post.title}</div><div class="col-4  category m-2 ml-auto">${post.categories}<div class="date">${post.date}</div></div><div class="col-12 p-3 content">${post.content}</div></div></div>`)
         })
     })
 
+
+
+
+
+
+    // NOTES
     // $.post( "Data/blog.json", { "title": "John", "content": "2pm" })
     //     .done(function( data ) {
     //         console.log( data );
@@ -161,11 +169,6 @@
     //     console.log('FAIL FAIL FAIL')
     // })
 
-
-
-
-
-
     // $.ajax("Data/blog.json").done(function (data, status) {
     //     console.log(data)
     //     console.log(status)
@@ -173,6 +176,12 @@
     //     $("element").attr("Data/blog.json", data.message)
     //
     // })
+
+
+
+
+
+
 
 </script>
 

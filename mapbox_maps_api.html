@@ -11,22 +11,18 @@
 
     <style>
 
-        #map {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-wrap: wrap;
+        #map1, #map2, #map3, #map4 {
+            width: 500px;
+            height: 400px;
+            margin-bottom: 100px;
+            margin-top: 10px;
         }
 
-        /*p {*/
-        /*    padding-right: 10px;*/
-        /*}*/
-
-        /*#map1, #map2, #map3, #map4 {*/
-        /*    margin-top: 50px;*/
-        /*    margin-bottom: 50px;*/
-        /*}*/
-
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
 
     </style>
 
@@ -34,46 +30,8 @@
 </head>
 <body>
 
-<div id="map" style='width: 500px; height: 400px;'>
 
-</div>
-<!--    &lt;!&ndash;MAP 1&ndash;&gt;-->
-<!--    <div class="maps">-->
-<!--        <p>Map 1-->
-<!--            <br>-->
-<!--            Zoom = 9-->
-<!--        </p>-->
-<!--        <div id='map1' ></div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash;MAP 2&ndash;&gt;-->
-<!--    <div class="maps">-->
-<!--        <p>Map 2-->
-<!--            <br>-->
-<!--            Zoom = 5-->
-<!--        </p>-->
-<!--        <div id='map2' style='width: 500px; height: 400px;'></div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash;MAP 3&ndash;&gt;-->
-<!--    <div class="maps">-->
-<!--        <p>Map 3-->
-<!--            <br>-->
-<!--            Zoom = 15-->
-<!--        </p>-->
-<!--        <div id='map3' style='width: 500px; height: 400px;'></div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash;MAP 4&ndash;&gt;-->
-<!--    <div class="maps">-->
-<!--        <p>Map 4-->
-<!--            <br>-->
-<!--            Zoom = 20-->
-<!--        </p>-->
-<!--        <div id='map4' style='width: 500px; height: 400px;'></div>-->
-<!--    </div>-->
-
-
+<script src="js/jquery-2.2.4.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
 <script>
     // PORTLAND GEOCODE 45.530639,-122.698456
@@ -85,48 +43,54 @@
             location: [-122.698566, 45.5332],
             bestFood: 'Chicken Tenders',
             Hours: 'Mon-Sun 11:00am-2:00am',
-            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+            zoom: 10,
+            id: 'map1'
         },
         {
             name: "Rock n' Roll Sushi",
-            location: [-122.698566, 45.5332],
+            location: [-83.661468, 32.553876],
             bestFood: 'Heart Roll',
             Hours: 'Mon-Sat 10:00am-9:00pm',
-            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+            zoom: 10,
+            id: 'map2'
         },
         {
             name: 'Kinjo',
-            location: [-122.698566, 45.5332],
+            location: [-83.630072, 32.835624],
             bestFood: 'Ramen',
             Hours: 'Mon, Wed-Sat 11:00am-7:30pm',
-            popupHTML: '<p>asdfghjdfghjkdfghjk</p>'
+            zoom: 10,
+            id: 'map3'
         },
         {
             name: 'Flying Saucer',
-            location: [-122.698566, 45.5332],
+            location: [-98.57744, 29.548038],
             bestFood: 'Shrimp Basket',
             Hours: 'Mon-Sun 10:00am-11:00pm',
-            popup: '<p>asdfghjdfghjkdfghjk</p>'
+            zoom: 10,
+            id: 'map4'
         }
 
     ]
 
 
     restaurants.forEach(function (restaurant) {
-        console.log(restaurant.location)
+        $('body').append(`<div><div><p>${restaurant.name}<br>${restaurant.Hours}<br>Best Food: ${restaurant.bestFood}</p></div><div class="maps" id="${restaurant.id}"></div></div>`);
+
         let map = new mapboxgl.Map({
-            container: 'map', // container ID
+            container: restaurant.id, // container ID
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
             center: restaurant.location, // starting position [lng, lat]
-            zoom: 9 // starting zoom
+            zoom: restaurant.zoom // starting zoom
         });
+
         let marker = new mapboxgl.Marker()
-            .setLngLat[restaurant.location]
-            .setPopup(new mapboxgl.Popup().setHTML("<p>rvevfrevrE</p>")) // add popup
-            // restaurant.name + restaurant.popup + restaurant.bestFood + restaurant.Hours
+            .setLngLat(restaurant.location)
+            .setPopup(new mapboxgl.Popup().setHTML(`${restaurant.name}<br>${restaurant.Hours}<br>Best Food: ${restaurant.bestFood}`)) // add popup
             .addTo(map);
-        console.log(marker)
-        });
+
+
+    });
 
 
     // const map1 = new mapboxgl.Map({

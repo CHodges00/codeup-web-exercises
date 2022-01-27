@@ -56,7 +56,7 @@
     function defuse(){
         clearInterval(timer);
         document.getElementById('header').style.color = 'Hello, World !';
-        document.getElementById('message').innerHTML = 'You live to fight another day !'
+        document.getElementById('message').innerHTML = 'You live to fight another day !';
         document.getElementById('body').innerHTML =
             '<video autoplay muted loop class="puppiness">\n' +
             '    <source src="../assets/puppiness.webm">\n' +
