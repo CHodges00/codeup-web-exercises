@@ -11,14 +11,14 @@ $('#submit').on('click', function () {
     }).done(function (data) {
         console.log(data)
         $('#cityName').append(`<p>Current City: ${data.name}`);
-
+        console.log(data.main)
         $('.row').append(`<div class="col-2 ml-auto mr-auto">
         <div class="card">
             <h5 class="card-header text-center">DATE</h5>
             <div class="card-body">
                 <div class="card-text">
                     <div class="card-center">
-                        <p>TEMPS</p>
+                        <p>${data.main.temp}<br>${data.main.feels_like}</p>
                         <img src='http://openweathermap.org/img/w/04n.png' style="width: 30px; height: 30px">
                     </div>
                     <hr>
@@ -31,8 +31,7 @@ $('#submit').on('click', function () {
                 </div>
             </div>
         </div>
-    </div>
-    <div id="map"></div>`)
+    </div>`)
     });
 })
 
