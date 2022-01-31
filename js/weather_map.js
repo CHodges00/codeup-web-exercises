@@ -7,7 +7,7 @@ $('#submit').on('click', function () {
 
 // GET DATA FOR CITY NAME ENTERED
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
-        APPID: "dc7b0ebe3a51ce3421b1dfcff8a97724",
+        APPID:  ,
         q: city,
         units: "imperial"
 // WHEN DONE -----
