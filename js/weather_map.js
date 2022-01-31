@@ -1,7 +1,7 @@
 
 
 
-
+// LOAD INITIAL MAP AND FORECAST
 $(document).ready( function () {
 
 
@@ -61,6 +61,30 @@ $(document).ready( function () {
             .addTo(map);
 
 
+
+// CLICK FOR MARKER TO MOVE // MAKE DRAG INSTEAD OF CLICK
+        map.on('click', function (e) {
+            $('.row').html('')
+            $('#cityName').html('');
+            // city =
+
+            console.log(e);
+            console.log(e.lngLat)
+
+            var map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                center: e.lngLat, // starting position [lng, lat]
+                zoom: 10 // starting zoom
+            });
+            let marker = new mapboxgl.Marker()
+                .setLngLat(e.lngLat)
+                .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`)) // add popup
+                .addTo(map);
+
+        });
+
+
     })
 })
 
@@ -68,7 +92,7 @@ $(document).ready( function () {
 
 
 
-
+// CLICK ON SEARCH OF CITY IN INPUT
 $('#submit').click(function (){
 
 
@@ -134,5 +158,7 @@ $('#submit').click(function (){
 
     })
 })
+
+
 
 
