@@ -15,16 +15,14 @@ $('#submit').on('click', function () {
         units: "imperial"
 // WHEN DONE -----
     }).done(function (data) {
-        console.log(data)
+        // console.log(data)
 
-        for (var i = 0; i < 5; i++){
+        for (var i = 0; i <= 40; i+=8){
             var day = data.list[i];
-            var date = day.dt_txt;
+            var date = data.list[i].dt_txt.substring(0, 10);
             console.log(date)
-            date = date.substring(0, 10);
 
-            console.log(date)
-            // console.log(day)
+            
             $('.row').append(`<div class="col-2 ml-auto mr-auto">
                             <div class="card">
                                 <h5 class="card-header text-center">${date}</h5>
@@ -52,7 +50,7 @@ $('#submit').on('click', function () {
         $('#cityName').append(`<p>Current City: ${data.city.name}`);
 
 
-        console.log(data.city.coord)
+        // console.log(data.city.coord)
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNrejJ3ZWhmcjAweGoybm55Z3lrNTlyNWgifQ.2Y_WT2W1PWBdIJCuK9azig';
 
@@ -68,17 +66,6 @@ $('#submit').on('click', function () {
             .addTo(map);
 
 
-
-        map.on('click', (e) => {
-            var coords = `{lat: ${e.lngLat.lat}, lon:${e.lngLat.lng}}`;
-            console.log(coords)
-
-
-            marker = new mapboxgl.Marker(el)
-                .setLngLat(e.lngLat)
-                .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`))
-                .addTo(map);
-        });
     })
 
 
