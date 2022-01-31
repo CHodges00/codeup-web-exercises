@@ -5,9 +5,12 @@ $('#submit').on('click', function () {
 // CITY = USERS INPUT VAL
     var city = $('#city').val();
 
+
+
+
 // GET DATA FOR CITY NAME ENTERED
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
-        APPID:  ,
+        APPID: "dc7b0ebe3a51ce3421b1dfcff8a97724",
         q: city,
         units: "imperial"
 // WHEN DONE -----
@@ -60,11 +63,22 @@ $('#submit').on('click', function () {
             zoom: 10 // starting zoom
         });
         let marker = new mapboxgl.Marker()
-            .setLngLat(data.coord)
-            .setPopup(new mapboxgl.Popup().setHTML(`${data.name}`)) // add popup
+            .setLngLat(data.city.coord)
+            .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`)) // add popup
             .addTo(map);
 
 
+
+        map.on('click', (e) => {
+            var coords = `{lat: ${e.lngLat.lat}, lon:${e.lngLat.lng}}`;
+            console.log(coords)
+
+
+            marker = new mapboxgl.Marker(el)
+                .setLngLat(e.lngLat)
+                .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`))
+                .addTo(map);
+        });
     })
 
 
