@@ -12,7 +12,7 @@ $('#submit').on('click', function () {
         units: "imperial"
 // WHEN DONE -----
     }).done(function (data) {
-        // console.log(data)
+        console.log(data)
 
         for (var i = 0; i < 5; i++){
             var day = data.list[i];
@@ -49,23 +49,22 @@ $('#submit').on('click', function () {
         $('#cityName').append(`<p>Current City: ${data.city.name}`);
 
 
+        console.log(data.city.coord)
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNrejJ3ZWhmcjAweGoybm55Z3lrNTlyNWgifQ.2Y_WT2W1PWBdIJCuK9azig';
+
+        var map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: data.city.coord, // starting position [lng, lat]
+            zoom: 10 // starting zoom
+        });
+        let marker = new mapboxgl.Marker()
+            .setLngLat(data.coord)
+            .setPopup(new mapboxgl.Popup().setHTML(`${data.name}`)) // add popup
+            .addTo(map);
 
 
-    //
-    //     mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNrejJ3ZWhmcjAweGoybm55Z3lrNTlyNWgifQ.2Y_WT2W1PWBdIJCuK9azig';
-    //
-    //     var map = new mapboxgl.Map({
-    //         container: 'map', // container ID
-    //         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    //         center: data.coord, // starting position [lng, lat]
-    //         zoom: 10 // starting zoom
-    //     });
-    //     let marker = new mapboxgl.Marker()
-    //         .setLngLat(data.coord)
-    //         .setPopup(new mapboxgl.Popup().setHTML(`${data.name}`)) // add popup
-    //         .addTo(map);
-    //
-    //
     })
 
 
