@@ -1,6 +1,14 @@
+html {
+    background-color: gray;
+
+}
+
 body {
-    margin: 0 80px 50px 80px;
-    padding: 0;
+    margin: 50px 80px 50px 80px;
+    padding-bottom: 30px;
+    background-color: gray;
+    background-image: url("https://i.gifer.com/RS5X.gif");
+    background-size: cover;
 }
 
 /*NAVBAR*/
@@ -9,7 +17,8 @@ body {
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    background-color: dodgerblue;
+    background-color: black;
+    opacity: 40%;
     padding-right: 15px;
     padding-left: 15px;
     color: white;
@@ -40,9 +49,15 @@ label{
 /*CARDS*/
 .card{
     text-align: left;
+    box-shadow: 0 0 20px 5px black;
 }
+hr{
+    border: 1px solid black;
+}
+
 p{
     font-size: 15px;
+    opacity: 60%;
 }
 
 .card-center{
@@ -56,5 +71,102 @@ p{
     width: 1100px;
     height: 300px;
     margin: 40px auto auto auto;
+    box-shadow: 0 0 20px 10px black;
+    opacity: 90%;
 }
 
+.row img {
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 5px black;
+    opacity: 80%;
+}
+
+
+
+
+
+
+
+
+/*LOADING SCREEN */
+:root {
+    --effect: hover 1s linear infinite;
+}
+
+
+#load {
+    position: absolute;
+    top: 723px;
+    left: 170px;
+    width: 1100px;
+    height: 300px;
+    background: black;
+    text-align: center;
+}
+
+
+
+#load p {
+    display: inline-block;
+    text-transform: uppercase;
+    padding-top: 120px;
+    font-size: 4em;
+    font-family: "Comic Sans MS";
+    font-weight: 600;
+    transform: scale(.5);
+    color: #121212;
+    -webkit-text-stroke: 2px gray;
+}
+
+#load p:nth-child(1) {
+    animation: var(--effect);
+}
+
+#load p:nth-child(2) {
+    animation: var(--effect) .125s;
+}
+
+#load p:nth-child(3) {
+    animation: var(--effect) .25s;
+}
+
+#load p:nth-child(4) {
+    animation: var(--effect) .375s;
+}
+
+#load p:nth-child(5) {
+    animation: var(--effect) .5s;
+}
+
+#load p:nth-child(6) {
+    animation: var(--effect) .675s;
+}
+
+#load p:nth-child(7) {
+    animation: var(--effect) .75s;
+}
+
+@keyframes hover {
+    0% {
+        transform: scale(.5);
+        color: #121212;
+        -webkit-text-stroke: 2px gray;
+    }
+
+    20% {
+        transform: scale(1);
+        color: pink;
+        -webkit-text-stroke: 3px red;
+        filter: drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 3px red)drop-shadow(0 0 5px red)hue-rotate(10turn);
+    }
+
+    50% {
+        transform: scale(.5);
+        color: #121212;
+        -webkit-text-stroke: 2px gray;
+    }
+
+
+}

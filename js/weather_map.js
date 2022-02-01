@@ -1,3 +1,20 @@
+
+$(document).ready(function (){
+    setTimeout(loading, 4000)
+    setTimeout(cards, 4000)
+})
+function loading (){
+    $('#load').remove()
+}
+function cards(){
+    $(".row").toggleClass('roll')
+}
+
+
+
+
+
+
 ///////////////////////////////////////// GENERATE FIRST MAP/WEATHER FOR SAN ANTONIO ///////////////////////////////////////
 $.get("http://api.openweathermap.org/data/2.5/forecast", {
     APPID: "dc7b0ebe3a51ce3421b1dfcff8a97724",
@@ -7,6 +24,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 }).done(function (data) {
     // console.log(data)
     $('#cityName').append(`<p>Current City: ${data.city.name}`);
+
 
     for (var i = 0; i < 40; i += 8) {
 
@@ -18,9 +36,9 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                                     <div class="card-text">
                                         <div class="card-center">
                                         <div class="temps" style="line-height: 3">
-                                           <p style="font-size: 20px; font-weight: bolder">${data.list[i].main.temp_min}F</p>
+                                           <p style="font-size: 20px; font-weight: bolder">${data.list[i].main.temp_min}°F</p>
                                         </div>
-                                        <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png' style="width: 30px; height: 30px">
+                                        <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png' style="width: 90px; height: 90px">
                                         </div>
                                     <hr>
                                     <p>Description: <b>${data.list[i].weather[0].description}</b></p>
@@ -35,7 +53,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                             </div>`);
     }
 
-    
+
 
     /////////////////////////////////////// GENERATE MAP ///////////////////////////////////////
     mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNrejJ3ZWhmcjAweGoybm55Z3lrNTlyNWgifQ.2Y_WT2W1PWBdIJCuK9azig';
@@ -67,23 +85,12 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 
 
         map.flyTo({
-// These options control the ending camera position: centered at
-// the target, at zoom level 9, and north up.
             center: lngLat,
             zoom: 12,
             bearing: 0,
-
-// These options control the flight curve, making it move
-// slowly and zoom out almost completely before starting
-// to pan.
-            speed: 0.2, // make the flying slow
-            curve: 10, // change the speed at which it zooms out
-
-// This can be any easing function: it takes a number between
-// 0 and 1 and returns another number between 0 and 1.
+            speed: 0.2,
+            curve: 8,
             easing: (t) => t,
-
-// this animation is considered essential with respect to prefers-reduced-motion
             essential: true
         });
 
@@ -110,7 +117,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                                     <div class="card-text">
                                         <div class="card-center">
                                         <div class="temps" style="line-height: 3">
-                                           <p style="font-size: 20px; font-weight: bolder">${data.list[i].main.temp_min}F</p>
+                                           <p style="font-size: 20px; font-weight: bolder">${data.list[i].main.temp_min}°F</p>
                                         </div>
                                         <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png' style="width: 30px; height: 30px">
                                         </div>
@@ -173,6 +180,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         geocoder.on('result', (event) => {
             map.getSource('single-point').setData(event.result.geometry);
 
+
             var lon = event.result.center[0]
             var lat = event.result.center[1]
 
@@ -199,7 +207,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                                     <div class="card-text">
                                         <div class="card-center">
                                         <div class="temps" style="line-height: 3">
-                                           <p style="font-size: 20px; font-weight: bolder">${event.list[i].main.temp_min}F</p>
+                                           <p style="font-size: 20px; font-weight: bolder">${event.list[i].main.temp_min}°F</p>
                                         </div>
                                         <img src='http://openweathermap.org/img/w/${event.list[i].weather[0].icon}.png' style="width: 30px; height: 30px">
                                         </div>
