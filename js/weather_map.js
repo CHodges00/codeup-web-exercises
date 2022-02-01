@@ -35,6 +35,8 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                             </div>`);
     }
 
+    
+
     /////////////////////////////////////// GENERATE MAP ///////////////////////////////////////
     mapboxgl.accessToken = 'pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNrejJ3ZWhmcjAweGoybm55Z3lrNTlyNWgifQ.2Y_WT2W1PWBdIJCuK9azig';
     var coordinates = document.getElementById('coordinates');
@@ -52,15 +54,13 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
     })
 
         .setLngLat(data.city.coord)
-        .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`))
-
         .addTo(map);
 
 
 /////////////////////////////////////// DRAGABLE MARKER THAT RETURNS LNGLAT ///////////////////////////////////////
     function onDragEnd() {
         var lngLat = marker.getLngLat();
-        coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+
         var lat = lngLat.lat
         var lon = lngLat.lng
         // console.log('DRAG MARKER LNGLAT ' + lngLat)
@@ -97,7 +97,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         }).done(function (data) {
             // console.log('DRAG MARKER CITY DATA ' + data)
             $("#cityName").html('')
-            $('#cityName').append(`<p>Current City: ${data.city.name}`);
+            $('#cityName').append(`<p>Current Marker Location: ${data.city.name}`);
             $('.row').html('')
 
             for (var i = 0; i < 40; i += 8) {
@@ -172,7 +172,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         //  Add a marker at the result's coordinates
         geocoder.on('result', (event) => {
             map.getSource('single-point').setData(event.result.geometry);
-            console.log(event)
+
             var lon = event.result.center[0]
             var lat = event.result.center[1]
 
@@ -183,10 +183,10 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                 lon: lon,
                 units: "imperial"
 // WHEN DONE -----
-            }).done(function (data) {
-                // console.log('DRAG MARKER CITY DATA ' + data)
+            }).done(function (event) {
+                console.log(event)
                 $("#cityName").html('')
-                $('#cityName').append(`<p>Current City: ${data.city.name}`);
+                $('#cityName').append(`<p>Current Marker Location: ${event.city.name}`);
                 $('.row').html('')
 
                 for (var i = 0; i < 40; i += 8) {
@@ -194,22 +194,22 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 /////////////////////////////////////// GENERATE WEATHER CARDS ///////////////////////////////////////
                     $('.row').append(`<div class="col-2 ml-auto mr-auto">
                             <div class="card">
-                                <h5 class="card-header text-center">${data.list[i].dt_txt.substring(0, 10)}</h5>
+                                <h5 class="card-header text-center">${event.list[i].dt_txt.substring(0, 10)}</h5>
                                 <div class="card-body">
                                     <div class="card-text">
                                         <div class="card-center">
                                         <div class="temps" style="line-height: 3">
-                                           <p style="font-size: 20px; font-weight: bolder">${data.list[i].main.temp_min}F</p>
+                                           <p style="font-size: 20px; font-weight: bolder">${event.list[i].main.temp_min}F</p>
                                         </div>
-                                        <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png' style="width: 30px; height: 30px">
+                                        <img src='http://openweathermap.org/img/w/${event.list[i].weather[0].icon}.png' style="width: 30px; height: 30px">
                                         </div>
                                     <hr>
-                                    <p>Description: <b>${data.list[i].weather[0].description}</b></p>
-                                    <p>Humidity: <b>${data.list[i].main.humidity} %</b></p>
+                                    <p>Description: <b>${event.list[i].weather[0].description}</b></p>
+                                    <p>Humidity: <b>${event.list[i].main.humidity} %</b></p>
                                     <hr>
-                                    <p>Wind: <b>${data.list[i].wind.speed} mph</b></p>
+                                    <p>Wind: <b>${event.list[i].wind.speed} mph</b></p>
                                     <hr>
-                                    <p>Pressure: <b>${data.list[i].main.pressure}</b></p>
+                                    <p>Pressure: <b>${event.list[i].main.pressure}</b></p>
                                     </div>
                                 </div>
                             </div>
