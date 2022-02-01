@@ -7,13 +7,17 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
+    text-align: center;
     align-items: center;
     background-color: dodgerblue;
     padding-right: 15px;
     padding-left: 15px;
     color: white;
-    height: 50px;
     margin-bottom: 30px;
+}
+.nav p {
+    font-size: 25px;
+    padding-top: 20px;
 }
 
 #cityName{
@@ -38,7 +42,7 @@ label{
     text-align: left;
 }
 p{
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .card-center{
