@@ -38,15 +38,14 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                                         <div class="temps" style="line-height: 3">
                                            <p style="font-size: 20px; font-weight: bolder">${data.list[i].main.temp_min}°F</p>
                                         </div>
-                                        <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png' style="width: 90px; height: 90px">
+                                        <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png'>
                                         </div>
                                     <hr>
-                                    <p>Description: <b>${data.list[i].weather[0].description}</b></p>
+                                    <p>Description: <br><b>${data.list[i].weather[0].description}</b></p>
                                     <p>Humidity: <b>${data.list[i].main.humidity} %</b></p>
                                     <hr>
                                     <p>Wind: <b>${data.list[i].wind.speed} mph</b></p>
-                                    <hr>
-                                    <p>Pressure: <b>${data.list[i].main.pressure}</b></p>
+                                   
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +77,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 /////////////////////////////////////// DRAGABLE MARKER THAT RETURNS LNGLAT ///////////////////////////////////////
     function onDragEnd() {
         var lngLat = marker.getLngLat();
-
+        // console.log(lngLat)
         var lat = lngLat.lat
         var lon = lngLat.lng
         // console.log('DRAG MARKER LNGLAT ' + lngLat)
@@ -89,7 +88,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
             zoom: 12,
             bearing: 0,
             speed: 0.2,
-            curve: 8,
+            curve: 9,
             easing: (t) => t,
             essential: true
         });
@@ -119,15 +118,14 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                                         <div class="temps" style="line-height: 3">
                                            <p style="font-size: 20px; font-weight: bolder">${data.list[i].main.temp_min}°F</p>
                                         </div>
-                                        <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png' style="width: 30px; height: 30px">
+                                        <img src='http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png'>
                                         </div>
                                     <hr>
-                                    <p>Description: <b>${data.list[i].weather[0].description}</b></p>
+                                    <p>Description: <br><b>${data.list[i].weather[0].description}</b></p>
                                     <p>Humidity: <b>${data.list[i].main.humidity} %</b></p>
                                     <hr>
                                     <p>Wind: <b>${data.list[i].wind.speed} mph</b></p>
-                                    <hr>
-                                    <p>Pressure: <b>${data.list[i].main.pressure}</b></p>
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -179,7 +177,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         //  Add a marker at the result's coordinates
         geocoder.on('result', (event) => {
             map.getSource('single-point').setData(event.result.geometry);
-
+            console.log(event)
 
             var lon = event.result.center[0]
             var lat = event.result.center[1]
@@ -209,16 +207,13 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                                         <div class="temps" style="line-height: 3">
                                            <p style="font-size: 20px; font-weight: bolder">${event.list[i].main.temp_min}°F</p>
                                         </div>
-                                        <img src='http://openweathermap.org/img/w/${event.list[i].weather[0].icon}.png' style="width: 30px; height: 30px">
+                                        <img src='http://openweathermap.org/img/w/${event.list[i].weather[0].icon}.png'>
                                         </div>
                                     <hr>
-                                    <p>Description: <b>${event.list[i].weather[0].description}</b></p>
+                                    <p>Description: <br><b>${event.list[i].weather[0].description}</b></p>
                                     <p>Humidity: <b>${event.list[i].main.humidity} %</b></p>
                                     <hr>
                                     <p>Wind: <b>${event.list[i].wind.speed} mph</b></p>
-                                    <hr>
-                                    <p>Pressure: <b>${event.list[i].main.pressure}</b></p>
-                                    </div>
                                 </div>
                             </div>
                             </div>`);
@@ -228,4 +223,6 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         });
     });
 });
+
+
 
