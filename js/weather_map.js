@@ -1,8 +1,5 @@
-
-
-
 // LOAD INITIAL MAP AND FORECAST
-$(document).ready( function () {
+$(document).ready(function () {
 
 
 // GET DATA FOR CITY NAME ENTERED
@@ -14,13 +11,12 @@ $(document).ready( function () {
     }).done(function (data) {
         // console.log(data)
 
-        for (var i = 0; i < 40; i+=8){
-
+        for (var i = 0; i < 40; i += 8) {
 
 
             $('.row').append(`<div class="col-2 ml-auto mr-auto">
                             <div class="card">
-                                <h5 class="card-header text-center">${data.list[i].dt_txt.substring(0 , 10)}</h5>
+                                <h5 class="card-header text-center">${data.list[i].dt_txt.substring(0, 10)}</h5>
                                 <div class="card-body">
                                     <div class="card-text">
                                         <div class="card-center">
@@ -61,44 +57,38 @@ $(document).ready( function () {
             .addTo(map);
 
 
-
-// CLICK FOR MARKER TO MOVE // MAKE DRAG INSTEAD OF CLICK
-        map.on('click', function (e) {
-            $('.row').html('')
-            $('#cityName').html('');
-            // city =
-
-            console.log(e);
-            console.log(e.lngLat)
-
-            var map = new mapboxgl.Map({
-                container: 'map', // container ID
-                style: 'mapbox://styles/mapbox/streets-v11', // style URL
-                center: e.lngLat, // starting position [lng, lat]
-                zoom: 10 // starting zoom
-            });
-            let marker = new mapboxgl.Marker()
-                .setLngLat(e.lngLat)
-                .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`)) // add popup
-                .addTo(map);
-
-        });
-
+// // CLICK FOR MARKER TO MOVE // MAKE DRAG INSTEAD OF CLICK
+//         map.on('click', function (e) {
+//             $('.row').html('')
+//             $('#cityName').html('');
+//             // city =
+//
+//             console.log(e);
+//             console.log(e.lngLat)
+//
+//             var map = new mapboxgl.Map({
+//                 container: 'map', // container ID
+//                 style: 'mapbox://styles/mapbox/streets-v11', // style URL
+//                 center: e.lngLat, // starting position [lng, lat]
+//                 zoom: 10 // starting zoom
+//             });
+//             let marker = new mapboxgl.Marker()
+//                 .setLngLat(e.lngLat)
+//                 .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`)) // add popup
+//                 .addTo(map);
+//             draggable: true;
+//         });
 
     })
 })
 
 
-
-
-
 // CLICK ON SEARCH OF CITY IN INPUT
-$('#submit').click(function (){
+$('#submit').click(function () {
 
 
     $('.row').html('')
     var city = $('#city').val();
-
 
 
     // GET DATA FOR CITY NAME ENTERED
@@ -111,7 +101,7 @@ $('#submit').click(function (){
 
         $('#cityName').html('');
         $('#cityName').append(`<p>Current City: ${data.city.name}`);
-        for (var i = 0; i < 40; i+=8){
+        for (var i = 0; i < 40; i += 8) {
 
             $('.row').append(`<div class="col-2 ml-auto mr-auto">
                             <div class="card">
@@ -136,8 +126,6 @@ $('#submit').click(function (){
                             </div>
                             </div>`);
         }
-
-
 
 
         // console.log(data.city.coord)
