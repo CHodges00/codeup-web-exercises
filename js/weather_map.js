@@ -178,7 +178,6 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         geocoder.on('result', (event) => {
             map.getSource('single-point').setData(event.result.geometry);
             console.log(event)
-
             var lon = event.result.center[0]
             var lat = event.result.center[1]
 
@@ -190,10 +189,11 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                 units: "imperial"
 // WHEN DONE -----
             }).done(function (event) {
-                console.log(event)
+
                 $("#cityName").html('')
                 $('#cityName').append(`<p>Current Marker Location: ${event.city.name}`);
                 $('.row').html('')
+
 
                 for (var i = 0; i < 40; i += 8) {
 
