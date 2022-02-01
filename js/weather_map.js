@@ -223,7 +223,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: data.city.coord,
-        zoom: 10
+        zoom: 12
     });
 
     var marker = new mapboxgl.Marker({
@@ -231,7 +231,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         draggable: true,
 
     })
-        
+
         .setLngLat(data.city.coord)
         .setPopup(new mapboxgl.Popup().setHTML(`${data.city.name}`))
 
@@ -254,14 +254,14 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 // These options control the ending camera position: centered at
 // the target, at zoom level 9, and north up.
             center: lngLat,
-            zoom: 11,
+            zoom: 12,
             bearing: 0,
 
 // These options control the flight curve, making it move
 // slowly and zoom out almost completely before starting
 // to pan.
-            speed: 0.5, // make the flying slow
-            curve: 1, // change the speed at which it zooms out
+            speed: 0.2, // make the flying slow
+            curve: 10, // change the speed at which it zooms out
 
 // This can be any easing function: it takes a number between
 // 0 and 1 and returns another number between 0 and 1.
