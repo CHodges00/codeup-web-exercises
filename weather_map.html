@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <title>Weather Map</title>
 
-    <link href="js/TOKENS.js">
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet'
           href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css'
           type='text/css'/>
 
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
 
 
@@ -22,11 +20,10 @@
 
 
 </head>
-<body>
+<body onload="initializeScreen()">
 
 
-<!--NAVBAR NAVBAR NAVBAR-->
-
+<!--/////////////////////////////// NAVBAR ///////////////////////////////-->
 <div class="nav">
     <div id="left">
         <h2>Weather App</h2>
@@ -37,14 +34,14 @@
 </div>
 
 
-<!--CARDS CARDS CARDS -->
+<!--/////////////////////////////// CARDS ///////////////////////////////-->
 <div class="row">
 
 </div>
 
-<!--MAP MAP MAP-->
 
 
+<!--/////////////////////////////// MAP ///////////////////////////////-->
 <div id="map-load">
     <div id="map"></div>
     <div id="load">
@@ -57,9 +54,38 @@
         <p>g</p>
     </div>
 </div>
-<pre id="coordinates" class="coordinates"></pre>
 
 
+
+<!--/////////////////////////////// CROSSWORD ///////////////////////////////-->
+<div id="leftBox">
+    <table id="puzzle">
+
+    </table>
+</div>
+<div id="rightBox">
+    <table>
+            <td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input class="butt"  type="submit" value="Check" onclick="checkClicked()">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </table>
+</div>
+<table id="hintsTable">
+    <tr>
+        <td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
+    </tr>
+    <tr>
+        <td>4. Only __ more months.</td><td>1. Drink more ____ !</td>
+    </tr>
+    <tr>
+        <td>5. I'm tired of writing _____. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>2. Can't get no love from me.  </td>
+    </tr>
+    <tr>
+        <td>6. The best battle royale... </td><td>3. Making this was a ___ idea. </td>
+</table>
+
+
+<!--/////////////////////////////// END OF CONTENT ///////////////////////////////-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -67,7 +93,9 @@
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
 <script src="js/jquery-2.2.4.js"></script>
-
+<script src="js/TOKENS.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
 <script src="js/weather_map.js"></script>
 </body>
 </html>
