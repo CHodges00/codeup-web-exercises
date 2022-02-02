@@ -1029,7 +1029,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cross word Puzzel</title>
+    <title>Cross word Puzzle</title>
     <style>
 
         #cross{
@@ -1039,50 +1039,30 @@
             margin: 0;
             padding: 0;
             border-collapse: collapse;
-            border: 1px solid white;
+            border: 1px solid;
         }
-        #buttons{
-            width:30%;
-            float: right;
-        }
-        tr{
-            margin: 0;
-            padding: 0;
-            border-collapse: collapse;
-        }
-        td{
-            height: 30px;
-            width: 30px;
-        }
-        #leftBox{
-            float: left;
-        }
-        #rightBox{
-            float: left;
-            clear:left;
-        }
+
         .butt{
             height:50px;
             width: 107px;
+            background-color: gray;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
         }
         #puzzel{
             text-align: center;
-            margin: 0;
-            padding: 0;
             border-collapse: collapse;
-            border: 1px solid black;
+            border: 25px solid black;
+
         }
         .inputBox{
             width: 40px;
             height:40px;
-            border: 1px solid black;
+            border: 2px solid gray;
             text-align: center;
         }
-        #hintsTable{
-            width: 480px;
-            float: left;
-            clear: left;
-        }
+
     </style>
 
     <script>
@@ -1123,10 +1103,11 @@
         }
         //Returns Array
         function preparePuzzelArray(){
-            var items = [	[0, 0, 0, 0, 'p', 0, 0, 0, 0, 0],
+            var items = [
+                [0, 0, 0, 0, 'p', 0, 0, 0, 0, 0],
                 [0, 0, 0, 0, 'u', 0, 0, 0, 0, 0 ],
-                [0, 0, 0, 0, 'n', 0, 'b', 0, 0, 0],
-                [0, 'h', 'y', 'd', 'e', 'r', 'a', 'b', 'a', 'd'],
+                [0, 0, 0, 0, 'b', 0, 'b', 0, 0, 0],
+                [0, 'h', 'y', 'd', 'g', 'r', 'a', 'b', 'a', 'd'],
                 [0, 0, 0, 0, 0, 0, 'n', 0, 0, 'e'],
                 [0, 0, 0, 0, 0, 0, 'g', 0, 0, 'l'],
                 [0, 0, 'm', 'u', 'm', 'b', 'a', 'i', 0, 'h'],
@@ -1152,26 +1133,16 @@
                     if(rowData[j] != 0){
                         var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + j);
                         if(selectedInputTextElement.value != puzzelArrayData[i][j]){
-                            selectedInputTextElement.style.backgroundColor = 'red';
+                            selectedInputTextElement.style.backgroundColor = 'yellow';
 
                         }else{
-                            selectedInputTextElement.style.backgroundColor = 'white';
+                            selectedInputTextElement.style.backgroundColor = 'green';
                         }
                     }
                 }
             }
         }
-        //Clue Button
-        function clueClicked(){
-            if (currentTextInput != null){
-                var temp1 = currentTextInput;
-                var token = temp1.split("_");
-                var row = token[1];
-                var column = token[2];
-                document.getElementById(temp1).value = puzzelArrayData[row][column];
-                //checkClicked();
-            }
-        }
+
         //Solve Button
         function solveClicked(){
             if (currentTextInput != null){
@@ -1222,7 +1193,6 @@
         <tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
             <td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
             <td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
-            <td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()"></td></tr>
     </table>
 </div>
 <table id="hintsTable">
@@ -1230,7 +1200,7 @@
         <td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
     </tr>
     <tr>
-        <td>3. Cultural Hub (Hyderabad)</td><td>1. Education Hub (Pune)</td>
+        <td>3. Cultural Hub (Hyderabad)</td><td>1. The best battle royale.</td>
     </tr>
     <tr>
         <td>5. India's financial capital (Mumbai)</td><td>2. Information Technology Hub (Bangalore)</td>
