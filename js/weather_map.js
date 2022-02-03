@@ -54,21 +54,6 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /////////////////////////////////////// GENERATE MAP ///////////////////////////////////////
     mapboxgl.accessToken = MAPBOX_TOKEN;
     var coordinates = document.getElementById('coordinates');
@@ -209,6 +194,8 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 
             console.log(event)
             console.log(event.result)
+            name = event.result.place_name
+
             var lon = event.result.center[0]
             var lat = event.result.center[1]
 
@@ -222,7 +209,7 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
             }).done(function (event) {
 
                 $("#cityName").html('')
-                $('#cityName').append(`<p>Current Marker Location: ${event.city.name}`);
+                $('#cityName').append(`<p>Current Marker Location: ${name}`);
                 $('.row').html('')
 
 
