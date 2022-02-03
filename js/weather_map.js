@@ -1,14 +1,15 @@
 
+
+//////////////// LOADING SCREEN
 $(document).ready(function (){
     setTimeout(loading, 4000)
-    setTimeout(cards, 4000)
+
 })
 function loading (){
     $('#load').remove()
 }
-function cards(){
-    $(".row").toggleClass('roll')
-}
+
+
 
 
 
@@ -54,6 +55,20 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /////////////////////////////////////// GENERATE MAP ///////////////////////////////////////
     mapboxgl.accessToken = MAPBOX_TOKEN;
     var coordinates = document.getElementById('coordinates');
@@ -72,7 +87,6 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
 
         .setLngLat(data.city.coord)
         .addTo(map);
-
 
 /////////////////////////////////////// DRAGABLE MARKER THAT RETURNS LNGLAT ///////////////////////////////////////
     function onDragEnd() {
@@ -132,11 +146,26 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
                             </div>`);
             }
         })
-
     }
-
-
     marker.on('dragend', (onDragEnd));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     ///////////////////////   GEOCODER    ///////////////////////
@@ -177,7 +206,9 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         //  Add a marker at the result's coordinates
         geocoder.on('result', (event) => {
             map.getSource('single-point').setData(event.result.geometry);
+
             console.log(event)
+            console.log(event.result)
             var lon = event.result.center[0]
             var lat = event.result.center[1]
 
@@ -223,6 +254,25 @@ $.get("http://api.openweathermap.org/data/2.5/forecast", {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
