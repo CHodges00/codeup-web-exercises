@@ -26,6 +26,11 @@ const users = [
     name: 'justin',
     email: 'justin@codeup.com',
     languages: ['html', 'css', 'javascript', 'php']
+  },
+  {
+    name: 'cody',
+    email: 'hodges.cody00@gmail.com',
+    languages: ['html', 'javascript', 'css']
   }
 ];
 
@@ -52,6 +57,7 @@ var names = [];
 users.forEach(function(user) {
   return emails.push(user.email);
 });
+
 users.forEach(function(user) {
   return names.push(user.name);
 });
