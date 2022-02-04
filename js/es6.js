@@ -1,6 +1,7 @@
 /*
  * Complete the TODO items below
  */
+
 const users = [
   {
     name: 'zach',
