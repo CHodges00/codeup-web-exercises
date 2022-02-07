@@ -172,7 +172,7 @@ const family = [
 
 
 // Create an array of the first letters of each fruit
-// let letters = fruits.charAt('"')
+// let letters = fruits.charAt('')
 // console.log(letters)
 
 
