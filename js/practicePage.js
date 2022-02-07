@@ -1039,7 +1039,13 @@
 // EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4}
 
 
+let sports = ['baseball', 'hockey', 'basketball', 'curling'];
 
+let sportsString = sports.reduce(((previousValue, currentValue) => {
+    return previousValue + ', ' + currentValue;
+
+}))
+console.log(sportsString)
 
 
 
