@@ -43,7 +43,7 @@ const users = [
 const lang = users.filter(function (a){
     return a.languages.length >= 3;
 })
-console.log('users with 3 or > languages', lang)
+console.log('users with 3 or > languages =', lang)
 console.log('-------------------')
 
 
@@ -51,7 +51,7 @@ console.log('-------------------')
 const email = users.map(function (a){
     return a.email
 })
-console.log('users emails', email)
+console.log('users emails array =', email)
 console.log('-------------------')
 
 
@@ -75,7 +75,7 @@ const longEmail = email.reduce((previousValue, currentValue) => {
         return previousValue
     }
 }, '')
-console.log('The longest email = ' + longEmail)
+console.log('The longest email = ', longEmail)
 console.log('-------------------')
 
 
@@ -87,7 +87,7 @@ const userNames = users.reduce((previousValue, currentValue) => {
     return (previousValue + ' ' + currentValue.name + ',')
 }, '')
 
-console.log('Users names = ' + userNames.replace(/,([^,]*)$/, '.'))
+console.log('Users names = ', userNames.replace(/,([^,]*)$/, '.'))
 console.log('-------------------')
 
 
@@ -95,10 +95,18 @@ console.log('-------------------')
 
 // BONUS
 // Use .reduce to get the unique list of languages from the list of users.
+let languages = users.reduce((langs, user) => {
+    user.languages.forEach(element => {
+        if(!langs.includes(element)){
+            langs.push(element);
+        }
+    })
+        return langs
 
+}, [])
 
-// console.log(languages)
-// console.log('-------------------')
+console.log('Unique languages = ', languages)
+console.log('-------------------')
 
 
 
@@ -176,7 +184,7 @@ const family = [
 //     return x[0];
 // })
 let firstLetters = fruits.map(x => x[0]);
-console.log(firstLetters);
+console.log('First letters of strings in array =', firstLetters);
 console.log('-------------------')
 
 
@@ -186,8 +194,9 @@ console.log('-------------------')
 const nameAge = customers.map(function (a){
     return {name: a.name, age: a.age}
 })
-console.log(nameAge)
+console.log('names and ages of objects =' , nameAge)
 console.log('-------------------')
+
 
 // Create an array of civil servant customers (teachers and police officers) containing the same properties as the objects on the customers objects
 const civil = customers.filter(function (a){
@@ -195,7 +204,7 @@ const civil = customers.filter(function (a){
 }).map((customers) => {
     return {name: customers.name, age: customers.age}
 })
-console.log(civil)
+console.log('name and age of civil workers =' , civil)
 console.log('-------------------')
 
 
@@ -203,7 +212,7 @@ console.log('-------------------')
 const ages = customers.reduce(((previousValue, currentValue) => {
     return previousValue + currentValue.age
 }), 0) / 3
-console.log(ages)
+console.log('Average age of all customers =' , ages)
 
 
 // Create a function makeSuperPet() that takes in the pets array as input and returns a single pet object with the following shape...
