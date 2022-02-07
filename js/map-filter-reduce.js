@@ -43,37 +43,47 @@ const users = [
 const lang = users.filter(function (a){
     return a.languages.length >= 3;
 })
-console.log('users with 3 or > languages', lang, '-------------------')
-
+console.log('users with 3 or > languages', lang)
+console.log('-------------------')
 
 
 // Use .map to create an array of strings where each element is a user's email address
 const email = users.map(function (a){
     return a.email
 })
-console.log('users emails', email, '-------------------')
-
+console.log('users emails', email)
+console.log('-------------------')
 
 
 // Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 const totalYears = users.reduce((total, user) => {
 return total + user.yearsOfExperience
 }, 0)
-console.log('total years of experience = ' + totalYears, '-------------------')
+console.log('total years of experience = ' + totalYears)
 
 const average = totalYears / users.length
-console.log('average years of experience = ' + average, '-------------------')
+console.log('average years of experience = ' + average)
+console.log('-------------------')
 
 
 
 // Use .reduce to get the longest email from the list of users.
-const longEmail = users.reduce((previousValue, currentValue) => {
-
-})
+const longEmail = email.reduce((previousValue, currentValue) => {
+    if(currentValue.length > previousValue.length){
+        return currentValue;
+    }else{
+        return previousValue
+    }
+}, '')
+console.log('The lomgest email = ' + longEmail)
+console.log('-------------------')
 
 
 
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-const names = users.reduce((previousValue, currentValue) => previousValue + ', ' + currentValue.name);
-console.log('users names = ' + names)
+const userNames = users.reduce((previousValue, currentValue) => {
+    return previousValue + ' ' + currentValue.name + ','
+}, '')
+console.log('Users names = ' + userNames)
+
