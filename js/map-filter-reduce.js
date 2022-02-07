@@ -40,10 +40,10 @@ const users = [
 
 
 // Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array
-var lang = users.filter(function (a){
+const lang = users.filter(function (a){
     return a.languages.length >= 3;
 })
-console.log(lang)
+console.log('users with 3 or > languages', lang, '-------------------')
 
 
 
@@ -51,7 +51,7 @@ console.log(lang)
 const email = users.map(function (a){
     return a.email
 })
-console.log('all users emails in string array = ' + email)
+console.log('users emails', email, '-------------------')
 
 
 
@@ -59,19 +59,21 @@ console.log('all users emails in string array = ' + email)
 const totalYears = users.reduce((total, user) => {
 return total + user.yearsOfExperience
 }, 0)
-console.log('total years of experience = ' + totalYears)
+console.log('total years of experience = ' + totalYears, '-------------------')
 
-const average = totalYears / 5
-console.log('average = ' + average)
-
+const average = totalYears / users.length
+console.log('average years of experience = ' + average, '-------------------')
 
 
 
 // Use .reduce to get the longest email from the list of users.
+const longEmail = users.reduce((previousValue, currentValue) => {
 
-
+})
 
 
 
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+const names = users.reduce((previousValue, currentValue) => previousValue + ', ' + currentValue.name);
+console.log('users names = ' + names)
