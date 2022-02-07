@@ -83,9 +83,11 @@ console.log('-------------------')
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 const userNames = users.reduce((previousValue, currentValue) => {
-    return previousValue + ' ' + currentValue.name + ','
+
+    return (previousValue + ' ' + currentValue.name + ',')
 }, '')
-console.log('Users names = ' + userNames)
+
+console.log('Users names = ' + userNames.replace(/,([^,]*)$/, '.'))
 console.log('-------------------')
 
 
@@ -95,8 +97,8 @@ console.log('-------------------')
 // Use .reduce to get the unique list of languages from the list of users.
 
 
-console.log(languages)
-console.log('-------------------')
+// console.log(languages)
+// console.log('-------------------')
 
 
 
