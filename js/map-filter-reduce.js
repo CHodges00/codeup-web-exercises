@@ -172,8 +172,14 @@ const family = [
 
 
 // Create an array of the first letters of each fruit
-// let letters = fruits.charAt('')
-// console.log(letters)
+// let firstLetters = fruits.map(function (x){
+//     return x[0];
+// })
+let firstLetters = fruits.map(x => x[0]);
+console.log(firstLetters);
+console.log('-------------------')
+
+
 
 
 // Create array of user objects based on the customers array of objects (each user object should just have name and age properties)
