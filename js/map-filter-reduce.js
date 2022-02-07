@@ -47,12 +47,16 @@ console.log('users with 3 or > languages =', lang)
 console.log('-------------------')
 
 
+
+
 // Use .map to create an array of strings where each element is a user's email address
 const email = users.map(function (a){
     return a.email
 })
 console.log('users emails array =', email)
 console.log('-------------------')
+
+
 
 
 // Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
@@ -64,6 +68,8 @@ console.log('total years of experience = ' + totalYears)
 const average = totalYears / users.length
 console.log('average years of experience = ' + average)
 console.log('-------------------')
+
+
 
 
 
@@ -81,6 +87,8 @@ console.log('-------------------')
 
 
 
+
+
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 const userNames = users.reduce((previousValue, currentValue) => {
 
@@ -89,6 +97,8 @@ const userNames = users.reduce((previousValue, currentValue) => {
 
 console.log('Users names = ', userNames.replace(/,([^,]*)$/, '.'))
 console.log('-------------------')
+
+
 
 
 
@@ -190,12 +200,18 @@ console.log('-------------------')
 
 
 
+
+
 // Create array of user objects based on the customers array of objects (each user object should just have name and age properties)
 const nameAge = customers.map(function (a){
     return {name: a.name, age: a.age}
 })
 console.log('names and ages of objects =' , nameAge)
 console.log('-------------------')
+
+
+
+
 
 
 // Create an array of civil servant customers (teachers and police officers) containing the same properties as the objects on the customers objects
@@ -208,11 +224,19 @@ console.log('name and age of civil workers =' , civil)
 console.log('-------------------')
 
 
+
+
+
+
 // Determine the average age of all the customers
 const ages = customers.reduce(((previousValue, currentValue) => {
     return previousValue + currentValue.age
 }), 0) / 3
 console.log('Average age of all customers =' , ages)
+
+
+
+
 
 
 // Create a function makeSuperPet() that takes in the pets array as input and returns a single pet object with the following shape...
