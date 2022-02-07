@@ -86,6 +86,7 @@ const userNames = users.reduce((previousValue, currentValue) => {
     return previousValue + ' ' + currentValue.name + ','
 }, '')
 console.log('Users names = ' + userNames)
+console.log('-------------------')
 
 
 
@@ -93,6 +94,9 @@ console.log('Users names = ' + userNames)
 // BONUS
 // Use .reduce to get the unique list of languages from the list of users.
 
+
+console.log(languages)
+console.log('-------------------')
 
 
 
@@ -166,7 +170,8 @@ const family = [
 
 
 // Create an array of the first letters of each fruit
-
+// let letters = fruits.charAt('"')
+// console.log(letters)
 
 
 // Create array of user objects based on the customers array of objects (each user object should just have name and age properties)
