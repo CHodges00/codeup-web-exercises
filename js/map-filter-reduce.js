@@ -93,7 +93,9 @@ console.log('Users names = ' + userNames)
 
 
 
-// BONUSES
+
+
+// EXTRA PRACTICE
 const fruits = ["cantaloupe", "orange", "date", "elderberry", "ugli fruit", "pineapple"];
 
 const customers = [
@@ -164,8 +166,11 @@ const family = [
 
 // Create array of user objects based on the customers array of objects (each user object should just have name and age properties)
 
+
 // Create an array of civil servant customers (teachers and police officers) containing the same properties as the objects on the customers objects
 
+
 // Determine the average age of all the customers
+
 
 // Create a function makeSuperPet() that takes in the pets array as input and returns a single pet object with the following shape...
