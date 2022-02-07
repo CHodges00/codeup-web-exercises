@@ -1,4 +1,8 @@
-
+// MAPBOX
 const MAPBOX_TOKEN = "pk.eyJ1IjoiaG9kZ2VzY29keTAwIiwiYSI6ImNreXVtOG5odDFvc2EycHBlaHhpMzF1c3QifQ.6g0ZKujuRweI-lJkBKuWAQ";
 
+// WEATHER
 const WEATHER_TOKEN = "dc7b0ebe3a51ce3421b1dfcff8a97724";
+
+// GITHUB API
+const GITHUB_TOKEN = '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';
