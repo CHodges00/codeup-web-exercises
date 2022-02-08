@@ -12,7 +12,7 @@ let username = 'CHodges00'
 
 
 
-fetch(`https://api.github.com/users/${username}/events`).then( response => {
+fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `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`}}).then( response => {
     response.json().then( users => {
         users.forEach( user => {
             // do something with each user object...
