@@ -7,6 +7,13 @@
     <style>
         body{
             background-color: gray;
+            font-weight: bold;
+            font-family: "Academy Engraved LET";
+        }
+
+        h2 {
+            font-size: 50px;
+            text-shadow: 2px 2px 2px white;
         }
         .input-box {
             display: flex;
@@ -15,24 +22,27 @@
             flex-direction: column;
         }
         input {
-            margin-bottom: 10px;
-            height: 20px;
+            margin-bottom: 40px;
+            height: 30px;
+            border: 3px dotted black;
         }
 
+        button {
+            height: 30px;
+            box-shadow: 0 0 15px 10px white;
+        }
         #last-push {
             margin-top: 30px;
             text-align: center;
-            font-weight: bold;
-            font-family: "Academy Engraved LET";
-            font-size: 25px;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px white;
         }
 
         #time-since {
             margin-top: 30px;
             text-align: center;
-            font-weight: bold;
-            font-family: "Academy Engraved LET";
-            font-size: 25px;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px white;
         }
     </style>
 </head>
@@ -41,7 +51,7 @@
 <!--INPUT FOR PASSWORD VAL THAT'S PASSED TO FETCH-->
 <div class="input-box">
     <h2>When's the last time you pushed ?</h2>
-<input id="input" type="text"  value="CHodges00">
+<input id="input" type="text"  placeholder="Enter username here">
 <button id="submit" type="button">SEE LAST PUSH</button>
 </div>
 
