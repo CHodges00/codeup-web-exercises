@@ -1,16 +1,22 @@
 
-// function getCommits(username) {
-//     return fetch(`https://api.github.com/users/${username}/events`)
-//         .then(response => response.json())
-//         .catch(error => console.error(error))
-// }
-// console.log(getCommits())
-
-
-
+// USERNAME TO PASS
 let username = 'CHodges00'
+// // PROMISE
+// const myPromise = fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token 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`}});
+// console.log(myPromise)
+// // RESPONSE
+// myPromise.then(response => response.json());
+//
+// // ERROR
+// myPromise.catch(error => console.error(error));
 
-const myPromise = fetch('https://api.github.com/users');
-myPromise.then(response => console.log(response));
-myPromise.catch(error => console.error(error));
 
+
+fetch(`https://api.github.com/users/${username}/events`).then( response => {
+    response.json().then( users => {
+        users.forEach( user => {
+            // do something with each user object...
+            console.log(user);
+        });
+    });
+});
