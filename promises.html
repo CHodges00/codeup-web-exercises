@@ -8,13 +8,38 @@
         body{
             background-color: gray;
         }
+        .input-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input {
+            margin-bottom: 10px;
+            height: 20px;
+        }
+
+        #last-push {
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-family: "Academy Engraved LET";
+            font-size: 25px;
+        }
     </style>
 </head>
 <body>
 
 <!--INPUT FOR PASSWORD VAL THAT'S PASSED TO FETCH-->
-<input id="input" type="text" placeholder="Enter Username">
-<button id="submit" type="button">SUBMIT</button>
+<div class="input-box">
+    <h2>When's the last time you pushed ?</h2>
+<input id="input" type="text"  value="CHodges00">
+<button id="submit" type="button">SEE LAST PUSH</button>
+</div>
+
+<div id="last-push">
+
+</div>
 
 
 <!--SCRIPTS-->
