@@ -101,7 +101,10 @@ let duplicates = numbers.reduce((dups, number) => {
             dups.push(element);
         }
     })
-    return dups
+    function compareNumbers(a, b) {
+        return a - b;
+    }
+    return dups.sort(compareNumbers);
 
 }, [])
 
