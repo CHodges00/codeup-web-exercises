@@ -27,3 +27,18 @@ function githubGet() {
 
 $('#submit').one('click', githubGet);
 
+
+
+// WAIT FUNCTIONALITY
+function wait(milliseconds) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, milliseconds);
+    });
+}
+
+
+// wait(2000).then(() => alert('Welcome, the only thing to do here is search how long it has been since your last GitHub push........ENJOY !'));
+// wait(20000).then(() => prompt(`You've been here for a while, enter your email to sign up for our newsletter !`));
+

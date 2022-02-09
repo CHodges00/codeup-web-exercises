@@ -44,6 +44,37 @@
             font-size: 50px;
             text-shadow: 2px 2px 2px white;
         }
+
+        /*BOUNCY IMAGE*/
+        :root {
+            --width: 500px;
+            --x-speed: 3s;
+            --y-speed: 7s;
+            --transition-speed: 10.2s;
+        }
+
+        .el {
+            width: var(--width);
+            height: var(--width);
+        }
+
+        .x {
+            animation: x var(--x-speed) linear infinite alternate;
+        }
+        .y {
+            animation: y var(--y-speed) linear infinite alternate;
+        }
+
+        @keyframes x {
+            100% {
+                transform: translateX(calc(130vw - var(--width)));
+            }
+        }
+        @keyframes y {
+            100% {
+                transform: translateY(calc(80vh - var(--width)));
+            }
+        }
     </style>
 </head>
 <body>
@@ -58,6 +89,10 @@
 <div id="last-push"></div>
 
 <div id="time-since"></div>
+
+<div class="el-wrap x">
+    <div class="el y"><img src="assets/github.png"></div>
+</div>
 
 <!--SCRIPTS-->
 <script src="js/TOKENS.js"></script>
