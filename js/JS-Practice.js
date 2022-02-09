@@ -93,22 +93,22 @@
 // expected output: [1, 2, 5, 12, 28, 33, 42, 45]
 
 
-const numbers =  [1, 12, 2, 33, 28, 5, 45, 12, 1, 42, 42, 5]
-
-let duplicates = numbers.reduce((dups, number) => {
-    numbers.forEach(element => {
-        if(!dups.includes(element)){
-            dups.push(element);
-        }
-    })
-    function compareNumbers(a, b) {
-        return a - b;
-    }
-    return dups.sort(compareNumbers);
-
-}, [])
-
-console.log(duplicates)
+// const numbers =  [1, 12, 2, 33, 28, 5, 45, 12, 1, 42, 42, 5]
+//
+// let duplicates = numbers.reduce((dups, number) => {
+//     numbers.forEach(element => {
+//         if(!dups.includes(element)){
+//             dups.push(element);
+//         }
+//     })
+//     function compareNumbers(a, b) {
+//         return a - b;
+//     }
+//     return dups.sort(compareNumbers);
+//
+// }, [])
+//
+// console.log(duplicates)
 
 
 

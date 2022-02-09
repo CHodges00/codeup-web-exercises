@@ -1039,13 +1039,58 @@
 // EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4}
 
 
-let sports = ['baseball', 'hockey', 'basketball', 'curling'];
+// let sports = ['baseball', 'hockey', 'basketball', 'curling'];
+//
+// let sportsString = sports.reduce(((previousValue, currentValue) => {
+//     return previousValue + ', ' + currentValue;
+//
+// }))
+// console.log(sportsString)
+//
 
-let sportsString = sports.reduce(((previousValue, currentValue) => {
-    return previousValue + ', ' + currentValue;
 
-}))
-console.log(sportsString)
+
+
+
+
+// fetch("api/url", {
+// content-type: 'application/json'
+// })
+
+
+// POST
+const url = '';
+
+const body = {
+"name": "Doug", "age": 93, "city": "York"
+};
+
+const options = {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+};
+
+fetch(url, options)
+    .then(res => res.json())
+    .catch(jsonObj => console.log(jsonObj))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
