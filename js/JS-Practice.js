@@ -93,16 +93,65 @@
 // expected output: [1, 2, 3, 4, 5, 6, 7, 8]
 
 
-const numbers =  [1 ,2 ,2 ,2 ,2 ,3 ,3 ,3 ,4 ,5 ,6 ,7 ,7 ,8 ,8]
+// const numbers =  [1 ,2 ,2 ,2 ,2 ,3 ,3 ,3 ,4 ,5 ,6 ,7 ,7 ,8 ,8]
+//
+// let duplicates = numbers.reduce((dups, number) => {
+//     numbers.forEach(element => {
+//         if(!dups.includes(element)){
+//             dups.push(element);
+//         }
+//     })
+//     return dups
+//
+// }, [])
+//
+// console.log(duplicates)
 
-let duplicates = numbers.reduce((dups, number) => {
-    numbers.forEach(element => {
-        if(!dups.includes(element)){
-            dups.push(element);
+
+
+
+
+// write a function that takes a string as argument and returns the number of vowels contained in that string.
+    // The vowels are “a”, “e”, “i”, “o”, “u”.
+
+
+function vowels (str){
+    let count = 0;
+
+
+    for (var i = 0; i < str.length; i++){
+        if (str.charAt(i).toLowerCase() == 'a' || str.charAt(i).toLowerCase() == 'e' ||
+            str.charAt(i).toLowerCase() == 'i' || str.charAt(i).toLowerCase() == 'o' ||
+            str.charAt(i).toLowerCase() == 'u'){
+            count += 1;
         }
-    })
-    return dups
+    }return count
+}
 
-}, [])
 
-console.log(duplicates)
+console.log('Total number of vowels = ', vowels('ROBINhood'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
